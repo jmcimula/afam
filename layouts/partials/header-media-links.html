@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
+<html lang="en">
+    <head>
+        <title>{{ $.Site.Title }} &mdash; {{ $strings.contentinfo.tagline }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="{{ .Site.Params.description}}">
+        <meta name="author" content="{{ .Site.Params.author }}">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+        <!-- Custom CSS -->
+        <link href="css/zeeshell.css" rel="stylesheet" media="all" />
+        <link href='css/google_prettify/sons-of-obsidian.css' type='text/css' rel='stylesheet' media='all' />
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media='all'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,900italic,900,300italic' type='text/css' rel='stylesheet' media='all'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' type='text/css' rel='stylesheet' media='all' />
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ .Site.BaseURL }}/images/favicon.ico" />
+        <!-- RSS -->
+        <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body id="page-top" class="index">

@@ -1,0 +1,72 @@
+MetaDataFormat: "yaml"
+
+ContentDir: "content/en-US"
+PublishDir: "public/en-US"
+
+LanguageCode: en-US
+BaseURL: "https://zeeshell.com/en-US/"
+Title: "ZeeShell Limited"
+Copyright: "ZeeShell Ltd"
+
+Params:
+    Domain: "zeeshell.com"
+    Publisher:
+        Name: "ZeeShell"
+        GoogleUserName: "ZeeShell"
+        TwitterUserName: "ZeeShell"
+    BaseDir: "/en-US/"
+    AlternateBaseDir: "/ja/"
+    AlternateLangCode: "ja"
+    GoogleAnalyticsID: "UA-37352183-2"
+    GoogleSiteSearchID: "006388931142546140887:uidl4-zslfu"
+    GoogleSiteSearchLangCode: "en"
+    FacebookLangCode: "en_US"
+    Locales:
+         - Code: "en-US"
+           Name: "English"
+         - Code: "ja"
+           Name: "Japanese"
+    DateFormat:
+        ISO8601: "2006-01-02T15:04:05-07:00"
+        Localized: "Feburary 16, 2016"
+
+Taxonomies:
+    category: "categories"
+    version: "versions"
+    status: "statuses"
+
+Menu:
+    Main:
+        - Name: "Home"
+          Weight: 0
+          Identifier: "home"
+          URL: "/"
+        - Name: "Blog"
+          Weight: 1
+          Identifier: "blog"
+          URL: "/blog/"
+        - Name: "About"
+          Weight: 2
+          Identifier: "about"
+          URL: "/about/"
+        - Name: "Contact"
+          Weight: 3
+          Identifier: "contact"
+          URL: "/contact/"
+    External:
+        - Name: "Feed"
+          Weight: 0
+          Identifier: "feed"
+          URL: "/index.xml"
+        - Name: "Twitter"
+          Weight: 1
+          Identifier: "twitter"
+          URL: "https://twitter.com/FxSiteCompat"
+        - Name: "Google+"
+          Weight: 2
+          Identifier: "google-plus"
+          URL: "https://plus.google.com/+ZeeShell"
+        - Name: "Bitbucket"
+          Weight: 3
+          Identifier: "bitbucket"
+          URL: "https://bitbucket.org/zeeshell"

@@ -1,0 +1,12 @@
+# Sections
+sections:
+    home: Home
+    blog: Blog
+    contact: Contact
+    categories: Categories
+    versions: Versions
+    about: About
+
+# Versions
+versions:
+    future: "Future"

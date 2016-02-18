@@ -1,0 +1,479 @@
+/* line 4, ../sass/zeeshell.scss */
+body {
+  overflow-x: hidden;
+}
+
+/* line 8, ../sass/zeeshell.scss */
+p {
+  font-size: 20px;
+}
+
+/* line 12, ../sass/zeeshell.scss */
+p.small {
+  font-size: 16px;
+}
+
+/* line 16, ../sass/zeeshell.scss */
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #18BC9C;
+  outline: none;
+}
+
+/* line 25, ../sass/zeeshell.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 31, ../sass/zeeshell.scss */
+hr.star-light,
+hr.star-primary {
+  padding: 0;
+  border: none;
+  border-top: solid 5px;
+  text-align: center;
+  max-width: 250px;
+  margin: 25px auto 30px;
+}
+
+/* line 41, ../sass/zeeshell.scss */
+hr.star-light:after,
+hr.star-primary:after {
+  content: "\f005";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 2em;
+  padding: 0 0.25em;
+}
+
+/* line 52, ../sass/zeeshell.scss */
+hr.star-light {
+  border-color: white;
+}
+
+/* line 56, ../sass/zeeshell.scss */
+hr.star-light:after {
+  background-color: #18BC9C;
+  color: white;
+}
+
+/* line 61, ../sass/zeeshell.scss */
+hr.star-primary {
+  border-color: #2C3E50;
+}
+
+/* line 65, ../sass/zeeshell.scss */
+hr.star-primary:after {
+  background-color: white;
+  color: #2C3E50;
+}
+
+/* line 70, ../sass/zeeshell.scss */
+.img-centered {
+  margin: 0 auto;
+}
+
+/* line 74, ../sass/zeeshell.scss */
+header {
+  text-align: center;
+  background: #18BC9C;
+  color: white;
+}
+/* line 78, ../sass/zeeshell.scss */
+header .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+/* line 82, ../sass/zeeshell.scss */
+header img {
+  display: block;
+  margin: 0 auto 20px;
+}
+/* line 87, ../sass/zeeshell.scss */
+header .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+/* line 94, ../sass/zeeshell.scss */
+header .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  /* line 103, ../sass/zeeshell.scss */
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  /* line 108, ../sass/zeeshell.scss */
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+  /* line 111, ../sass/zeeshell.scss */
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 119, ../sass/zeeshell.scss */
+  .navbar-fixed-top {
+    padding: 25px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+  /* line 124, ../sass/zeeshell.scss */
+  .navbar-fixed-top .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  /* line 131, ../sass/zeeshell.scss */
+  .navbar-fixed-top.navbar-shrink {
+    padding: 10px 0;
+  }
+  /* line 133, ../sass/zeeshell.scss */
+  .navbar-fixed-top.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+/* line 139, ../sass/zeeshell.scss */
+.navbar {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 143, ../sass/zeeshell.scss */
+.navbar a:focus {
+  outline: none;
+}
+/* line 146, ../sass/zeeshell.scss */
+.navbar .navbar-nav {
+  letter-spacing: 1px;
+}
+/* line 149, ../sass/zeeshell.scss */
+.navbar .navbar-nav li a:focus {
+  outline: none;
+}
+
+/* line 156, ../sass/zeeshell.scss */
+.navbar-default,
+.navbar-inverse {
+  border: none;
+}
+
+/* line 161, ../sass/zeeshell.scss */
+section {
+  padding: 100px 0;
+}
+/* line 163, ../sass/zeeshell.scss */
+section h2 {
+  margin: 0;
+  font-size: 3em;
+}
+
+/* line 169, ../sass/zeeshell.scss */
+section.success {
+  background: #18BC9C;
+  color: white;
+}
+/* line 173, ../sass/zeeshell.scss */
+section.success a,
+section.success a:hover,
+section.success a:focus,
+section.success a:active,
+section.success a.active {
+  color: #2C3E50;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  /* line 184, ../sass/zeeshell.scss */
+  section {
+    padding: 75px 0;
+  }
+
+  /* line 187, ../sass/zeeshell.scss */
+  section.first {
+    padding-top: 75px;
+  }
+}
+/* line 193, ../sass/zeeshell.scss */
+#portfolio .portfolio-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+/* line 196, ../sass/zeeshell.scss */
+#portfolio .portfolio-item .portfolio-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+/* line 201, ../sass/zeeshell.scss */
+#portfolio .portfolio-item .portfolio-link .caption {
+  background: fade(#18BC9C, 90%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+/* line 210, ../sass/zeeshell.scss */
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+  opacity: 1;
+}
+/* line 213, ../sass/zeeshell.scss */
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+/* line 222, ../sass/zeeshell.scss */
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+  margin-top: -12px;
+}
+/* line 225, ../sass/zeeshell.scss */
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+  margin: 0;
+}
+/* line 233, ../sass/zeeshell.scss */
+#portfolio * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  /* line 240, ../sass/zeeshell.scss */
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+/* line 246, ../sass/zeeshell.scss */
+.btn-outline {
+  color: white;
+  font-size: 20px;
+  border: solid 2px white;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+}
+/* line 253, ../sass/zeeshell.scss */
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+  color: #18BC9C;
+  background: white;
+  border: solid 2px white;
+}
+
+/* line 263, ../sass/zeeshell.scss */
+.floating-label-form-group {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 268, ../sass/zeeshell.scss */
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+  z-index: 1;
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5em;
+  background: none;
+  box-shadow: none !important;
+  resize: none;
+}
+/* line 281, ../sass/zeeshell.scss */
+.floating-label-form-group label {
+  display: block;
+  z-index: 0;
+  position: relative;
+  top: 2em;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.764705882em;
+  vertical-align: middle;
+  vertical-align: baseline;
+  opacity: 0;
+  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+  -moz-transition: top 0.3s ease,opacity 0.3s ease;
+  -ms-transition: top 0.3s ease,opacity 0.3s ease;
+  transition: top 0.3s ease,opacity 0.3s ease;
+}
+/* line 297, ../sass/zeeshell.scss */
+.floating-label-form-group:not(:first-child) {
+  padding-left: 14px;
+  border-left: 1px solid #eeeeee;
+}
+
+/* line 304, ../sass/zeeshell.scss */
+.floating-label-form-group-with-value label {
+  top: 0;
+  opacity: 1;
+}
+
+/* line 311, ../sass/zeeshell.scss */
+.floating-label-form-group-with-focus label {
+  color: #18BC9C;
+}
+
+/* line 316, ../sass/zeeshell.scss */
+form .row:first-child .floating-label-form-group {
+  border-top: 1px solid #eeeeee;
+}
+
+/* line 320, ../sass/zeeshell.scss */
+footer {
+  color: white;
+}
+/* line 322, ../sass/zeeshell.scss */
+footer h3 {
+  margin-bottom: 30px;
+}
+/* line 325, ../sass/zeeshell.scss */
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2C3E50;
+}
+/* line 329, ../sass/zeeshell.scss */
+footer .footer-col {
+  margin-bottom: 50px;
+}
+/* line 332, ../sass/zeeshell.scss */
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #233140;
+}
+
+/* line 338, ../sass/zeeshell.scss */
+.btn-social {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+/* line 349, ../sass/zeeshell.scss */
+.btn:focus,
+.btn:active,
+.btn.active {
+  outline: none;
+}
+
+/* line 355, ../sass/zeeshell.scss */
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  z-index: 1049;
+}
+/* line 362, ../sass/zeeshell.scss */
+.scroll-top .btn {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  line-height: 28px;
+}
+/* line 368, ../sass/zeeshell.scss */
+.scroll-top .btn:focus {
+  outline: none;
+}
+
+/* line 375, ../sass/zeeshell.scss */
+.portfolio-modal .modal-content {
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  min-height: 100%;
+  padding: 100px 0;
+  text-align: center;
+}
+/* line 384, ../sass/zeeshell.scss */
+.portfolio-modal .modal-content h2 {
+  margin: 0;
+  font-size: 3em;
+}
+/* line 388, ../sass/zeeshell.scss */
+.portfolio-modal .modal-content img {
+  margin-bottom: 30px;
+}
+/* line 391, ../sass/zeeshell.scss */
+.portfolio-modal .modal-content .item-details {
+  margin: 30px 0;
+}
+/* line 395, ../sass/zeeshell.scss */
+.portfolio-modal .close-modal {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+/* line 403, ../sass/zeeshell.scss */
+.portfolio-modal .close-modal:hover {
+  opacity: 0.3;
+}
+/* line 406, ../sass/zeeshell.scss */
+.portfolio-modal .close-modal .lr {
+  height: 75px;
+  width: 1px;
+  margin-left: 35px;
+  background-color: #2C3E50;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari and Chrome */
+  z-index: 1051;
+}
+/* line 417, ../sass/zeeshell.scss */
+.portfolio-modal .close-modal .lr .rl {
+  height: 75px;
+  width: 1px;
+  background-color: #2C3E50;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari and Chrome */
+  z-index: 1052;
+}
+/* line 430, ../sass/zeeshell.scss */
+.portfolio-modal .modal-backdrop {
+  opacity: 0;
+  display: none;
+}
