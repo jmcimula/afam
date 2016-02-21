@@ -1,0 +1,33 @@
+{{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
+<!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Sendai, Japan</h3>
+                        <p>Green Hills A 102<br />1-30-8, Izumi Chuo, Sendai <br /> Miyagi, Japan<br />981-3133</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <ul class="list-inline">{{ range $.Site.Menus.External }}
+                            <li><a href="{{ .URL }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ .Identifier}}"></i></a></li>{{ end }}
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Accra, Ghana</h3>
+                        <p>P.O.Box CT 8610, <br />Cantonments, Accra, Ghana,<br /> West Africa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }} <span class="pull-right powered-by"> &middot; {{ $strings.contentinfo.generator | safeHTML }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {{ partial "footer-scripts.html" . }}

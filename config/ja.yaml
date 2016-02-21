@@ -8,14 +8,6 @@ BaseURL: "https://zeeshell.com/ja/"
 Title: "ZeeShell Limited"
 Copyright: "ZeeShell Ltd"
 
-Author:
-    Name: "Kohei Yoshino"
-    Email: "webmaster@fxsitecompat.com"
-    GoogleUserName: "KoheiYoshino"
-    TwitterUserName: "koyoskeh"
-    FacebookID: "100003919776216"
-    FacebookUserName: "kohei.yoshino.aqr"
-
 Params:
     Domain: "zeeshell.com"
     Publisher:

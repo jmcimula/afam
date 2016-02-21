@@ -1,7 +1,7 @@
 /* line 4, ../sass/zeeshell.scss */
 body {
-  overflow-x: hidden;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
 }
 
 /* line 9, ../sass/zeeshell.scss */
@@ -14,24 +14,47 @@ p.small {
   font-size: 16px;
 }
 
-/* line 17, ../sass/zeeshell.scss */
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-  color: #18BC9C;
+/* line 18, ../sass/zeeshell.scss */
+a:hover, a:focus, a:active, a:active {
+  color: #EA073E;
   outline: none;
 }
 
-/* line 26, ../sass/zeeshell.scss */
+/* line 29, ../sass/zeeshell.scss */
+.powered-by a:hover, .powered-by a:focus, .powered-by a:active, .powered-by a.active {
+  color: black;
+  outline: none;
+}
+
+/* line 39, ../sass/zeeshell.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
   font-weight: 700;
 }
 
-/* line 32, ../sass/zeeshell.scss */
+/* line 45, ../sass/zeeshell.scss */
+.navbar-brand {
+  color: black;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+}
+/* line 49, ../sass/zeeshell.scss */
+.navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active, .navbar-brand.active {
+  color: white;
+  outline: none;
+}
+
+/* line 60, ../sass/zeeshell.scss */
+.navbar-default .navbar-brand {
+  color: black;
+}
+/* line 62, ../sass/zeeshell.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: white;
+}
+
+/* line 69, ../sass/zeeshell.scss */
 hr.star-light,
 hr.star-primary {
   padding: 0;
@@ -42,7 +65,7 @@ hr.star-primary {
   margin: 25px auto 30px;
 }
 
-/* line 42, ../sass/zeeshell.scss */
+/* line 79, ../sass/zeeshell.scss */
 hr.star-light:after,
 hr.star-primary:after {
   content: "\f005";
@@ -54,50 +77,54 @@ hr.star-primary:after {
   padding: 0 0.25em;
 }
 
-/* line 53, ../sass/zeeshell.scss */
+/* line 90, ../sass/zeeshell.scss */
 hr.star-light {
   border-color: white;
 }
 
-/* line 57, ../sass/zeeshell.scss */
+/* line 94, ../sass/zeeshell.scss */
 hr.star-light:after {
-  background-color: #18BC9C;
+  background-color: #EA073E;
   color: white;
 }
 
-/* line 62, ../sass/zeeshell.scss */
+/* line 99, ../sass/zeeshell.scss */
 hr.star-primary {
-  border-color: #2C3E50;
+  border-color: #EA073E;
 }
 
-/* line 66, ../sass/zeeshell.scss */
+/* line 103, ../sass/zeeshell.scss */
 hr.star-primary:after {
   background-color: white;
-  color: #2C3E50;
+  color: #EA073E;
 }
 
-/* line 71, ../sass/zeeshell.scss */
+/* line 108, ../sass/zeeshell.scss */
 .img-centered {
   margin: 0 auto;
 }
 
-/* line 75, ../sass/zeeshell.scss */
+/* line 112, ../sass/zeeshell.scss */
 header {
   text-align: center;
-  background: #18BC9C;
+  background: #F7F7F7;
   color: white;
 }
-/* line 79, ../sass/zeeshell.scss */
+/* line 116, ../sass/zeeshell.scss */
 header .container {
   padding-top: 100px;
   padding-bottom: 50px;
 }
-/* line 83, ../sass/zeeshell.scss */
+/* line 120, ../sass/zeeshell.scss */
 header img {
   display: block;
   margin: 0 auto 20px;
 }
-/* line 88, ../sass/zeeshell.scss */
+/* line 124, ../sass/zeeshell.scss */
+header .intro-text {
+  color: black;
+}
+/* line 126, ../sass/zeeshell.scss */
 header .intro-text .name {
   display: block;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -105,36 +132,35 @@ header .intro-text .name {
   font-weight: 700;
   font-size: 2em;
 }
-/* line 95, ../sass/zeeshell.scss */
+/* line 133, ../sass/zeeshell.scss */
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
 
 @media (min-width: 768px) {
-  /* line 104, ../sass/zeeshell.scss */
+  /* line 142, ../sass/zeeshell.scss */
   header .container {
     padding-top: 200px;
     padding-bottom: 100px;
   }
-  /* line 109, ../sass/zeeshell.scss */
+  /* line 147, ../sass/zeeshell.scss */
   header .intro-text .name {
     font-size: 4.75em;
   }
-  /* line 112, ../sass/zeeshell.scss */
+  /* line 150, ../sass/zeeshell.scss */
   header .intro-text .skills {
     font-size: 1.75em;
   }
 }
 @media (min-width: 768px) {
-  /* line 120, ../sass/zeeshell.scss */
+  /* line 158, ../sass/zeeshell.scss */
   .navbar-fixed-top {
-    padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
   }
-  /* line 125, ../sass/zeeshell.scss */
+  /* line 162, ../sass/zeeshell.scss */
   .navbar-fixed-top .navbar-brand {
     font-size: 2em;
     -webkit-transition: all 0.3s;
@@ -142,91 +168,87 @@ header .intro-text .skills {
     transition: all 0.3s;
   }
 
-  /* line 132, ../sass/zeeshell.scss */
+  /* line 169, ../sass/zeeshell.scss */
   .navbar-fixed-top.navbar-shrink {
     padding: 10px 0;
   }
-  /* line 134, ../sass/zeeshell.scss */
+  /* line 171, ../sass/zeeshell.scss */
   .navbar-fixed-top.navbar-shrink .navbar-brand {
     font-size: 1.5em;
   }
 }
-/* line 140, ../sass/zeeshell.scss */
+/* line 177, ../sass/zeeshell.scss */
 .navbar {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 144, ../sass/zeeshell.scss */
+/* line 181, ../sass/zeeshell.scss */
 .navbar a:focus {
   outline: none;
 }
-/* line 147, ../sass/zeeshell.scss */
+/* line 184, ../sass/zeeshell.scss */
 .navbar .navbar-nav {
   letter-spacing: 1px;
 }
-/* line 150, ../sass/zeeshell.scss */
+/* line 187, ../sass/zeeshell.scss */
 .navbar .navbar-nav li a:focus {
   outline: none;
 }
 
-/* line 157, ../sass/zeeshell.scss */
+/* line 194, ../sass/zeeshell.scss */
 .navbar-default,
 .navbar-inverse {
   border: none;
 }
 
-/* line 162, ../sass/zeeshell.scss */
+/* line 199, ../sass/zeeshell.scss */
 section {
   padding: 100px 0;
 }
-/* line 164, ../sass/zeeshell.scss */
+/* line 201, ../sass/zeeshell.scss */
 section h2 {
   margin: 0;
   font-size: 3em;
 }
 
-/* line 170, ../sass/zeeshell.scss */
+/* line 207, ../sass/zeeshell.scss */
 section.success {
-  background: #18BC9C;
+  background: #EA073E;
   color: white;
 }
-/* line 174, ../sass/zeeshell.scss */
-section.success a,
-section.success a:hover,
-section.success a:focus,
-section.success a:active,
-section.success a.active {
-  color: #2C3E50;
+/* line 211, ../sass/zeeshell.scss */
+section.success a:hover, section.success a:focus, section.success a:active, section.success a:active {
+  color: #EA073E;
   outline: none;
 }
 
 @media (max-width: 767px) {
-  /* line 185, ../sass/zeeshell.scss */
+  /* line 222, ../sass/zeeshell.scss */
   section {
     padding: 75px 0;
   }
 
-  /* line 188, ../sass/zeeshell.scss */
+  /* line 225, ../sass/zeeshell.scss */
   section.first {
     padding-top: 75px;
   }
 }
-/* line 194, ../sass/zeeshell.scss */
+/* line 231, ../sass/zeeshell.scss */
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
 }
-/* line 197, ../sass/zeeshell.scss */
+/* line 234, ../sass/zeeshell.scss */
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
-/* line 202, ../sass/zeeshell.scss */
+/* line 239, ../sass/zeeshell.scss */
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: fade(#18BC9C, 90%);
+  background: fade(#EA073E, 90%);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -235,11 +257,11 @@ section.success a.active {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
 }
-/* line 211, ../sass/zeeshell.scss */
+/* line 248, ../sass/zeeshell.scss */
 #portfolio .portfolio-item .portfolio-link .caption:hover {
   opacity: 1;
 }
-/* line 214, ../sass/zeeshell.scss */
+/* line 251, ../sass/zeeshell.scss */
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
   width: 100%;
@@ -250,27 +272,27 @@ section.success a.active {
   margin-top: -12px;
   color: white;
 }
-/* line 223, ../sass/zeeshell.scss */
+/* line 260, ../sass/zeeshell.scss */
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
   margin-top: -12px;
 }
-/* line 226, ../sass/zeeshell.scss */
+/* line 263, ../sass/zeeshell.scss */
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
 #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
   margin: 0;
 }
-/* line 234, ../sass/zeeshell.scss */
+/* line 271, ../sass/zeeshell.scss */
 #portfolio * {
   z-index: 2;
 }
 
 @media (min-width: 767px) {
-  /* line 241, ../sass/zeeshell.scss */
+  /* line 278, ../sass/zeeshell.scss */
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
 }
-/* line 247, ../sass/zeeshell.scss */
+/* line 284, ../sass/zeeshell.scss */
 .btn-outline {
   color: white;
   font-size: 20px;
@@ -279,21 +301,21 @@ section.success a.active {
   transition: all 0.3s ease-in-out;
   margin-top: 15px;
 }
-/* line 254, ../sass/zeeshell.scss */
-.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
-  color: #18BC9C;
+/* line 292, ../sass/zeeshell.scss */
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline:active {
+  color: #EA073E;
   background: white;
   border: solid 2px white;
 }
 
-/* line 264, ../sass/zeeshell.scss */
+/* line 302, ../sass/zeeshell.scss */
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 269, ../sass/zeeshell.scss */
+/* line 307, ../sass/zeeshell.scss */
 .floating-label-form-group input,
 .floating-label-form-group textarea {
   z-index: 1;
@@ -307,7 +329,7 @@ section.success a.active {
   box-shadow: none !important;
   resize: none;
 }
-/* line 282, ../sass/zeeshell.scss */
+/* line 320, ../sass/zeeshell.scss */
 .floating-label-form-group label {
   display: block;
   z-index: 0;
@@ -324,52 +346,52 @@ section.success a.active {
   -ms-transition: top 0.3s ease,opacity 0.3s ease;
   transition: top 0.3s ease,opacity 0.3s ease;
 }
-/* line 298, ../sass/zeeshell.scss */
+/* line 336, ../sass/zeeshell.scss */
 .floating-label-form-group:not(:first-child) {
   padding-left: 14px;
   border-left: 1px solid #eeeeee;
 }
 
-/* line 305, ../sass/zeeshell.scss */
+/* line 343, ../sass/zeeshell.scss */
 .floating-label-form-group-with-value label {
   top: 0;
   opacity: 1;
 }
 
-/* line 312, ../sass/zeeshell.scss */
+/* line 350, ../sass/zeeshell.scss */
 .floating-label-form-group-with-focus label {
-  color: #18BC9C;
+  color: #EA073E;
 }
 
-/* line 317, ../sass/zeeshell.scss */
+/* line 355, ../sass/zeeshell.scss */
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 
-/* line 321, ../sass/zeeshell.scss */
+/* line 359, ../sass/zeeshell.scss */
 footer {
   color: white;
 }
-/* line 323, ../sass/zeeshell.scss */
+/* line 361, ../sass/zeeshell.scss */
 footer h3 {
   margin-bottom: 30px;
 }
-/* line 326, ../sass/zeeshell.scss */
+/* line 364, ../sass/zeeshell.scss */
 footer .footer-above {
   padding-top: 50px;
-  background-color: #2C3E50;
+  background-color: #EA073E;
 }
-/* line 330, ../sass/zeeshell.scss */
+/* line 368, ../sass/zeeshell.scss */
 footer .footer-col {
   margin-bottom: 50px;
 }
-/* line 333, ../sass/zeeshell.scss */
+/* line 371, ../sass/zeeshell.scss */
 footer .footer-below {
   padding: 25px 0;
-  background-color: #233140;
+  background-color: #d10637;
 }
 
-/* line 339, ../sass/zeeshell.scss */
+/* line 377, ../sass/zeeshell.scss */
 .btn-social {
   display: inline-block;
   height: 50px;
@@ -381,14 +403,14 @@ footer .footer-below {
   line-height: 45px;
 }
 
-/* line 350, ../sass/zeeshell.scss */
+/* line 388, ../sass/zeeshell.scss */
 .btn:focus,
 .btn:active,
 .btn.active {
   outline: none;
 }
 
-/* line 356, ../sass/zeeshell.scss */
+/* line 394, ../sass/zeeshell.scss */
 .scroll-top {
   position: fixed;
   right: 2%;
@@ -397,7 +419,7 @@ footer .footer-below {
   height: 50px;
   z-index: 1049;
 }
-/* line 363, ../sass/zeeshell.scss */
+/* line 401, ../sass/zeeshell.scss */
 .scroll-top .btn {
   font-size: 20px;
   width: 50px;
@@ -405,12 +427,12 @@ footer .footer-below {
   border-radius: 100%;
   line-height: 28px;
 }
-/* line 369, ../sass/zeeshell.scss */
+/* line 407, ../sass/zeeshell.scss */
 .scroll-top .btn:focus {
   outline: none;
 }
 
-/* line 376, ../sass/zeeshell.scss */
+/* line 414, ../sass/zeeshell.scss */
 .portfolio-modal .modal-content {
   border-radius: 0;
   background-clip: border-box;
@@ -421,20 +443,20 @@ footer .footer-below {
   padding: 100px 0;
   text-align: center;
 }
-/* line 385, ../sass/zeeshell.scss */
+/* line 423, ../sass/zeeshell.scss */
 .portfolio-modal .modal-content h2 {
   margin: 0;
   font-size: 3em;
 }
-/* line 389, ../sass/zeeshell.scss */
+/* line 427, ../sass/zeeshell.scss */
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
 }
-/* line 392, ../sass/zeeshell.scss */
+/* line 430, ../sass/zeeshell.scss */
 .portfolio-modal .modal-content .item-details {
   margin: 30px 0;
 }
-/* line 396, ../sass/zeeshell.scss */
+/* line 434, ../sass/zeeshell.scss */
 .portfolio-modal .close-modal {
   position: absolute;
   width: 75px;
@@ -444,16 +466,16 @@ footer .footer-below {
   right: 25px;
   cursor: pointer;
 }
-/* line 404, ../sass/zeeshell.scss */
+/* line 442, ../sass/zeeshell.scss */
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
 }
-/* line 407, ../sass/zeeshell.scss */
+/* line 445, ../sass/zeeshell.scss */
 .portfolio-modal .close-modal .lr {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: #2C3E50;
+  background-color: #EA073E;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -461,11 +483,11 @@ footer .footer-below {
   /* Safari and Chrome */
   z-index: 1051;
 }
-/* line 418, ../sass/zeeshell.scss */
+/* line 456, ../sass/zeeshell.scss */
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: #2C3E50;
+  background-color: #EA073E;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
@@ -473,7 +495,7 @@ footer .footer-below {
   /* Safari and Chrome */
   z-index: 1052;
 }
-/* line 431, ../sass/zeeshell.scss */
+/* line 469, ../sass/zeeshell.scss */
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;

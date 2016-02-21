@@ -5,7 +5,7 @@ PublishDir: "public/en-US"
 
 LanguageCode: en-US
 BaseURL: "https://zeeshell.com/en-US/"
-Title: "ZeeShell Limited"
+Title: "ZeeShell"
 Copyright: "ZeeShell Ltd"
 
 Params:
@@ -18,9 +18,6 @@ Params:
     AlternateBaseDir: "/ja/"
     AlternateLangCode: "ja"
     GoogleAnalyticsID: "UA-37352183-2"
-    GoogleSiteSearchID: "006388931142546140887:uidl4-zslfu"
-    GoogleSiteSearchLangCode: "en"
-    FacebookLangCode: "en_US"
     Locales:
          - Code: "en-US"
            Name: "English"
@@ -30,38 +27,37 @@ Params:
         ISO8601: "2006-01-02T15:04:05-07:00"
         Localized: "Feburary 16, 2016"
 
-Taxonomies:
-    category: "categories"
-    version: "versions"
-    status: "statuses"
-
 Menu:
     Main:
-        - Name: "Home"
+        - Name: "What We Do"
           Weight: 0
-          Identifier: "home"
-          URL: "/"
-        - Name: "Blog"
+          Identifier: "what-we-do"
+          URL: "#what-we-do"
+        - Name: "Portfolio"
           Weight: 1
-          Identifier: "blog"
-          URL: "/blog/"
+          Identifier: "portfolio"
+          URL: "#portfolio"
         - Name: "About"
           Weight: 2
           Identifier: "about"
-          URL: "/about/"
+          URL: "#about"
         - Name: "Contact"
           Weight: 3
           Identifier: "contact"
-          URL: "/contact/"
+          URL: "#contact"
+        - Name: "Blog"
+          Weight: 4
+          Identifier: "blog"
+          URL: "/blog/"  
     External:
         - Name: "Feed"
           Weight: 0
-          Identifier: "feed"
+          Identifier: "rss"
           URL: "/index.xml"
         - Name: "Twitter"
           Weight: 1
           Identifier: "twitter"
-          URL: "https://twitter.com/FxSiteCompat"
+          URL: "https://twitter.com/eyedol"
         - Name: "Google+"
           Weight: 2
           Identifier: "google-plus"

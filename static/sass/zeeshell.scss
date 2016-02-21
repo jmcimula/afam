@@ -2,8 +2,8 @@
 @import "mixins";
 
 body {
-    overflow-x: hidden;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
 }
 
 p {
@@ -14,19 +14,56 @@ p.small {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-    color: $brand-success;
-    outline: none;
+a {
+    &:hover,
+    &:focus,
+    &:active,
+    &:active {
+        color: $brand-success;
+        outline: none;
+    }
+}
+
+.powered-by {
+    a {
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: black;
+            outline: none;
+        }
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
     font-weight: 700;
+}
+
+.navbar-brand {
+    color: black;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active  {
+        color: white;
+        outline: none;
+    }
+}
+
+// Default navbar
+.navbar-default {
+    .navbar-brand {
+        color: black;
+        &:hover,
+        &:focus {
+            color: white;
+        }
+    }
 }
 
 hr.star-light,
@@ -74,7 +111,7 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    background: $brand-success;
+    background: $orange;
     color: white;
     .container {
         padding-top: 100px;
@@ -85,6 +122,7 @@ header {
         margin: 0 auto 20px;
     }
     .intro-text {
+        color: black;
         .name {
             display: block;
             font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -118,7 +156,6 @@ header {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 25px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
@@ -138,7 +175,7 @@ header {
 }
 
 .navbar {
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     a:focus {
@@ -170,14 +207,14 @@ section {
 section.success {
     background: $brand-success;
     color: white;
-
-    a,
-    a:hover,
-    a:focus,
-    a:active,
-    a.active {
-      color: $brand-primary;
-      outline: none;
+    a {
+        &:hover,
+        &:focus,
+        &:active,
+        &:active {
+            color: $brand-primary;
+            outline: none;
+        }
     }
 }
 
@@ -251,10 +288,11 @@ section.success {
     background: transparent;
     transition: all 0.3s ease-in-out;
     margin-top: 15px;
+    
     &:hover,
     &:focus,
     &:active,
-    &.active {
+    &:active {
         color: $brand-success;
         background: white;
         border: solid 2px white;
