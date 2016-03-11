@@ -5,15 +5,15 @@ PublishDir: "public/en-US"
 
 LanguageCode: en-US
 BaseURL: "https://zeeshell.com/en-US/"
-Title: "ZeeShell"
-Copyright: "ZeeShell Ltd"
+Title: "Addhen"
+Copyright: "Addhen Ltd"
 
 Params:
-    Domain: "zeeshell.com"
+    Domain: "addhen.com"
     Publisher:
-        Name: "ZeeShell"
-        GoogleUserName: "ZeeShell"
-        TwitterUserName: "ZeeShell"
+        Name: "Addhen"
+        GoogleUserName: "Addhen"
+        TwitterUserName: "Addhen"
     BaseDir: "/en-US/"
     AlternateBaseDir: "/ja/"
     AlternateLangCode: "ja"
@@ -37,16 +37,12 @@ Menu:
           Weight: 1
           Identifier: "portfolio"
           URL: "#portfolio"
-        - Name: "About"
+        - Name: "Contact Us"
           Weight: 2
-          Identifier: "about"
-          URL: "#about"
-        - Name: "Contact"
-          Weight: 3
           Identifier: "contact"
           URL: "#contact"
         - Name: "Blog"
-          Weight: 4
+          Weight: 3
           Identifier: "blog"
           URL: "/blog/"  
     External:

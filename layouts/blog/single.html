@@ -6,30 +6,19 @@
 <meta name="description" content="{{ substr .Summary 0 250 }} ...">
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
-<section>
 <div class="container">
     <!-- body starts -->
     <div class="row">
-        <div class="col-lg-7">
-            <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemref="meta-general copyright translation">
-            <header>
-                <h1 itemprop="headline">{{ .Title }}</h1>
-                <p><time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }} {{ if isset .Params "author" }} &#44; {{ .Params.author }} {{ end }}</time></p>
-            </header>
-          <div itemprop="articleBody">
-            {{ .Content }}
-          </div>
-        </article>
-        </div>
-        <div class="col-lg-3 col-sm-offset-2">
-            <nav class="nocontent">
-                <h4>{{ $strings.recent_blog_posts }}</h4>
-                <ul>{{ range first 10 (where $.Site.Pages "Section" "blog") }}
-                    <li><a href="{{ replace .Permalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}">{{ .Title | markdownify }}</a></li>{{ end }}
-                </ul>
-            </nav>
+        <div class="post-content col-sm-10 col-sm-offset-1">	
+        	<h3>{{ .Title }}</h3>
+        	<p class="post-meta">{{ if isset .Params "author" }} Posted by {{ .Params.author }} {{ end }} on <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></p>
+        	<hr />
         </div>
     </div>
+    <div class="row">
+    	<div class="col-sm-10 col-sm-offset-1">
+    		{{ .Content }}
+    	</div>
+    </div>
 </div>
-</section>
 {{ partial "footer.html" . }}
