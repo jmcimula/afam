@@ -20,7 +20,6 @@ Please report any regressions you encountered through one of the following ways:
 Social media: Tweet us the URL of your problematic site. You can also send us a direct message via Twitter or Facebook.
 GitHub: If you have a GitHub account, it might be easy to file a new issue on our repository.
 Bugzilla: If you have Mozilla’s Bugzilla account and can recognize an appropriate component for your issue, file a new bug directly.
-<?prettify?>
 <pre class="prettyprint linenums">
 /**
  * Gets the messages(SMSs) sent by SMSsync as a POST request.

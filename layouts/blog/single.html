@@ -9,16 +9,27 @@
 <div class="container">
     <!-- body starts -->
     <div class="row">
-        <div class="post-content col-sm-10 col-sm-offset-1">	
-        	<h3>{{ .Title }}</h3>
-        	<p class="post-meta">{{ if isset .Params "author" }} Posted by {{ .Params.author }} {{ end }} on <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></p>
-        	<hr />
+        <div class="wrap-content col-sm-12">    
+            <h3>{{ .Title }}</h3>
+            <hr />
+            <ul class="list-inline">
+                <li>
+                   <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
+                </li>
+                {{ if isset .Params "author" }}<li><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
+            </ul>
         </div>
     </div>
     <div class="row">
-    	<div class="col-sm-10 col-sm-offset-1">
-    		{{ .Content }}
-    	</div>
+        <div class="col-sm-12">
+            {{ .Content }}
+        </div>
+    </div>
+    <!-- comment section -->
+    <div class="row">
+        <div class="wrap-content col-sm-12">
+            {{ partial "disqus.html" . }}
+        </div>
     </div>
 </div>
 {{ partial "footer.html" . }}

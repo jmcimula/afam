@@ -5,19 +5,20 @@ PublishDir: "public/en-US"
 
 LanguageCode: en-US
 BaseURL: "https://zeeshell.com/en-US/"
-Title: "Addhen"
-Copyright: "Addhen Ltd"
+Title: "addhen"
+Copyright: "addhen Ltd"
 
 Params:
     Domain: "addhen.com"
     Publisher:
-        Name: "Addhen"
-        GoogleUserName: "Addhen"
-        TwitterUserName: "Addhen"
+        Name: "addhen"
+        GoogleUserName: "addhen"
+        TwitterUserName: "addhen"
     BaseDir: "/en-US/"
     AlternateBaseDir: "/ja/"
     AlternateLangCode: "ja"
-    GoogleAnalyticsID: "UA-37352183-2"
+    GoogleAnalyticsID: "<REPLACE With GA UA Code>"
+    disqusShortname: "addhen"
     Locales:
          - Code: "en-US"
            Name: "English"
@@ -25,7 +26,7 @@ Params:
            Name: "Japanese"
     DateFormat:
         ISO8601: "2006-01-02T15:04:05-07:00"
-        Localized: "Feburary 16, 2016"
+        Localized: "Feburary 16, 2006"
 
 Menu:
     Main:

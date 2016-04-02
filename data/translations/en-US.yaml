@@ -9,15 +9,9 @@ sections:
 
 # Meta
 contentinfo:
-    organization: "<span>Firefox Site Compatibility</span> <span>Working Group</span>"
-    category: "Technology"
-    audienceType: "Web developers"
     tagline: "Android Experts"
-    description: "A community-driven Web developer engagement initiative focused on the backward compatibility and regressions of Firefox. Documents, latest updates & more."
-    legal: "Mozilla and Firefox are trademarks of The Mozilla Foundation. This initiative is not affiliated with Mozilla."
+    description: "Website for addhen Ltd. Highlighting its portfolio and service offerings."
     generator: 'Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a>'
-    hosting: 'Hosted by <a href="https://www.digitalocean.com/?refcode=79ce8405cfad" rel="nofollow">DigitalOcean</a>'
-    contribute: '<a href="%s">Improve this page</a>'
     translation: '<a href="%s" itemprop="url">日本語</a>'
 
 # Contact form
@@ -34,14 +28,13 @@ contactform:
 whatwedo:
     column_one: "Addhen is specialized in developing apps for the Android platform: apps for phones, tablets, wearables.
 We value direct communication, a pragmatic approach to problem solving and results driven approach.
-<p>Addhen can <strong>create</strong> your app from the ground up, port it from a different platform, or help to maintain and improve any existing Android app.</p>"
+Addhen can <strong>create</strong> your app from the ground up, port it from a different platform, or help to maintain and improve any existing Android app."
     column_two: 'Addhen can advise you on topics like Android design and UX, mobile security, mobile friendly API&rsquo;s, scaling mobile server back ends and many more.
-<p>Interested to know more about what we can do for your business? You can reach us at <a href="mailto:workwithus@addhen.com">workwithus@addhen.com</a></p>'
+<p>Interested to know more about what we can do for your business? Reach us at <a href="mailto:workwithus@addhen.com">workwithus@addhen.com</a></p>'
 
 # About
 about:
-    column_one: "Addhen is a mobile application company based out in Accra, Ghana and Sendai, Japan. We are experienced in Mobile development, Web applications, Geo based applications and much more. Our expertise lies in Android apps development. Feel free to engage us."
-    column_two: "Addhen was founded by Henry Addo"
+    description: "Addhen is a mobile application company based out in Accra, Ghana and Sendai, Japan. We are experienced in Mobile development, Web applications, Geo based applications and more. Our expertise lies in Android apps development. Feel free to engage us."
 
 # Single blog page
 recent_blog_posts: "Recent"
@@ -60,4 +53,4 @@ feed:
 # Portfolio Modal
 portfolio:
     close: "Close"
-    readmore: "Read more"
+    readmore: "See demo"

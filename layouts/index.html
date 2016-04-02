@@ -24,7 +24,7 @@
                 <!--Heading-->
                 <h4>{{ $strings.contentinfo.tagline | safeHTML }}</h4>
                 <!--Description-->
-                <p>{{ $strings.about.column_one | safeHTML }}</p>
+                <p>{{ $strings.about.description | safeHTML }}</p>
                 <!--Call to action button-->
                 <a href="{{ $.Site.Params.BaseDir }}#{{ $contact.Identifier }}" class="btn btn-danger waves-effect waves-light ">{{ $contact.Name }}</a>
             </div>
@@ -35,7 +35,7 @@
         {{ $whatwedo := index $menus 0 }}
         <section id="{{ $whatwedo.Identifier }}">
             <div class="divider-new wow bounceIn">{{ $whatwedo.Name }}</div>
-            <div class="row">
+            <div class="row wrap-content">
                 <p>{{ $strings.whatwedo.column_one | safeHTML }}</p>
                 <p>{{ $strings.whatwedo.column_two | safeHTML }}</p>
             </div>
@@ -45,14 +45,14 @@
         {{ $portfolio := index $menus 1 }}
         <section id="{{ $portfolio.Identifier }}">
             <div class="divider-new">{{$portfolio.Name}}</div>
-            <div class="row">
+            <div class="row wrap-content">
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp">
                         <div class="card-image">
-                            <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project1.png">
-                            <span class="card-title">FindReels Android App</span>
+                            <img src="{{ .Site.BaseURL }}img/screenshots/findreels.png">
                         </div>
                         <div class="card-content">
+                            <h5 class="text-center">FindReels App</h5>
                             <p>A beautiful and feature rich Android app for scheduling movies.</p>
                         </div>
                         <div class="card-action">
@@ -66,10 +66,10 @@
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp" data-wow-delay="0.2s">
                         <div class="card-image">
-                            <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project3.png">
-                            <span class="card-title">SMSsync</span>
+                            <img src="{{ .Site.BaseURL }}img/screenshots/smssync.png">
                         </div>
                         <div class="card-content">
+                            <h5 class="text-center">SMSsync</h5>
                             <p>Free &amp; Open Sourced SMS gateway for Android. Turns your Android device into a powerful SMS gateway.</p>
                         </div>
                         <div class="card-action">
@@ -83,10 +83,10 @@
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp" data-wow-delay="0.4s">
                         <div class="card-image">
-                            <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project4.png">
-                            <span class="card-title">Ushahidi Android App</span>
+                            <img src="{{ .Site.BaseURL }}img/screenshots/ushahidi.png">
                         </div>
                         <div class="card-content">
+                            <h5 class="text-center">Ushahidi Android App</h5>
                             <p>Free &amp; Open Sourced Android client for the Ushahidi Platform. Made heavy use of the Google Maps Android APIs.</p>
                         </div>
                         <div class="card-action">
@@ -103,10 +103,10 @@
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp">
                         <div class="card-image">
-                            <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project1.png">
-                            <span class="card-title">Kasahorow Android App</span>
+                            <img src="{{ .Site.BaseURL }}img/screenshots/kasahorow-keyboard.png">
                         </div>
                         <div class="card-content">
+                            <h5 class="text-center">Kasahorow App</h5>
                             <p>An Android keyboard for serveral Ghanaian languages including Akan, Ga, Ewe, and Hausa.</p>
                         </div>
                         <div class="card-action">
@@ -120,10 +120,10 @@
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp" data-wow-delay="0.2s">
                         <div class="card-image">
-                            <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project3.png">
-                            <span class="card-title">Spotify Music Player</span>
+                            <img src="{{ .Site.BaseURL }}img/screenshots/spotify-streamer.png">
                         </div>
                         <div class="card-content">
+                            <h5 class="text-center">Spotify Music Player</h5>
                             <p>A music player that displays an artist's top 10 tracks on Spotify and provides streaming playback of audio using Android's Mediaplayer API.</p>
                         </div>
                         <div class="card-action">
@@ -138,9 +138,9 @@
                     <div class="card hoverable wow fadeInUp" data-wow-delay="0.4s">
                         <div class="card-image">
                             <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project4.png">
-                            <span class="card-title">Sunshine Weather Watch Face</span>
                         </div>
                         <div class="card-content">
+                            <h5 class="text-center">Weather Watch Face</h5>
                             <p>A watch face for Android Wear so users can access Sunshine's weather information at a glance.</p>
                         </div>
                         <div class="card-action">
@@ -162,13 +162,8 @@
 {{ $contact := index $menus 2 }}
 <section id="{{ $contact.Identifier }}">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>{{$contact.Name}}</h2>
-                <hr class="star-primary">
-            </div>
-        </div>
-        <div class="row">
+        <div class="divider-new">{{$contact.Name}}</div>
+        <div class="row wrap-content">
             <div class="col-lg-8 ">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                 <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
