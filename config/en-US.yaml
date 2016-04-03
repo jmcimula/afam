@@ -47,19 +47,15 @@ Menu:
           Identifier: "blog"
           URL: "/blog/"  
     External:
-        - Name: "Feed"
-          Weight: 0
-          Identifier: "rss"
-          URL: "/index.xml"
-        - Name: "Twitter"
-          Weight: 1
-          Identifier: "twitter"
-          URL: "https://twitter.com/eyedol"
         - Name: "Google+"
-          Weight: 2
+          Weight: 1
           Identifier: "google-plus"
-          URL: "https://plus.google.com/+ZeeShell"
+          URL: "https://plus.google.com/u/0/100985884362110852858"
+        - Name: "Github"
+          Weight: 2
+          Identifier: "github"
+          URL: "https://github.com/addhen"
         - Name: "Bitbucket"
           Weight: 3
           Identifier: "bitbucket"
-          URL: "https://bitbucket.org/zeeshell"
+          URL: "https://bitbucket.org/addhen"
