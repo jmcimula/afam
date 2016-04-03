@@ -4,7 +4,7 @@ ContentDir: "content/en-US"
 PublishDir: "public/en-US"
 
 LanguageCode: en-US
-BaseURL: "https://zeeshell.com/en-US/"
+BaseURL: "https://addhen.com/en-US/"
 Title: "addhen"
 Copyright: "addhen Ltd"
 
