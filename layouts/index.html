@@ -5,6 +5,12 @@
 <meta property="og:description" content="{{ $strings.contentinfo.description }}">
 <meta name="description" content="{{ .Site.Params.description}}">
 <meta name="author" content="{{ .Site.Params.author }}">
+<!-- Twitter card support -->
+<meta name="twitter:card" content="{{ $strings.contentinfo.description }}" />
+<meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ $strings.contentinfo.tagline }}" />
+<meta name="twitter:description" content="{{ .Site.Params.description}}" />
+<meta name="twitter:creator" content="@addhen" />
+<meta name="twitter:site" content="@addhen" />
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
