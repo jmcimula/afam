@@ -12,7 +12,6 @@ contentinfo:
     tagline: "Android Experts"
     description: "Website for addhen Ltd. Highlighting its portfolio and service offerings."
     generator: 'Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a>'
-    translation: '<a href="%s" itemprop="url">日本語</a>'
 
 # Contact form
 contactform:

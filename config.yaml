@@ -1,12 +1,10 @@
 MetaDataFormat: "yaml"
 
-ContentDir: "content/en-US"
-PublishDir: "public/en-US"
-
-LanguageCode: en-US
-BaseURL: "https://addhen.com/en-US/"
+LanguageCode: "en-US"
+BaseURL: "https://www.addhen.com"
+Theme: "mdb-addhen"
 Title: "addhen"
-Copyright: "addhen Ltd"
+Copyright: "addhen limited"
 
 Params:
     Domain: "addhen.com"
@@ -14,16 +12,11 @@ Params:
         Name: "addhen"
         GoogleUserName: "addhen"
         TwitterUserName: "addhen"
-    BaseDir: "/en-US/"
-    AlternateBaseDir: "/ja/"
-    AlternateLangCode: "ja"
     GoogleAnalyticsID: "<REPLACE With GA UA Code>"
     disqusShortname: "addhen"
     Locales:
          - Code: "en-US"
            Name: "English"
-         - Code: "ja"
-           Name: "Japanese"
     DateFormat:
         ISO8601: "2006-01-02T15:04:05-07:00"
         Localized: "Feburary 16, 2006"

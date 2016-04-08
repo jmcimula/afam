@@ -1,0 +1,42 @@
+<!-- Navigation -->
+<!--Header Section-->
+<header>
+    <!--Navigation-->
+    <nav class="navbar danger-color navbar-fixed-top z-depth-1" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="waves-effect waves-light navbar-brand" href="{{ $.Site.BaseURL }}"><span class="logo-shadow">addhen</span></a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav smooth-scroll">
+                    {{ if .IsHome }}
+                        {{ range $.Site.Menus.Main }}
+                            {{ if eq .Identifier "blog" }}
+                                <li class="page-scroll"><a href="{{ .Identifier }}">{{ .Name }}</a></li>
+                            {{ else }}
+                                <li class="page-scroll"><a href="#{{ .Identifier }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        {{ end }}
+                    {{ else }}
+                        {{ range $.Site.Menus.Main }}
+                            {{ if eq .Identifier "blog" }}
+                                <li class="page-scroll"><a href="{{ $.Site.BaseURL }}{{ .Identifier }}">{{ .Name }}</a></li>
+                            {{ else }}
+                                <li class="page-scroll"><a href="{{ $.Site.BaseURL }}#{{ .Identifier }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/.Navigation-->
+</header>
+<!--/.Header Section-->

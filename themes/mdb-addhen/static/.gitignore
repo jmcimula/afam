@@ -1,0 +1,6 @@
+*.swp
+bin
+gen
+*.DS_Store
+.sass-cache
+Gemfile.lock

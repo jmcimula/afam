@@ -1,4 +1,4 @@
-zeeshell.com website
+www.addhen.com website
 
 ### TO build SCSS
 
@@ -13,7 +13,4 @@ Then issue
 ### Run website locally
 
 **English**
-`hugo server --buildDrafts --watch --config=config/en-US.yaml`
-
-**Japanese**
-`hugo server --buildDrafts --watch --config=config/jp.yaml`
+`hugo server --buildDrafts --watch --config=config.yaml`
