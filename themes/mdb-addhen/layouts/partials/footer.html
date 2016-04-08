@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="footer-col col-md-4">
-                    <address>
+                    <address class="pull-right">
                         <h5 class="white-text wow fadeInDown">Sendai, Japan</h5>
                         <p class="white-text">Green Hills A 102<br />1-30-8, Izumi Chuo, Sendai<br />Miyagi, Japan<br />981-3133</p>
                     </address>
@@ -28,7 +28,7 @@
         </div>
         <div class="footer-copyright text-center rgba-black-light">
             <div class="container-fluid">
-                &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }} <span class="pull-right powered-by"> &middot; {{ $strings.contentinfo.generator | safeHTML }}</span>
+                &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }}
             </div>
         </div>
     </footer>
