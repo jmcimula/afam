@@ -9705,15 +9705,15 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   height: 60px;
   line-height: 30px;
-  color: #000;
+  color: #FFF;
 }
 
 /* line 37, ../sass/addhen.scss */
 a.navbar-brand {
-  font-family: "Arbutus Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-style: bold;
   font-size: 35px;
-  font-weight: 400;
+  font-weight: 500;
 }
 /* line 42, ../sass/addhen.scss */
 a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active, a.navbar-brand:active {
@@ -9722,7 +9722,7 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active, a.navbar-bran
 
 /* line 50, ../sass/addhen.scss */
 .logo-shadow {
-  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 0, rgba(0, 0, 0, 0.2) 2px 2px 0, rgba(0, 0, 0, 0.2) 3px 3px 0;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0, rgba(0, 0, 0, 0.1) 1px 1px 0, rgba(0, 0, 0, 0.2) 1px 1px 0;
 }
 
 /* line 55, ../sass/addhen.scss */
