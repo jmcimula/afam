@@ -1,0 +1,33 @@
+{{ partial "head.html" . }}
+<title>{{ .Title }} | {{ $.Site.Title }}</title>
+{{ partial "header-media-links.html" . }}
+{{ partial "menu.html" . }}
+<section>
+<div class="container">
+    {{ range .Data.Pages }} 
+    <div class="row">
+        <div class="wrap-content col-sm-12"> 
+            <h3>{{ .Title }}</h3>
+            <hr />
+            <ul class="list-inline">
+                <li>
+                   <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
+                </li>
+                {{ if isset .Params "author" }}<li><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            {{ .Summary }}
+            {{ if .Truncated }}
+            <div class="read-more-link">
+                <a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"><nobr><span class="text-info">Read more →</span></nobr></a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ partial "footer.html" . }}
+</section>
