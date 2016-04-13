@@ -31,20 +31,30 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     height: 60px;
     line-height: 30px;
-    color: #FFF;
+    color: #000;
 }
 
 a.navbar-brand {
     font-family: 'Roboto Slab', serif;
     font-style: bold;
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 700;
     &:hover,
     &:focus,
     &:active,
     &:active  {
         outline: none;
     }
+}
+
+#logo a {
+  font-family: 'Roboto Slab', serif;
+  text-indent: 30px;
+  font-size: 35px;
+  background: transparent url(../img/logomark.png) no-repeat 0px 15px;
+  display: block;
+  color: #000;
+  outline: none;
 }
 
 .logo-shadow {

@@ -3,7 +3,7 @@ MetaDataFormat: "yaml"
 LanguageCode: "en-US"
 BaseURL: "https://www.addhen.com"
 Theme: "mdb-addhen"
-Title: "addhen"
+Title: "addhen.com"
 Copyright: "addhen limited"
 
 Params:
