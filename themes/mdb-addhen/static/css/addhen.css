@@ -9723,9 +9723,9 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active, a.navbar-bran
 /* line 50, ../sass/addhen.scss */
 #logo a {
   font-family: 'Roboto Slab', serif;
-  text-indent: 30px;
+  text-indent: 50px;
   font-size: 35px;
-  background: transparent url(../img/logomark.png) no-repeat 0px 15px;
+  background: transparent url(../img/logomark.png) no-repeat 15px 15px;
   display: block;
   color: #000;
   outline: none;
