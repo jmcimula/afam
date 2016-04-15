@@ -35,10 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a.navbar-brand {
-    font-family: "Arbutus Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-style: bold;
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 700;
     &:hover,
     &:focus,
     &:active,
@@ -47,8 +47,18 @@ a.navbar-brand {
     }
 }
 
+#logo a {
+  font-family: 'Roboto Slab', serif;
+  text-indent: 30px;
+  font-size: 35px;
+  background: transparent url(../img/logomark.png) no-repeat 0px 15px;
+  display: block;
+  color: #000;
+  outline: none;
+}
+
 .logo-shadow {
-  @include text-shadow(rgba(black, 0.2) 1px 1px 0, rgba(black, 0.2) 2px 2px 0, rgba(black, 0.2) 3px 3px 0);
+  @include text-shadow(rgba(black, 0.1) 1px 1px 0, rgba(black, 0.1) 1px 1px 0, rgba(black, 0.2) 1px 1px 0);
 }
 
 .card-panel {
