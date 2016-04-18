@@ -2,7 +2,7 @@
 <!--Header Section-->
 <header>
     <!--Navigation-->
-    <nav class="navbar danger-color navbar-fixed-top z-depth-1" role="navigation">
+    <nav class="navbar navbar-fixed-top nav-background-light z-depth-1" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -11,8 +11,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div id="logo">
-                    <a class="waves-effect waves-light navbar-brand" href="{{ $.Site.BaseURL }}">addhen</a>
+                <div class="rgba-black-strong">
+                    <div id="logo">
+                        <a class="waves-effect waves-light navbar-brand" href="{{ $.Site.BaseURL }}">addhen</a>
+                    </div>
                 </div>
             </div>
 
@@ -21,7 +23,7 @@
                     {{ if .IsHome }}
                         {{ range $.Site.Menus.Main }}
                             {{ if eq .Identifier "blog" }}
-                                <li class="page-scroll"><a href="{{ .Identifier }}">{{ .Name }}</a></li>
+                                <li><a href="{{ .Identifier }}">{{ .Name }}</a></li>
                             {{ else }}
                                 <li class="page-scroll"><a href="#{{ .Identifier }}">{{ .Name }}</a></li>
                             {{ end }}
@@ -29,7 +31,7 @@
                     {{ else }}
                         {{ range $.Site.Menus.Main }}
                             {{ if eq .Identifier "blog" }}
-                                <li class="page-scroll"><a href="{{ $.Site.BaseURL }}{{ .Identifier }}">{{ .Name }}</a></li>
+                                <li class="page-scroll active"><a href="{{ $.Site.BaseURL }}{{ .Identifier }}">{{ .Name }}</a></li>
                             {{ else }}
                                 <li class="page-scroll"><a href="{{ $.Site.BaseURL }}#{{ .Identifier }}">{{ .Name }}</a></li>
                             {{ end }}

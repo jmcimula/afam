@@ -1,11 +1,11 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 <!-- Footer -->
-    <footer class="page-footer danger-color-dark center-on-small-only">
+    <footer class="page-footer rgba-black-lighter center-on-small-only">
         <div class="container">
             <div class="row">
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-4 wow">
                     <address>
-                        <h5 class="white-text wow fadeInDown">Accra, Ghana</h5>
+                        <h5 class="white-text fadeInDown">Accra, Ghana</h5>
                         <p class="white-text">PO Box CT 8610, <br />Cantonments, Accra, Ghana,<br /> West Africa.</p>
                     </address>
                 </div>
@@ -18,15 +18,15 @@
                         {{ end }}
                     </ul>
                 </div>
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-4 wow">
                     <address class="pull-right">
-                        <h5 class="white-text wow fadeInDown">Sendai, Japan</h5>
-                        <p class="white-text">Green Hills A 102<br />1-30-8, Izumi Chuo, Sendai<br />Miyagi, Japan<br />981-3133</p>
+                        <h5 class="white-text fadeInDown">Sendai, Japan</h5>
+                        <p class="white-text">Izumi Chuo, Sendai<br />Miyagi, Japan</p>
                     </address>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright text-center rgba-black-light">
+        <div class="footer-copyright text-center rgba-black-lighter">
             <div class="container-fluid">
                 &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }}
             </div>

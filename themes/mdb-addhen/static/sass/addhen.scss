@@ -6,6 +6,7 @@ body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: black;
     margin-top: 100px;
+    background-color: #EEEEEE;
 }
 
 span.powered-by {
@@ -31,7 +32,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     height: 60px;
     line-height: 30px;
-    color: #000;
+    color: #202020;
+    background-color: #fff;
 }
 
 a.navbar-brand {
@@ -49,11 +51,11 @@ a.navbar-brand {
 
 #logo a {
   font-family: 'Roboto Slab', serif;
-  text-indent: 35px;
+  text-indent: 30px;
   font-size: 30px;
   background: transparent url(../img/logomark.svg) no-repeat 10px 20px;
   display: block;
-  color: #fff;
+  color: #202020;
   outline: none;
 
 }
@@ -97,7 +99,8 @@ footer.page-footer a {
 span.post-meta {
     margin: 0;
     padding: 0;
-    font-size:0.8em;color:#777
+    font-size:0.8em;
+    color:#777
 }
 
 div.col-sm-10 h3 {
@@ -139,4 +142,49 @@ textarea.materialize-textarea {
 textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly=readonly]{
     color:rgba(0,0,0,.26);
     border-bottom:1px dotted rgba(0,0,0,.26)
+}
+
+.nav-background-light {
+    background-color: #E0E0E0!important;
+}
+
+.rgba-black-strong {
+    background-color: #000!important;
+}
+
+.rgba-black-lighter {
+    background-color: #202020!important;
+}
+
+.wow {
+    margin-top: 25px;
+}
+
+.navbar .nav {
+    > li > a {
+        color: #202020;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:hover,
+        &:focus {
+            color: #202020;
+            background-color: transparent;
+        }
+    }
+    > .active > a {
+        &,
+        &:hover,
+        &:focus {
+            color: #FFF;
+            background-color: #CC0000;
+        }
+    }
+    > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $navbar-link-disabled-color;
+            background-color: $navbar-link-disabled-bg;
+        }
+    }
 }
