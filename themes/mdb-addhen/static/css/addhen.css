@@ -9723,62 +9723,57 @@ a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active, a.navbar-bran
 /* line 50, ../sass/addhen.scss */
 #logo a {
   font-family: 'Roboto Slab', serif;
-  text-indent: 50px;
-  font-size: 35px;
-  background: transparent url(../img/logomark.png) no-repeat 15px 15px;
+  text-indent: 35px;
+  font-size: 30px;
+  background: transparent url(../img/logomark.svg) no-repeat 10px 20px;
   display: block;
-  color: #000;
+  color: #fff;
   outline: none;
 }
 
-/* line 60, ../sass/addhen.scss */
-.logo-shadow {
-  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0, rgba(0, 0, 0, 0.1) 1px 1px 0, rgba(0, 0, 0, 0.2) 1px 1px 0;
-}
-
-/* line 65, ../sass/addhen.scss */
+/* line 62, ../sass/addhen.scss */
 .card-panel p {
   font-size: 20px;
 }
 
-/* line 70, ../sass/addhen.scss */
+/* line 67, ../sass/addhen.scss */
 p {
   font-size: 16px;
   line-height: 30px;
   color: #666666;
 }
 
-/* line 76, ../sass/addhen.scss */
+/* line 73, ../sass/addhen.scss */
 .footer-social-media {
   margin-top: 50px;
 }
 
-/* line 80, ../sass/addhen.scss */
+/* line 77, ../sass/addhen.scss */
 .github-bg {
   background-color: #333333;
 }
 
-/* line 84, ../sass/addhen.scss */
+/* line 81, ../sass/addhen.scss */
 .bitbucket-bg {
   background-color: #205081;
 }
 
-/* line 88, ../sass/addhen.scss */
+/* line 85, ../sass/addhen.scss */
 .google-plus-bg {
   background-color: #DD4B39;
 }
 
-/* line 92, ../sass/addhen.scss */
+/* line 89, ../sass/addhen.scss */
 footer.page-footer a {
   line-height: 25px;
 }
 
-/* line 96, ../sass/addhen.scss */
+/* line 93, ../sass/addhen.scss */
 footer.page-footer a {
   font-size: 15px;
 }
 
-/* line 100, ../sass/addhen.scss */
+/* line 97, ../sass/addhen.scss */
 span.post-meta {
   margin: 0;
   padding: 0;
@@ -9786,29 +9781,29 @@ span.post-meta {
   color: #777;
 }
 
-/* line 106, ../sass/addhen.scss */
+/* line 103, ../sass/addhen.scss */
 div.col-sm-10 h3 {
   margin: 0;
 }
 
-/* line 110, ../sass/addhen.scss */
+/* line 107, ../sass/addhen.scss */
 .read-more-link {
   margin-top: 10px;
 }
 
-/* line 114, ../sass/addhen.scss */
+/* line 111, ../sass/addhen.scss */
 div.post-content hr {
   margin: 0 0 15px 0;
   padding: 0;
 }
 
-/* line 119, ../sass/addhen.scss */
+/* line 116, ../sass/addhen.scss */
 .wrap-content {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 124, ../sass/addhen.scss */
+/* line 121, ../sass/addhen.scss */
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
@@ -9827,7 +9822,7 @@ textarea.materialize-textarea {
   transition: all 0.3s;
 }
 
-/* line 142, ../sass/addhen.scss */
+/* line 139, ../sass/addhen.scss */
 textarea.materialize-textarea:disabled, textarea.materialize-textarea[readonly=readonly] {
   color: rgba(0, 0, 0, 0.26);
   border-bottom: 1px dotted rgba(0, 0, 0, 0.26);

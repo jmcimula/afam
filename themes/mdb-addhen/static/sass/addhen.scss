@@ -49,16 +49,13 @@ a.navbar-brand {
 
 #logo a {
   font-family: 'Roboto Slab', serif;
-  text-indent: 50px;
-  font-size: 35px;
-  background: transparent url(../img/logomark.png) no-repeat 15px 15px;
+  text-indent: 35px;
+  font-size: 30px;
+  background: transparent url(../img/logomark.svg) no-repeat 10px 20px;
   display: block;
-  color: #000;
+  color: #fff;
   outline: none;
-}
 
-.logo-shadow {
-  @include text-shadow(rgba(black, 0.1) 1px 1px 0, rgba(black, 0.1) 1px 1px 0, rgba(black, 0.2) 1px 1px 0);
 }
 
 .card-panel {
