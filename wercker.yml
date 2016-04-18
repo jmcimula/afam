@@ -3,9 +3,19 @@ box: debian
 # Build definition
 build:
   # The steps that will be executed on build
+
+  # Build css
+  steps:
+    - mylesnoton/sass-compile@0.0.1
+    - sass-compile:
+      source-dir: $WERCKER_ROOT/themes/mdb-addhen/static/sass/
+      output-dir: $WERCKER_ROOT/themes/mdb-addhen/static/css/
+
+  # Build hugo site
   steps:
     - arjen/hugo-build:
         version: 0.15
         config: ./config.yaml
         flags: --buildDrafts=true
+
 # A step that deploys hugo build

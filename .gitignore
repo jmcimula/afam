@@ -1,0 +1,8 @@
+*.swp
+bin
+gen
+*.DS_Store
+.sass-cache
+Gemfile.lock
+addhen.min.css
+bootstrap.min.css
