@@ -37,9 +37,10 @@ deploy:
         filename: $PRIVATEKEY_PATH
         content: $DO_IZUMI_PRIVATE
         overwrite: true
-        
+
     - alacoche/rsync-deploy:
         host: $DO_IZUMI_HOST
         directory: /var/www/addhenltd
         sshkey: $DO_IZUMI_PRIVATE
         source: public
+        user: $DO_IZUMI_USER
