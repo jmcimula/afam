@@ -13,6 +13,7 @@ build:
           rubygems
           ruby-dev
           openssh-client
+          rsync
     - script:
         name: Install bootstrap sass
         code: |
