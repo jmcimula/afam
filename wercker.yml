@@ -17,10 +17,6 @@ build:
         code: |
           gem install bootstrap-sass
 
-    - eyedol/compass-compile:
-        config-file: $WERCKER_ROOT/themes/mdb-addhen/static/sass/config.rb
-        flags: --output-style compressed
-
     - arjen/hugo-build:
         version: 0.15
         config: ./config.yaml
