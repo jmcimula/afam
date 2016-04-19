@@ -30,8 +30,6 @@ build:
 # A step that deploys hugo build
 deploy:
   steps:
-    - add-to-known_hosts@1.4.0:
-        hostname: $DO_IZUMI_IP_ADDRESS
     - mktemp:
         envvar: PRIVATEKEY_PATH
     - create-file:
