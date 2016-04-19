@@ -12,7 +12,7 @@ build:
           ruby
           rubygems
           ruby-dev
-          ssh
+          ssh-client
     - script:
         name: Install bootstrap sass
         code: |
