@@ -8,6 +8,7 @@ build:
   steps:
     - install-packages:
         packages: 
+          build-essential
           ruby
           rubygems
           ruby-dev
