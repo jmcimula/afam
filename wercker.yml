@@ -27,3 +27,20 @@ build:
         flags: --buildDrafts=true
 
 # A step that deploys hugo build
+# A step that deploys hugo build
+deploy:
+  steps:
+    - add-to-known_hosts:
+        hostname: $DO_IZUMI_IP_ADDRESS
+    - mktemp:
+        envvar: PRIVATEKEY_PATH
+    - create-file:
+        name: write key
+        filename: $PRIVATEKEY_PATH
+        content: $DO_IZUMI_PRIVATE
+        overwrite: true
+    - script:
+        name: copy files public files server
+        code: |
+          pwd
+          ls -la
