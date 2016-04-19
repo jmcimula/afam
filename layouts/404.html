@@ -1,12 +1,9 @@
-<!DOCTYPE html>
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
-<html lang="{{ $.Site.LanguageCode }}">
-  <head>
 {{ partial "head.html" . }}
-    <title>{{ $strings.not_found_page.title }} | {{ $.Site.Title }}</title>
     <meta property="og:title" content="{{ $strings.not_found_page.title }}">
     <meta property="og:description" content="{{ $strings.not_found_page.description }}">
     <meta name="description" content="{{ $strings.not_found_page.description }}">
+    <title>{{ $strings.not_found_page.title }} | {{ $.Site.Title }}</title>
   </head>
   <body class="single error" itemscope itemtype="http://schema.org/WebPage" itemref="copyright translation">
     <meta itemprop="name" content="{{ $strings.not_found_page.title }}">

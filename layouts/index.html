@@ -1,6 +1,5 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
-<title>{{ $.Site.Title }} &mdash; {{ $strings.contentinfo.tagline }}</title>
 <meta property="og:title" content="{{ $.Site.Title }}">
 <meta property="og:description" content="{{ $strings.contentinfo.description }}">
 <meta name="description" content="{{ .Site.Params.description}}">
@@ -11,6 +10,7 @@
 <meta name="twitter:description" content="{{ .Site.Params.description}}" />
 <meta name="twitter:creator" content="@addhen" />
 <meta name="twitter:site" content="@addhen" />
+<title>{{ $.Site.Title }} &mdash; {{ $strings.contentinfo.tagline }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
