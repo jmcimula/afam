@@ -12,6 +12,7 @@ build:
           ruby
           rubygems
           ruby-dev
+          ssh
     - script:
         name: Install bootstrap sass
         code: |
