@@ -6,10 +6,10 @@ build:
 
   # Build css
   steps:
-    - mylesnoton/sass-compile@0.0.1
-    - sass-compile:
-      source-dir: $WERCKER_ROOT/themes/mdb-addhen/static/sass/
-      output-dir: $WERCKER_ROOT/themes/mdb-addhen/static/css/
+    - mylesnoton/sass-compile@0.0.1:
+      sass-compile:
+        source-dir: $WERCKER_ROOT/themes/mdb-addhen/static/sass/
+        output-dir: $WERCKER_ROOT/themes/mdb-addhen/static/css/
 
   # Build hugo site
   steps:
