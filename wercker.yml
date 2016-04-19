@@ -28,7 +28,6 @@ build:
         flags: --buildDrafts=true
 
 # A step that deploys hugo build
-# A step that deploys hugo build
 deploy:
   steps:
     - add-to-known_hosts:
