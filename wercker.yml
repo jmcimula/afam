@@ -37,8 +37,9 @@ deploy:
         filename: $PRIVATEKEY_PATH
         content: $DO_IZUMI_PRIVATE
         overwrite: true
-    - script:
-        name: copy files public files server
-        code: |
-          pwd
-          ls -la
+        
+    - alacoche/rsync-deploy:
+        host: $DO_IZUMI_HOST
+        directory: /var/www/addhenltd
+        sshkey: $DO_IZUMI_PRIVATE
+        source: public
