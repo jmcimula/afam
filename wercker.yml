@@ -6,7 +6,7 @@ build:
 
   # Build hugo site
   steps:
-    - sass-compile:
+    - mylesnoton/sass-compile:
         source-dir: $WERCKER_ROOT/themes/mdb-addhen/static/sass/
         output-dir: $WERCKER_ROOT/themes/mdb-addhen/static/css/
 
