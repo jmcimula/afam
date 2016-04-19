@@ -9,6 +9,7 @@ build:
     - install-packages:
         packages: 
           ruby
+          rubygems
           ruby-dev
     - script:
         name: Install compass and bootstrap sass
