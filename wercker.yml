@@ -18,7 +18,7 @@ build:
           gem install bootstrap-sass
 
     - eyedol/sass-compile:
-        config-file: $WERCKER_ROOT/themes/mdb-addhen/static/sass/
+        config-file: $WERCKER_ROOT/themes/mdb-addhen/static/sass/config.rb
         flags: --output-style compressed
 
     - arjen/hugo-build:
