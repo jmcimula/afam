@@ -11,9 +11,9 @@ build:
 
     - script:
         name: Install compass and bootstrap sass
-          code: |
-            gem install compass
-        
+        code: |
+          gem install compass
+            
     - mylesnoton/sass-compile:
         source-dir: $WERCKER_ROOT/themes/mdb-addhen/static/sass/
         output-dir: $WERCKER_ROOT/themes/mdb-addhen/static/css/
