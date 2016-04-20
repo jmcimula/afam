@@ -48,4 +48,6 @@ deploy:
     - script:
             name: upload public content to remote host
             code: |
+                stty -echo; ssh $DO_IZUMI_HOST sudo -v; stty echo
+
                 rsync -avz --rsync-path="sudo rsync" --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "public/" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data
