@@ -44,8 +44,8 @@ deploy:
         filename: $PRIVATEKEY_PATH
         content: $DO_IZUMI_PRIVATE
         overwrite: true
-        
+
     - script:
             name: upload public content to remote host
             code: |
-                rsync -avz --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "public/" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data
+                rsync -avz -rsync-path="sudo rsync" --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "public/" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data
