@@ -45,9 +45,19 @@ deploy:
         content: $DO_IZUMI_PRIVATE
         overwrite: true
 
+    - script:
+            name: change directory
+            code: |
+                cd public
+                ls -alF
+
     - fedor/rsync-soft-deploy:
         host: $DO_IZUMI_HOST
         directory: /var/www/addhenltd
         sshkey: $PRIVATEKEY_PATH
         source: public/*
         user: $DO_IZUMI_USER
+    - script:
+            name: transfer blog
+            code: |
+                ssh -i $PRIVATEKEY_PATH -l $DO_IZUMI_USER -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME chown -R www-data:www-data /var/www/addhenltd
