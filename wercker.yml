@@ -45,9 +45,14 @@ deploy:
         content: $DO_IZUMI_PRIVATE
         overwrite: true
 
+    - script:
+        name: Change to public directory
+        code: |
+          cd public
+          ls -alF
+
     - fedor/rsync-soft-deploy:
         host: $DO_IZUMI_HOST
         directory: /var/www/addhenltd
         sshkey: $PRIVATEKEY_PATH
-        source: public
         user: $DO_IZUMI_USER
