@@ -1,0 +1,51 @@
+---
+box: debian
+# Build definition
+build:
+  # The steps that will be executed on build
+
+  # Build hugo site
+  steps:
+    - install-packages:
+        packages: 
+          build-essential
+          ruby
+          rubygems
+          ruby-dev
+          openssh-client
+          rsync
+    - script:
+        name: Install bootstrap sass
+        code: |
+          gem install bootstrap-sass
+
+    - eyedol/compass-compile:
+        config-file: $WERCKER_ROOT/themes/mdb-addhen/static/config.rb
+        flags: --output-style compressed
+
+    - arjen/hugo-build:
+        version: 0.15
+        config: ./config.yaml
+        flags: --buildDrafts=true
+
+# A step that deploys hugo build
+deploy:
+  steps:
+    - install-packages:
+        packages: 
+          openssh-client
+          rsync
+    - add-to-known_hosts:
+        hostname: $DO_IZUMI_HOST
+    - mktemp:
+        envvar: PRIVATEKEY_PATH
+    - create-file:
+        name: write key
+        filename: $PRIVATEKEY_PATH
+        content: $DO_IZUMI_PRIVATE
+        overwrite: true
+
+    - script:
+            name: upload public content to remote host
+            code: |
+                rsync -avz --rsync-path="sudo rsync" --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "public/" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data

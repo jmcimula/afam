@@ -1,7 +1,6 @@
-project_path = '../static'
+project_path = 'themes/mdb-addhen/static'
 css_dir = 'css'
 sass_dir = 'sass'
 scss_dir = 'sass'
 javascript_dir = 'js'
-images_dir = 'images'
 require 'bootstrap-sass'

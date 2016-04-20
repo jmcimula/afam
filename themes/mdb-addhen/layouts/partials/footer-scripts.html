@@ -10,11 +10,9 @@
     <script src="{{ $.Site.BaseURL }}js/jqBootstrapValidation.js"></script>
     <script src="{{ $.Site.BaseURL }}js/contact.js"></script>
 
-    <!-- Google PrettyPrint Syntax Highlighter -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=sons-of-obsidian&lang=css" defer="defer"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="{{ $.Site.BaseURL }}js/addhen.js"></script>
+    {{ if not .IsHome }} <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script> {{ end }}
     {{ if .IsHome }} <script src="https://cdn.smooch.io/smooch.min.js"></script>  {{ end }}
     {{ if .IsHome }} <script src="{{ $.Site.BaseURL }}js/smooch.js"></script>  {{ end }}
     <!-- Google analytics -->

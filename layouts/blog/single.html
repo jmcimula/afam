@@ -1,6 +1,5 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
-<title>{{ .Title }} &mdash; {{ $.Site.Title }}</title>
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ substr .Summary 0 250 }} ...">
 <meta name="description" content="{{ substr .Summary 0 250 }} ...">
@@ -10,6 +9,7 @@
 <meta name="twitter:description" content="{{ .Site.Params.description}}" />
 <meta name="twitter:creator" content="@{{ .Params.twitter }}" />
 <meta name="twitter:site" content="@{{ .Params.twitter }}" />
+<title>{{ .Title }} &mdash; {{ $.Site.Title }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <div class="container">
@@ -17,7 +17,6 @@
     <div class="row">
         <div class="wrap-content col-sm-12">    
             <h3>{{ .Title }}</h3>
-            <hr />
             <ul class="list-inline">
                 <li>
                    <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>

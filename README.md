@@ -2,13 +2,14 @@ www.addhen.com website
 
 ### TO build SCSS
 
-cd into `sass/static`
+In the root folder issue
 
-Then issue
+`compass watch --config themes/mdb-addhen/static/config.rb --output-style compressed`
 
-`compass watch`
+*Note* Make sure you've compass and bootstrap-sass installed.
 
-*Note* Make sure you've compass installed.
+`gem install compass`
+`gem install bootstrap-sass`
 
 ### Run website locally
 

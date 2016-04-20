@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+a {
+    color: #CC0000;
+}
+
 .navbar .navbar-brand {
     position: relative;
     height: 60px;
@@ -105,14 +109,6 @@ span.post-meta {
 
 div.col-sm-10 h3 {
     margin: 0;
-}
-
-.read-more-link {
-    margin-top: 10px;
-}
-
-div.post-content hr {
-    margin: 0 0 15px 0;
     padding: 0;
 }
 
