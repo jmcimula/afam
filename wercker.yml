@@ -44,15 +44,8 @@ deploy:
         filename: $PRIVATEKEY_PATH
         content: $DO_IZUMI_PRIVATE
         overwrite: true
-
-    - fedor/rsync-soft-deploy:
-        host: $DO_IZUMI_HOST
-        directory: ~/www/addhenltd
-        sshkey: $PRIVATEKEY_PATH
-        user: $DO_IZUMI_USER
-        source: public/
-
+        
     - script:
-            name: change directory permission
+            name: upload public content to remote host
             code: |
-                ssh -i $PRIVATEKEY_PATH -l $DO_IZUMI_USER -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $HOSTNAME chown -R www-data:www-data /var/www/addhenltd
+                rsync -avz --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "public/" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data
