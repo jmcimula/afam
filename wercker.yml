@@ -39,7 +39,7 @@ deploy:
         content: $DO_IZUMI_PRIVATE
         overwrite: true
 
-    - alacoche/rsync-deploy:
+    - fedor/rsync-soft-deploy:
         host: $DO_IZUMI_HOST
         directory: /var/www/addhenltd
         sshkey: $DO_IZUMI_PRIVATE
