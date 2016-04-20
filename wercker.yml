@@ -47,11 +47,11 @@ deploy:
 
     - fedor/rsync-soft-deploy:
         host: $DO_IZUMI_HOST
-        directory: /var/www/addhenltd
+        directory: ~/www/addhenltd
         sshkey: $PRIVATEKEY_PATH
         user: $DO_IZUMI_USER
         source: public/
-        
+
     - script:
             name: change directory permission
             code: |
