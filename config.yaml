@@ -12,8 +12,8 @@ Params:
         Name: "addhen"
         GoogleUserName: "addhen"
         TwitterUserName: "addhen"
-    GoogleAnalyticsID: "<REPLACE With GA UA Code>"
-    disqusShortname: "addhen"
+    GoogleAnalyticsID: "UA-76734972-1"
+    DisqusShortname: "addhen"
     Locales:
          - Code: "en-US"
            Name: "English"

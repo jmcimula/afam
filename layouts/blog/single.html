@@ -28,17 +28,19 @@
     <div class="row">
         <div class="col-sm-12">
             {{ .Content }}
+
         </div>
     </div>
+
     <!-- pagination -->
     {{ partial "pagination.html" . }}
     <!-- comment section -->
-    {{ with .Site.DisqusShortname }}
+    {{ with $.Site.Params.DisqusShortname }}
         <div class="row">
             <div class="wrap-content col-sm-12">
                 {{ partial "disqus.html" . }}
             </div>
         </div>
     {{ end }}
-    {{ partial "footer.html" . }}
 </div>
+{{ partial "footer.html" . }}

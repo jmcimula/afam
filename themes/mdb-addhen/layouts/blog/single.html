@@ -32,7 +32,7 @@
     <!-- pagination -->
     {{ partial "pagination.html" . }}
     <!-- comment section -->
-    {{ with .Site.DisqusShortname }}
+    {{ with $.Site.Params.DisqusShortname }}
         <div class="row">
             <div class="wrap-content col-sm-12">
                 {{ partial "disqus.html" . }}
