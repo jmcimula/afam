@@ -31,7 +31,9 @@
                 <h4>{{ $strings.contentinfo.tagline | safeHTML }}</h4>
                 <!--Description-->
                 <p>{{ $strings.about.description | safeHTML }}</p>
+                <p>Addhen was started by <a href="https://www.linkedin.com/in/henryaddo">Henry Addo</a>. A former software engineer at Ushahidi. You can read more about him on his personal <a href="https://www.addhen.org/">website</a>.<p>
                 <!--Call to action button-->
+                <p>Feel free to engage us.</p>
                 <a href="#{{ $contact.Identifier }}" class="btn btn-danger waves-effect waves-light ">{{ $contact.Name }}</a>
             </div>
             <!--/.Second Column-->
@@ -76,7 +78,7 @@
                         </div>
                         <div class="card-content">
                             <h5 class="text-center">SMSsync</h5>
-                            <p>Free &amp; Open Sourced SMS gateway for Android. Turns your Android device into a powerful SMS gateway.</p>
+                            <p>Free &amp; Open Source SMS gateway for Android. Turns your Android device into a powerful SMS gateway.</p>
                         </div>
                         <div class="card-action">
                             <a href="#" data-toggle="modal" data-target="#smssync-modal">
@@ -93,7 +95,7 @@
                         </div>
                         <div class="card-content">
                             <h5 class="text-center">Ushahidi Android App</h5>
-                            <p>Free &amp; Open Sourced Android client for the Ushahidi Platform. Made heavy use of the Google Maps Android APIs.</p>
+                            <p>Free &amp; Open Source Android client for the Ushahidi Platform. Made heavy use of the Google Maps Android APIs.</p>
                         </div>
                         <div class="card-action">
                             <a href="#" data-toggle="modal" data-target="#ushahidi-modal">
@@ -143,15 +145,15 @@
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp" data-wow-delay="0.4s">
                         <div class="card-image">
-                            <img src="http://mdbootstrap.com/MDB/live/Corporate/img/project4.png">
+                            <img src="{{ .Site.BaseURL }}img/screenshots/raiburari.png">
                         </div>
                         <div class="card-content">
-                            <h5 class="text-center">Weather Watch Face</h5>
-                            <p>A watch face for Android Wear so users can access Sunshine's weather information at a glance.</p>
+                            <h5 class="text-center">Raiburari</h5>
+                            <p>This is a resuable library to make it easy to write Android apps the reactive way.</p>
                         </div>
                         <div class="card-action">
                             <a href="#" data-toggle="modal" data-target="#sunshine-modal">
-                                <button type="button" class="btn btn-danger waves-effect waves-light">{{ $strings.portfolio.readmore }}</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light">Read more</button>
                             </a>
                         </div>
                     </div>
