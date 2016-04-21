@@ -16,5 +16,5 @@
     {{ if .IsHome }} <script src="https://cdn.smooch.io/smooch.min.js"></script>  {{ end }}
     {{ if .IsHome }} <script src="{{ $.Site.BaseURL }}js/smooch.js"></script>  {{ end }}
     <!-- Google analytics -->
-    {{ template "_internal/google_analytics.html" . }}
+    {{ partial "google_analytics.html" . }}
 </body>
