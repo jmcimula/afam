@@ -12,7 +12,7 @@ Params:
         Name: "addhen"
         GoogleUserName: "addhen"
         TwitterUserName: "addhen"
-    GoogleAnalyticsID: "<REPLACE With GA UA Code>"
+    GoogleAnalyticsID: "UA-76734972-1"
     disqusShortname: "addhen"
     Locales:
          - Code: "en-US"
