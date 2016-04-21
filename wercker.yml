@@ -49,3 +49,7 @@ deploy:
             name: upload public content to remote host
             code: |
                 rsync -avz --rsync-path="sudo rsync" --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "public/" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data
+    - script:
+            name: upload mail folder
+            code: |
+                rsync -avz --rsync-path="sudo rsync" --rsh="ssh -o BatchMode=yes -p 22 -i $PRIVATEKEY_PATH" "mail" "$DO_IZUMI_USER@$DO_IZUMI_HOST:/var/www/addhenltd" --chown=www-data:www-data
