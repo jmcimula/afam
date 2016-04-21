@@ -13,7 +13,7 @@ Params:
         GoogleUserName: "addhen"
         TwitterUserName: "addhen"
     GoogleAnalyticsID: "UA-76734972-1"
-    disqusShortname: "addhen"
+    DisqusShortname: "addhen"
     Locales:
          - Code: "en-US"
            Name: "English"
