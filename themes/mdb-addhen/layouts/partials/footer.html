@@ -9,7 +9,7 @@
                         <p class="white-text">PO Box CT 8610, <br />Cantonments, Accra, Ghana,<br /> West Africa.</p>
                     </address>
                 </div>
-                <div class="footer-col col-md-4 footer-social-media text-center">
+                <div class="footer-col col-md-4 text-center footer-social-media">
                     <ul class="list-inline">
                         {{ range $.Site.Menus.External }}
                         <li>
@@ -18,8 +18,8 @@
                         {{ end }}
                     </ul>
                 </div>
-                <div class="footer-col col-md-4 wow">
-                    <address class="pull-right">
+                <div class="footer-col col-md-2 col-md-offset-2  wow">
+                    <address>
                         <h5 class="white-text fadeInDown">Sendai, Japan</h5>
                         <p class="white-text">Izumi Chuo, Sendai<br />Miyagi, Japan</p>
                     </address>
@@ -28,7 +28,7 @@
         </div>
         <div class="footer-copyright text-center rgba-black-lighter">
             <div class="container">
-                &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }} <span class="powered-by"> &middot; {{ $strings.contentinfo.generator | safeHTML }}
+                &copy; {{ .Now.Format "2006" }} &middot; {{ $.Site.Copyright }} <span class="powered-by"> &middot; {{ $strings.contentinfo.generator | safeHTML }}
             </div>
         </div>
     </footer>

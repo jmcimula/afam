@@ -53,7 +53,7 @@
         {{ $portfolio := index $menus 1 }}
         <section id="{{ $portfolio.Identifier }}">
             <div class="divider-new">{{$portfolio.Name}}</div>
-            <div class="row wrap-content">
+            <div class="row">
                 <div class="col-md-4">
                     <div class="card hoverable wow fadeInUp">
                         <div class="card-image">
@@ -61,7 +61,7 @@
                         </div>
                         <div class="card-content">
                             <h5 class="text-center">FindReels App</h5>
-                            <p>A beautiful and feature rich Android app for scheduling movies.</p>
+                            <p>A beautiful and feature rich Android app for scheduling movies. Implemented lots of custom views.</p>
                         </div>
                         <div class="card-action">
                             <a href="#" data-toggle="modal" data-target="#findreels-modal">
@@ -115,7 +115,7 @@
                         </div>
                         <div class="card-content">
                             <h5 class="text-center">Kasahorow App</h5>
-                            <p>An Android keyboard for serveral Ghanaian languages including Akan, Ga, Ewe, and Hausa.</p>
+                            <p>An Android keyboard for serveral Ghanaian languages including Akan, Ga, Ewe, and Hausa. It made extensive use of input framework.</p>
                         </div>
                         <div class="card-action">
                             <a href="#" data-toggle="modal" data-target="#kasahorow-modal">
@@ -149,7 +149,7 @@
                         </div>
                         <div class="card-content">
                             <h5 class="text-center">Raiburari</h5>
-                            <p>This is a resuable library to make it easy to write Android apps the reactive way.</p>
+                            <p>This is a resuable library to make it easy to write Android apps the reactive way. It makes use of the RxJava library to make this possible.</p>
                         </div>
                         <div class="card-action">
                             <a href="#" data-toggle="modal" data-target="#sunshine-modal">
@@ -172,9 +172,7 @@
     <div class="container">
         <div class="divider-new">{{$contact.Name}}</div>
         <div class="row wrap-content">
-            <div class="col-lg-8 ">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <div class="col-md-12">
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="row">
                         <div class="input-field">
@@ -203,7 +201,7 @@
                     <br>
                     <div id="success"></div>
                     <div class="row">
-                        <div class="form-group">
+                        <div class="form-group send-btn-margin">
                             <button type="submit" class="btn btn-danger waves-effect waves-light">{{ $strings.contactform.send }}</button>
                         </div>
                     </div>

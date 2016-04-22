@@ -165,31 +165,53 @@ textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly=re
     margin-top: 25px;
 }
 
-.navbar .nav {
-    > li > a {
-        color: #202020;
-        padding-top: 20px;
-        padding-bottom: 20px;
+.navbar {
+    .navbar-nav {
+        > li > a {
+            color: #202020;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            &:hover,
+            &:focus {
+                color: #202020;
+                background-color: transparent;
+            }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: #FFF;
+                background-color: #CC0000;
+            }
+        }
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-link-disabled-color;
+                background-color: $navbar-link-disabled-bg;
+            }
+        }
+    }
+    // Responsive menu icon
+    // Darken the responsive nav toggle
+    .navbar-toggle {
+        border-color: #000000;
         &:hover,
         &:focus {
-            color: #202020;
             background-color: transparent;
         }
-    }
-    > .active > a {
-        &,
-        &:hover,
-        &:focus {
-            color: #FFF;
-            background-color: #CC0000;
+        .icon-bar {
+            background-color: #000000;
+            &:hover,
+            &:focus {
+                background-color: #FFFFFF;
+            }
         }
     }
-    > .disabled > a {
-        &,
-        &:hover,
-        &:focus {
-            color: $navbar-link-disabled-color;
-            background-color: $navbar-link-disabled-bg;
-        }
-    }
+} 
+
+.send-btn-margin {
+    margin-left: 40px;
 }
