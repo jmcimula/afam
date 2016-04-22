@@ -11,7 +11,7 @@ sections:
 contentinfo:
     tagline: "You dream it, We deliver it."
     description: "Website for Addhen Limited. Highlighting its portfolio and service offerings."
-    generator: 'Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a>'
+    generator: 'powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a>'
 
 # Contact form
 contactform:
