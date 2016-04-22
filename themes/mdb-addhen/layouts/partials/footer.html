@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="footer-copyright text-center rgba-black-lighter">
-            <div class="container-fluid">
-                &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }}
+            <div class="container">
+                &copy; {{ .Now.Format "2006" }} &dash; {{ $.Site.Copyright }} <span class="powered-by"> &middot; {{ $strings.contentinfo.generator | safeHTML }}
             </div>
         </div>
     </footer>
