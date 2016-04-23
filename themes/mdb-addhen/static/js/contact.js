@@ -4,7 +4,6 @@
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
-            // 
         },
         submitSuccess: function($form, event) {
             // Prevent spam click and default submit behaviour

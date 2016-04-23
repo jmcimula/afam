@@ -9,14 +9,11 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{ $.Site.BaseURL }}js/addhen.js"></script>
     {{ if not .IsHome }} <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script> {{ end }}
-    {{ if .IsHome }} 
-    <!-- Contact Form JavaScript -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="{{ $.Site.BaseURL }}js/jqBootstrapValidation.js"></script>
     <script src="{{ $.Site.BaseURL }}js/contact.js"></script>
     <script src="https://cdn.smooch.io/smooch.min.js"></script>
-    <script src="{{ $.Site.BaseURL }}js/smooch.js"></script> 
-    {{ end }}
+    <script src="{{ $.Site.BaseURL }}js/smooch.js"></script>
     <!-- Google analytics -->
     {{ partial "google_analytics.html" . }}
 </body>
