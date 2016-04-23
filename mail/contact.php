@@ -1,37 +1,19 @@
 <?php
-    $secret = "6LctIR4TAAAAAAtVNwdkI5_GN344uatmgIIxdp0A";
-    $sitekey = "6LctIR4TAAAAAGn68rUkAH1N64o2cVrGV3YAhkzK";
-
-    $postdata = http_build_query(
-        array(
-            'secret' => $secret,
-            'response' => $_POST["grecaptcha"]
-        )
-    );
-
-    $opts = array('http' =>
-        array(
-            'method'  => 'POST',
-            'header'  => 'Content-type: application/x-www-form-urlencoded',
-            'content' => $postdata
-        )
-    );
 
     function validate() {
         // Check for empty fields
-        print_r($opts);
         if (!empty($_POST['name'])           &&
                 !empty($_POST['email'])      &&
                 !empty($_POST['message'])    &&
                 !empty($_POST['grecaptcha']) &&
                 filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
 
-                // Send verify recapture
-                $captcha_response = verify_recaptcha();
-                if ($captcha_response !=1 ) {
-                    return false;
-                }
-                return true;
+            // Send verify recapture
+            $captcha_response = verify_recaptcha();
+            if ($captcha_response !=1 ) {
+                return false;
+            }
+            return true;
         } 
         return false;
     }
@@ -67,6 +49,21 @@
     }
 
     function verify_recaptcha() {
+        $secret = "6LctIR4TAAAAAAtVNwdkI5_GN344uatmgIIxdp0A";
+        $postdata = http_build_query(
+            array(
+                'secret' => $secret,
+                'response' => $_POST["grecaptcha"]
+            )
+        );
+
+        $opts = array('http' =>
+            array(
+                'method'  => 'POST',
+                'header'  => 'Content-type: application/x-www-form-urlencoded',
+                'content' => $postdata
+            )
+        );
         $context = stream_context_create($opts);
         $result = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context);
 
