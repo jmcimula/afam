@@ -23,7 +23,7 @@
         if (!empty($_POST['name'])           &&
                 !empty($_POST['email'])      &&
                 !empty($_POST['message'])    &&
-                !empty($_POST['g-recaptcha-response']) &&
+                !empty($_POST['grecaptcha']) &&
                 filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
 
                 // Send verify recapture
