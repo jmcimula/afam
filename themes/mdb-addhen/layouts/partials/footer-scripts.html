@@ -15,6 +15,7 @@
     {{ if not .IsHome }} <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script> {{ end }}
     {{ if .IsHome }} <script src="https://cdn.smooch.io/smooch.min.js"></script>  {{ end }}
     {{ if .IsHome }} <script src="{{ $.Site.BaseURL }}js/smooch.js"></script>  {{ end }}
+    {{ if .IsHome }} <script src='https://www.google.com/recaptcha/api.js'></script> {{ end }}
     <!-- Google analytics -->
     {{ partial "google_analytics.html" . }}
 </body>
