@@ -19,21 +19,20 @@
 
     function validate() {
         // Check for empty fields
-        if(empty($_POST['name'])            ||
-                empty($_POST['email'])      ||
-                empty($_POST['message'])    ||
-                empty($_POST['g-recaptcha-response']) ||
-                !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+        if (!empty($_POST['name'])           &&
+                !empty($_POST['email'])      &&
+                !empty($_POST['message'])    &&
+                !empty($_POST['g-recaptcha-response']) &&
+                filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
 
-                return false;
-           } else {
                 // Send verify recapture
                 $captcha_response = verify_recaptcha();
-                if($captcha_response !=1 ) {
+                if ($captcha_response !=1 ) {
                     return false;
                 }
                 return true;
-           }
+        } 
+        return false;
     }
 
     function sanitize_input($data) {
