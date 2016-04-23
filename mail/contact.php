@@ -5,7 +5,7 @@
     $postdata = http_build_query(
         array(
             'secret' => $secret,
-            'response' => $_POST["g-recaptcha-response"]
+            'response' => $_POST["grecaptcha"]
         )
     );
 
@@ -19,6 +19,7 @@
 
     function validate() {
         // Check for empty fields
+        print_r($opts);
         if (!empty($_POST['name'])           &&
                 !empty($_POST['email'])      &&
                 !empty($_POST['message'])    &&
