@@ -174,33 +174,34 @@
         <div class="row wrap-content">
             <div class="col-md-12">
                 <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="row">
+                    <div class="row control-group">
                         <div class="input-field">
                             <i class="material-icons prefix">account_circle</i>
                             <label for="name">{{ $strings.contactform.name }}</label>
                             <input type="text" class="validate" id="name" required data-validation-required-message="{{ $strings.contactform.validatename }}">
-                            <p class="help-block text-danger"></p>
+                            <p class="help-block text-danger form-error-message-margin"></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row control-group">
                         <div class="input-field">
                             <i class="material-icons prefix">mail</i>
                             <label for="email">{{ $strings.contactform.email }}</label>
                             <input type="email" class="validate" id="email" required data-validation-required-message="{{ $strings.contactform.validateemail }}">
-                            <p class="help-block text-danger"></p>
+                            <p class="help-block text-danger form-error-message-margin"></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row control-group">
                         <div class="input-field">
                             <i class="material-icons prefix">mode_edit</i>
                             <label for="message">{{ $strings.contactform.message}}</label>
                             <textarea class="materialize-textarea" id="message" required data-validation-required-message="{{ $strings.contactform.validatemessage }}"></textarea>
-                            <p class="help-block text-danger"></p>
+                            <p class="help-block text-danger form-error-message-margin"></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row control-group">
                         <div class="form-group send-btn-margin">
                             <div class="g-recaptcha" data-sitekey="6LctIR4TAAAAAGn68rUkAH1N64o2cVrGV3YAhkzK"></div>
+                            <p class="help-block text-danger" id="recaptcha-error"></p>
                         </div>
                     </div>
                     <br>
