@@ -40,7 +40,7 @@
             $support_from        =   "$name <$email_address>\n";
             $to_customer_from = "Addhen Limited's support team <support@addhen.com>";
             $to_customer_subject        = "Thank You For Contacting Us";
-            $to_customer_message = "Dear $name,\n\n This is a confirmation that your message has been received by our support team. Please expect a response within one business day.\n\n\n Kind regards,\nAddhen Support Team";
+            $to_customer_message = "Dear $name,\n\nThis is a confirmation that your message has been received by our support team. Please expect a response within one business day.\n\n\n Kind regards,\nAddhen Support Team";
             // Send to addhen's support system.
             $status = send_email_through_mailgun($to, $support_from, $email_subject, $email_body);
             if($status) {
