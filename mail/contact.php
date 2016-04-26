@@ -42,7 +42,7 @@
             $to_customer_subject        = "Thank You For Contacting Us";
             $to_customer_message = "Dear $name,\n\n This is a confirmation that your message has been received by our support team. Please expect a response within one business day.\n\n\n Kind regards,\nAddhen Support Team";
             // Send to addhen's support system.
-            $status = send_email_through_mailgun($to, $support_from, $subject, $email_body);
+            $status = send_email_through_mailgun($to, $support_from, $email_subject, $email_body);
             if($status) {
                 // Send confirmation email to sender
                 return send_email_through_mailgun($email_address, $to_customer_from, $to_customer_subject, $to_customer_message);
@@ -98,7 +98,6 @@
         curl_setopt($ch, CURLOPT_POSTFIELDS, array('from' => $from,
                 'to' => $to,
                 'subject' => $subject,
-                'html' => $message,
                 'text' => $plain));
 
         $j = json_decode(curl_exec($ch));
