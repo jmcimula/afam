@@ -42,10 +42,10 @@
             $to_customer_subject        = "Thank You For Contacting Us";
             $to_customer_message = "Dear $name,\n\n This is a confirmation that your message has been received by our support team. Please expect a response within one business day.\n\n\n Kind regards,\nAddhen Support Team";
             // Send to addhen's support system.
-            $status = send_email($to, $support_from, $subject, $email_body);
+            $status = send_email_through_mailgun($to, $support_from, $subject, $email_body);
             if($status) {
                 // Send confirmation email to sender
-                return send_email($email_address, $to_customer_from, $to_customer_subject, $to_customer_message);
+                return send_email_through_mailgun($email_address, $to_customer_from, $to_customer_subject, $to_customer_message);
             }
             return $status;
         } else {
@@ -81,7 +81,7 @@
     /** Uses the mailgun API to send emails. It uses php-curl to interact with 
      * Mailgun's API.
      */
-    function send_email($to, $from, $subject, $message) {
+    function send_email_through_mailgun($to, $from, $subject, $message) {
         $mailgun_api_key = "key-149101e346db487195c5ffebee34ddba";
         $mailgun = "api.mailgun.net";
         $domain = "mg.addhen.com";
