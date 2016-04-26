@@ -1,5 +1,6 @@
 <?php
 
+    define(MAILGUN_API, "api.mailgun.net");
     function validate() {
         // Check for empty fields
         if (!empty($_POST['name'])           &&
@@ -30,24 +31,30 @@
         if (validate()) {
             $name           =   sanitize_input($_POST['name']);
             $email_address  =   sanitize_input($_POST['email']);
-            $phone          =   sanitize_input($_POST['phone']);
             $message        =   sanitize_input($_POST['message']);
 
             // Create the email and send the message
             $email_subject  =   "Website Contact Form:  $name";
             $email_body     =   "You have received a new message from your website contact form.\n\n"."Here are the        
             details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-            $headers        =   "From: $name <$email_address>\n";
-            $headers        .= "Reply-To: $email_address";
-            // Send true on successful send.
-            // Send false if failed
-            return (mail($to,$email_subject,wordwrap($email_body,80),$headers))? true: false;
+            $support_from        =   "$name <$email_address>\n";
+            $to_customer_from = "Addhen Limited's support team <support@addhen.com>";
+            $to_customer_subject        = "Thank You For Contacting Us";
+            $to_customer_message = "Dear $name,\n\n This is a confirmation that your message has been received by our support team. Please expect a response within one business day.\n\n\n Kind regards,\nAddhen Support Team";
+            // Send to addhen's support system.
+            $status = send_email($to, $support_from, $subject, $email_body);
+            if($status) {
+                // Send confirmation email to sender
+                return send_email($email_address, $to_customer_from, $to_customer_subject, $to_customer_message);
+            }
+            return $status;
         } else {
             // Invalid inputs
             return 'No arguments Provided!';
         }
     }
 
+    /** Validates Google's recaptcha response to make sure user is  not a bot. */
     function verify_recaptcha() {
         $secret = "6LctIR4TAAAAAAtVNwdkI5_GN344uatmgIIxdp0A";
         $postdata = http_build_query(
@@ -69,6 +76,40 @@
 
         $decoded_result = json_decode($result, true);
         return $decoded_result["success"];
+    }
+
+    /** Uses the mailgun API to send emails. It uses php-curl to interact with 
+     * Mailgun's API.
+     */
+    function send_email($to, $from, $subject, $message) {
+        $mailgun_api_key = "key-149101e346db487195c5ffebee34ddba";
+        $mailgun = "api.mailgun.net";
+        $domain = "mg.addhen.com";
+        $version = "v3";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        curl_setopt($ch, CURLOPT_USERPWD, "api:$mailgun_api_key");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        $plain = strip_tags(nl2br($message));
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_URL, "https://$mailgun/$version/$domain/messages");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, array('from' => $from,
+                'to' => $to,
+                'subject' => $subject,
+                'html' => $message,
+                'text' => $plain));
+
+        $j = json_decode(curl_exec($ch));
+
+        $info = curl_getinfo($ch);
+
+        if($info['http_code'] != 200) {
+            error("Failed to send email support@$domain");
+        }
+        curl_close($ch);
+        return $j;
     }
 
     send_email();
