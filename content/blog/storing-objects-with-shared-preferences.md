@@ -36,7 +36,9 @@ We provided two interfaces, one for the Serialization mechanism and another for 
 {{< /syntax-highlight >}}
 
 And the interface for the storage engine.
-{{< syntax-highlight java >}}public interface StorageMechanism<T> {
+
+{{< syntax-highlight java >}}
+public interface StorageMechanism<T> {
 
     /**
      * Gets an {@link rx.Observable} which will emit a list of {@link EntityType}.
