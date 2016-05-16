@@ -1,5 +1,5 @@
 ---
-box: nytame/ubuntu-14.04
+box: debian
 # Build definition
 build:
   # The steps that will be executed on build
