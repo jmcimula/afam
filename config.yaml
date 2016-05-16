@@ -3,7 +3,7 @@ MetaDataFormat: "yaml"
 LanguageCode: "en-US"
 BaseURL: "http://www.addhen.com/"
 Theme: "mdb-addhen"
-Title: "addhen.com"
+Title: "Android Development Company"
 Copyright: "addhen limited"
 
 Params:
@@ -19,7 +19,7 @@ Params:
            Name: "English"
     DateFormat:
         ISO8601: "2006-01-02T15:04:05-07:00"
-        Localized: "Feburary 16, 2006"
+        Localized: "January 2, 2006"
 
 Menu:
     Main:

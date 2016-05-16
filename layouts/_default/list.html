@@ -1,13 +1,16 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
-<title>{{ .Title }} | {{ $.Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta name="description" content="{{ .Description }}">
+<title>{{ $.Site.Title }} &mdash; {{ .Title }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <section>
 <div class="container">
-    {{ range .Data.Pages }} 
+    {{ range .Data.Pages }}
     <div class="row">
-        <div class="wrap-content col-sm-12"> 
+        <div class="wrap-content col-sm-12">
             <h3>{{ .Title }}</h3>
             <ul class="list-inline">
                 <li>
