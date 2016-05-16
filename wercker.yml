@@ -6,14 +6,12 @@ build:
 
   # Build hugo site
   steps:
-    - install-packages:
-        packages: 
-          build-essential
-          ruby
-          rubygems
-          ruby-dev
-          openssh-client
-          rsync
+    - script:
+        name: Install packages
+        code: |
+          apt-get update && apt-get upgrade
+          apt-get install build-essential ruby rubygems ruby-dev openssh-client rsync -y --force-yes
+
     - script:
         name: Install bootstrap sass
         code: |
