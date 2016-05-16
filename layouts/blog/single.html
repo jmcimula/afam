@@ -1,21 +1,24 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ substr .Summary 0 250 }} ...">
+<meta name="title" content="{{ $.Site.Title }} &mdash; {{ .Title}}">
 <meta name="description" content="{{ substr .Summary 0 250 }} ...">
+<meta name="author" content="{{ .Params.author }}">
+<!-- fb open gragh meta tag -->
+<meta property="og:title" content="{{ $.Site.Title }} &mdash; {{ .Title}}">
+<meta property="og:description" content="{{ substr .Summary 0 250 }} ...">
 <!-- Twitter cards -->
 <meta name="twitter:card" content="{{ substr .Summary 0 250 }} ..." />
-<meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ $strings.contentinfo.tagline }}" />
+<meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ $.Site.Title }}" />
 <meta name="twitter:description" content="{{ .Site.Params.description}}" />
 <meta name="twitter:creator" content="@{{ .Params.twitter }}" />
 <meta name="twitter:site" content="@{{ .Params.twitter }}" />
-<title>{{ .Title }} &mdash; {{ $.Site.Title }}</title>
+<title>{{ $.Site.Title }} &mdash; {{ .Title}}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <div class="container">
     <!-- body starts -->
     <div class="row">
-        <div class="wrap-content col-sm-12">    
+        <div class="wrap-content col-sm-12">
             <h3>{{ .Title }}</h3>
             <ul class="list-inline">
                 <li>
@@ -27,11 +30,19 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            {{ .Content }}
+            {{ .Content  }}
 
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-inline">
+                <li><span>&mdash; <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></li></span>
+                <li><a href="https://twitter.com/share" title="Tweet this"><span class="badge label label-primary tweet-this"><i class="fa fa-twitter"></i> Tweet</span></a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
     <!-- pagination -->
     {{ partial "pagination.html" . }}
     <!-- comment section -->

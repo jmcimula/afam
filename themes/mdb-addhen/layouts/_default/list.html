@@ -1,5 +1,8 @@
 {{ partial "head.html" . }}
-<title>{{ .Title }} | {{ $.Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta name="description" content="{{ .Description }}">
+<title>{{ .Title }} &mdash; {{ $.Site.Title }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <section>

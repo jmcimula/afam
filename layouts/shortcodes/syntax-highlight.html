@@ -1,0 +1,5 @@
+{{ if .Get 0 }}
+	<pre class="prettyprint linenums"><code class="language-{{ .Get 0 }}">{{ .Inner  }}</code></pre>
+{{ else }}
+	<pre class="prettyprint linenums"><code class="language-html">{{ .Inner  }}</code></pre>
+{{ end }}
