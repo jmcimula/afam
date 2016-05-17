@@ -12,6 +12,7 @@
 <meta name="twitter:description" content="{{ substr .Summary 0 250 }}" />
 <meta name="twitter:creator" content="@{{ .Params.twitter }}" />
 <meta name="twitter:site" content="{{ $.Site.Params.Publisher.TwitterUserName }}" />
+<meta name="twitter:image" content="{{ $.Site.BaseURL }}/img/logo-for-twitter.png"/>
 <title>{{ $.Site.Title }} &mdash; {{ .Title}}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
