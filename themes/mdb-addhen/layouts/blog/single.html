@@ -7,7 +7,7 @@
 <meta name="twitter:card" content="{{ substr .Summary 0 250 }} ..." />
 <meta name="twitter:description" content="{{ .Site.Params.description}}" />
 <meta name="twitter:creator" content="@{{ .Params.twitter }}" />
-<meta name="twitter:site" content="@{{ .Params.twitter }}" />
+<meta name="twitter:site" content="@{{ $.Site.Twitter }}" />
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <div class="container">

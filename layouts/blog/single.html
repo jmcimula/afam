@@ -1,17 +1,17 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
 <meta name="title" content="{{ $.Site.Title }} &mdash; {{ .Title}}">
-<meta name="description" content="{{ substr .Summary 0 250 }} ...">
+<meta name="description" content="{{ substr .Summary 0 250 }}">
 <meta name="author" content="{{ .Params.author }}">
 <!-- fb open gragh meta tag -->
-<meta property="og:title" content="{{ $.Site.Title }} &mdash; {{ .Title}}">
-<meta property="og:description" content="{{ substr .Summary 0 250 }} ...">
+<meta property="og:title" content="{{ .Title}}">
+<meta property="og:description" content="{{ substr .Summary 0 250 }}">
 <!-- Twitter cards -->
-<meta name="twitter:card" content="{{ substr .Summary 0 250 }} ..." />
-<meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ $.Site.Title }}" />
-<meta name="twitter:description" content="{{ .Site.Params.description}}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ substr .Summary 0 250 }}" />
 <meta name="twitter:creator" content="@{{ .Params.twitter }}" />
-<meta name="twitter:site" content="@{{ .Params.twitter }}" />
+<meta name="twitter:site" content="{{ $.Site.Params.Publisher.TwitterUserName }}" />
 <title>{{ $.Site.Title }} &mdash; {{ .Title}}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}

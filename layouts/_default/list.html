@@ -1,8 +1,14 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ .Description }}">
-<meta name="description" content="{{ .Description }}">
+<meta property="og:title" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
+<meta property="og:description" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
+<meta name="description" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
+<meta name="author" content="{{ $.Site.Params.Publisher.Name }}">
+<!-- Twitter card support -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ .Title }}" />
+<meta name="twitter:description" content="{{ $.Site.Title }} &mdash; {{ .Title }}" />
+<meta name="twitter:site" content="{{ $.Site.Params.Publisher.TwitterUserName }}" />
 <title>{{ $.Site.Title }} &mdash; {{ .Title }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}

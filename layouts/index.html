@@ -1,15 +1,15 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ partial "head.html" . }}
+<!-- open gragh support -->
 <meta property="og:title" content="{{ $.Site.Title }}">
 <meta property="og:description" content="{{ $strings.contentinfo.description }}">
-<meta name="description" content="{{ .Site.Params.description}}">
-<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="description" content="{{ $strings.about.description | safeHTML }}">
+<meta name="author" content="{{ $.Site.Params.Publisher.Name }}">
 <!-- Twitter card support -->
-<meta name="twitter:card" content="{{ $strings.contentinfo.description }}" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ $strings.contentinfo.tagline }}" />
-<meta name="twitter:description" content="{{ .Site.Params.description}}" />
-<meta name="twitter:creator" content="@addhen" />
-<meta name="twitter:site" content="@addhen" />
+<meta name="twitter:description" content="{{ $strings.about.description | safeHTML }}" />
+<meta name="twitter:site" content="{{ $.Site.Params.Publisher.TwitterUserName }}" />
 <title>{{ $.Site.Title }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
