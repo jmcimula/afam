@@ -2,12 +2,12 @@
 {{ partial "head.html" . }}
 <meta property="og:title" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
 <meta property="og:description" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
-<meta name="description" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
+<meta name="description" content="{{ $strings.about.description | safeHTML }}">
 <meta name="author" content="{{ $.Site.Params.Publisher.Name }}">
 <!-- Twitter card support -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ .Title }}" />
-<meta name="twitter:description" content="{{ $.Site.Title }} &mdash; {{ .Title }}" />
+<meta name="twitter:description" content="{{ $strings.about.description | safeHTML }}" />
 <meta name="twitter:site" content="{{ $.Site.Params.Publisher.TwitterUserName }}" />
 <title>{{ $.Site.Title }} &mdash; {{ .Title }}</title>
 {{ partial "header-media-links.html" . }}
