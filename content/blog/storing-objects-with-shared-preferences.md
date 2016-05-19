@@ -108,7 +108,7 @@ find that useful for your use case.
     }
 
     @Override
-    public Observable<RemindersEntity> put(@NonNull String key, @NonNull EntityType entityType) {
+    public Observable<EntityType> put(@NonNull String key, @NonNull EntityType entityType) {
         return Observable.create(subscriber -> {
             mSharedPreferences.edit().putString(key,mSerializationStrategy.serialize(entityType)).apply();
             subscriber.onNext(entityType);
@@ -138,10 +138,10 @@ find that useful for your use case.
     @Override
     public Observable<List<EntityType>> get() {
         return Observable.create(subscriber -> {
-            Map<String, String> savedReminders = (Map<String, String>) mSharedPreferences
+            Map<String, String> savedTypes = (Map<String, String>) mSharedPreferences
                     .getAll();
             List<EntityType> entitiesTypes = new ArrayList<EntityType>();
-            for (Map.Entry entry : savedReminders.entrySet()) {
+            for (Map.Entry entry : savedTypes.entrySet()) {
                 entitiesTypes.add(mSerializationStrategy.deserialize((String) entry.getValue()));
             }
             subscriber.onNext(entitiesTypes);
@@ -150,7 +150,7 @@ find that useful for your use case.
     }
 
     @Override
-    public Observable<RemindersEntity> get(String key) {
+    public Observable<EntityType> get(String key) {
         return Observable.create(subscriber -> {
             EntityType entityType = getStored(key);
             if (entityType != null) {
