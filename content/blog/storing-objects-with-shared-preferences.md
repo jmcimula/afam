@@ -92,7 +92,7 @@ The serialization mechanism:
 }
 {{< /syntax-highlight >}}
 
-The storage mechanism implementation: This is an [RxJava][4] based implementation. You will noticed most of the functions are returning an Observable. You can do away with the RxJava implementation if you don't 
+The storage mechanism implementation: This is a [RxJava][4] based implementation. You will noticed most of the functions are returning an Observable. You can do away with the RxJava implementation if you don't 
 find that useful for your use case.
 
 {{< syntax-highlight java >}}public class SharedPreferenceStorageMechanism implements StorageMechanism<EntityType> {
