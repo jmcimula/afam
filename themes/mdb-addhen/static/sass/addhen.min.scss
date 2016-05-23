@@ -228,3 +228,23 @@ textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly=re
 .label {
     border-radius: .25em;
 }
+
+a.more  {
+    color: #CC0000;
+    &:link {
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+a.recap-heading-links {
+    color: #0099cc;
+    &:link {
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}

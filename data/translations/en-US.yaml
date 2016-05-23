@@ -52,3 +52,7 @@ feed:
 portfolio:
     close: "Close"
     readmore: "See demo"
+
+# Content
+content:
+    readmore_link: "Read more"    

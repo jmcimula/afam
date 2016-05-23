@@ -1,7 +1,7 @@
 ---
 author: "Henry Addo"
 date: 2016-05-16T14:02:21+09:00
-draft: true
+draft: false
 title: Storing Objects With Shared Preferences
 twitter: "eyedol"
 ---

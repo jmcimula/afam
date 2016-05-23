@@ -1,7 +1,7 @@
 ---
 author: Henry Addo
 date: 2016-02-19T20:35:29Z
-draft: true
+draft: false
 title: Welcome To Our Blog
 twitter: eyedol
 ---
