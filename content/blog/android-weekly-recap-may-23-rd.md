@@ -35,7 +35,7 @@ Here are our picks of interesting links from last week.
 
 	Google is bringing Android Apps to chromebooks. If you don't know, chromebooks out sold Macs in the US for the first time. This means it's time to start looking into to bringing your apps to chromebooks. {{< more href="http://android-developers.blogspot.jp/2016/05/bring-your-android-app-to-chromebooks.html" >}}
 
-7. {{< recap-heading-links href="https://codelabs.developers.google.com/codelabs/constraint-layout/index.html#0" >}}The new Design and Layout constraints CodeLab {{< /recap-heading-links >}}
+7. {{< recap-heading-links href="https://codelabs.developers.google.com/codelabs/constraint-layout/index.html#0" >}}The New Design and Layout constraints CodeLab {{< /recap-heading-links >}}
 
 	The new [Constraints layout](http://android-developers.blogspot.jp/2016/05/android-studio-22-preview-new-ui.html) is one of the big features coming to Android Studio 2.2. It essentially allows you to design Android layouts using the UI builder in Android Studio to conform to the material design guidelines. This is a codelab tutorial to get you started in using the feature. {{< more href="https://codelabs.developers.google.com/codelabs/constraint-layout/index.html#0" >}}
 
