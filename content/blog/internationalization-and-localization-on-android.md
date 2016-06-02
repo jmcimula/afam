@@ -50,7 +50,7 @@ At addhen, localization is something we take very seriously when developing an A
     private void initCustomFont(Context context, AttributeSet attributeSet) {
         final TypedArray attrs = context.obtainStyledAttributes(attributeSet, R.styleable.CustomView);
         final String fontName = attrs.getString(R.string.CustomView_fontName);
-        final TypefaceManager typefaceManager = new TypefaceManager(context);
+        final TypefaceManager typefaceManager = new TypefaceManager();
         final Typeface typeface = typefaceManager.getTypeface(context,fontName);
         if (typeface != null) {
             super.setTypeface(typeface);
