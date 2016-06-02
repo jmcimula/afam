@@ -66,10 +66,10 @@ At addhen, localization is something we take very seriously when developing an A
             mCache = new LruCache<>(3);
         }
 
-        public Typeface getTypeface(final Contenxt, final String filename) {
+        public Typeface getTypeface(final Contenxt context, final String filename) {
             Typeface typeface = mCache.get(filename);
             if (typeface == null) {
-                typeface = Typeface.createFromAsset(getContext().getAssets(), filename);
+                typeface = Typeface.createFromAsset(context.getAssets(), filename);
                 mCache.put(filename, typeface);
             }
             return typeface;
