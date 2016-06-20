@@ -10,7 +10,7 @@ build:
         name: Update and Install Packages
         code: |
           apt-get update && apt-get upgrade -y
-          apt-get install build-essential ruby rubygems ruby-dev openssh-client rsync -y --force-yes -f
+          apt-get install build-essential ruby rubygems ruby-dev -y -f
 
     - script:
         name: Install bootstrap sass
@@ -29,6 +29,11 @@ build:
 # A step that deploys hugo build
 deploy:
   steps:
+    - script:
+        name: Update and Install Packages
+        code: |
+          apt-get update && apt-get upgrade -y
+          apt-get install openssh-client rsync -y -f
     - add-to-known_hosts:
         hostname: $DO_IZUMI_HOST
     - mktemp:
