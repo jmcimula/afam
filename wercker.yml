@@ -29,10 +29,6 @@ build:
 # A step that deploys hugo build
 deploy:
   steps:
-    - install-packages:
-        packages: 
-          openssh-client
-          rsync
     - add-to-known_hosts:
         hostname: $DO_IZUMI_HOST
     - mktemp:
