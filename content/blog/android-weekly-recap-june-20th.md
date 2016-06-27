@@ -1,7 +1,7 @@
 ---
 author: "Henry Addo"
 date: 2016-06-20T11:04:47+09:00
-draft: true
+draft: false
 title: Android Weekly Recap June 20th
 twitter: "eyedol"
 ---
