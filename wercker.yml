@@ -15,7 +15,7 @@ build:
     - script:
         name: Install bootstrap sass
         code: |
-          gem install bootstrap-sass
+          gem install sass bootstrap-sass
 
     - eyedol/compass-compile:
         config-file: $WERCKER_ROOT/themes/mdb-addhen/static/config.rb
