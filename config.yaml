@@ -20,6 +20,21 @@ Params:
     DateFormat:
         ISO8601: "2006-01-02T15:04:05-07:00"
         Localized: "January 2, 2006"
+    Social:
+      Github: "addhen"
+      Facebook: "addhenltd"
+      Twitter: "addhenltd"
+      TwitterDomain: "www.addhen.com" # This domain shows in twitter cards as "View on 
+      Googleplus: "addhen"
+
+    Authors:
+      Henry:
+        Name: "Henry Addo"
+        Bio: "Software developer at Addhen Limited"
+        Social:
+          Github: "eyedol"
+          Twitter: "eyedol"
+          LinkedIn: "henryaddo"
 
 Menu:
     Main:
@@ -52,3 +67,6 @@ Menu:
           Weight: 3
           Identifier: "bitbucket"
           URL: "https://bitbucket.org/addhen"
+
+Taxonomies:
+    Tags: "tags"           

@@ -1,5 +1,5 @@
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
-{{ partial "head.html" . }}
+{{ partial "home-page-head.html" . }}
 <!-- open gragh support -->
 <meta property="og:title" content="{{ $.Site.Title }}">
 <meta property="og:description" content="{{ $strings.contentinfo.description }}">
