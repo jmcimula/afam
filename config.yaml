@@ -35,6 +35,9 @@ Params:
           Github: "eyedol"
           Twitter: "eyedol"
           LinkedIn: "henryaddo"
+    Widgets:
+      RecentArticles: true
+      Tags: true
 
 Menu:
     Main:
@@ -69,4 +72,4 @@ Menu:
           URL: "https://bitbucket.org/addhen"
 
 Taxonomies:
-    Tags: "tags"           
+    Tags: "tags"
