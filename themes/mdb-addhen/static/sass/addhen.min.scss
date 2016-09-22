@@ -124,6 +124,15 @@ div.col-sm-10 h3 {
 .wrap-content {
     padding-left : 20px;
     padding-right: 20px;
+
+    h5 {
+        a {
+            color: #202020;
+            &:hover {
+                color: #CC0000;
+            }
+        }
+    }
 }
 
 textarea.materialize-textarea {

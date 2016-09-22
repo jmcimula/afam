@@ -18,7 +18,7 @@
     {{ range .Data.Pages }}
     <div class="row">
         <div class="wrap-content col-sm-12">
-            <h5>{{ .Title }}</h5>
+            <h5><a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"> {{ .Title }}</a></h5>
             <ul class="list-inline">
                 <li>
                    <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
