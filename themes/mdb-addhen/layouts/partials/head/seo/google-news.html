@@ -1,0 +1,5 @@
+<!-- Credits: https://github.com/nozzle/hugo-snippets/blob/master/layouts/partials/head/seo/google_news.html -->
+<!-- Output news_keywords taxonomy as Google news_keywords -->
+{{ with .Params.googlenewskeywords }}
+<meta name="news_keywords" content="{{ range $i, $kw := first 10 . }}{{ if $i }},{{ end }}{{ $kw }}{{ end }}" />
+{{ end }}

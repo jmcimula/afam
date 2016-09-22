@@ -121,9 +121,27 @@ div.col-sm-10 h3 {
     padding: 0;
 }
 
+div.read-more-link {
+    a {
+        color: #CC0000;
+        &:hover {
+            color: #202020;
+        }
+    }
+}
+
 .wrap-content {
     padding-left : 20px;
     padding-right: 20px;
+
+    h5 {
+        a {
+            color: #202020;
+            &:hover {
+                color: #CC0000;
+            }
+        }
+    }
 }
 
 textarea.materialize-textarea {

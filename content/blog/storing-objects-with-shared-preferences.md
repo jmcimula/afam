@@ -1,9 +1,11 @@
 ---
 author: "Henry Addo"
 date: 2016-05-16T14:02:21+09:00
-draft: false
+draft: true
 title: Storing Objects With Shared Preferences
 twitter: "eyedol"
+googlenewskeywords: ["sharedPreferences", "storing", "objects", "android", "design", "gson"]
+tags: ["Storing", "Database", "Sharing"]
 ---
 As you know [SharedPreferences][1] allows you to store key-value pairs of primitive data types in an XML and provides you with a decent API for storing/retrieving their values. It's mostly used to persist values from Preferences/Settings screens.
 
