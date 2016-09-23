@@ -1,11 +1,8 @@
 // MDB 
-@import "mdb/mdb";
-@import "compass/css3";
-
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #202020;
-    margin-top: 100px;
+    margin-top: 7rem;
     background-color: #EEEEEE;
 }
 
@@ -42,11 +39,9 @@ strong {
 }
 
 .navbar .navbar-brand {
-    position: relative;
-    height: 60px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     color: #202020;
-    background-color: #fff;
 }
 
 a.navbar-brand {
@@ -64,13 +59,14 @@ a.navbar-brand {
 
 #logo a {
   font-family: 'Roboto Slab', serif;
-  text-indent: 30px;
+  text-indent: 35px;
   font-size: 30px;
-  background: transparent url(../img/logomark.svg) no-repeat 10px 20px;
-  display: block;
+  background: transparent url(../img/logomark.svg) no-repeat 0 5px;
   color: #202020;
   outline: none;
-
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .card-panel {
@@ -183,49 +179,56 @@ textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly=re
     margin-top: 25px;
 }
 
-.navbar {
-    .navbar-nav {
-        > li > a {
-            color: #202020;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            &:hover,
-            &:focus {
-                color: #202020;
+.navbar.navbar-light {
+    background: #E0E0E0;
+    .nav-item a {
+        color: #202020;
+        &:hover {
+            background-color: transparent;
+        }
+        &.open {
+            color: #CC0000;
+            &:focus, &:hover {
+                color: #CC0000;
                 background-color: transparent;
             }
         }
-        > .active > a {
+    }
+
+    .nav-link {
+        &.active {
             &,
-            &:hover,
-            &:focus {
+            &:focus, 
+            &:hover {
                 color: #FFF;
                 background-color: #CC0000;
             }
         }
-        > .disabled > a {
-            &,
-            &:hover,
-            &:focus {
-                color: $navbar-link-disabled-color;
-                background-color: $navbar-link-disabled-bg;
+        &.open {
+            color: #CC0000;
+            &:focus, &:hover {
+                color: #CC0000;
+                background-color: transparent;
             }
         }
     }
-    // Responsive menu icon
-    // Darken the responsive nav toggle
-    .navbar-toggle {
-        border-color: #000000;
-        &:hover,
-        &:focus {
-            background-color: transparent;
+}
+
+/** Style blog menu item active state. For some reason I have to do this */
+.navbar-light .navbar-nav {
+    .active > .nav-link {
+        &,
+        &:focus, 
+        &:hover {
+            color: #FFF;
+            background-color: #CC0000;
         }
-        .icon-bar {
-            background-color: #000000;
-            &:hover,
-            &:focus {
-                background-color: #FFFFFF;
-            }
+    }
+    &.open {
+        color: #CC0000;
+        &:focus, &:hover {
+            color: #CC0000;
+            background-color: transparent;
         }
     }
 }

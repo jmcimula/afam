@@ -16,13 +16,14 @@
 {{ partial "menu.html" . }}
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ $menus := $.Site.Menus.Main }}
-{{ $contact := index $menus 2 }}
+{{ $contact := index $menus 3 }}
 <main>
     <div class="container">
         <!--First Row-->
         <div class="row intro-row">
+            {{ $home := index $menus 0 }}
             <!--First Column-->
-            <div class="col-md-6">
+            <div id="{{ $home.Identifier }}" class="col-md-6">
                 <img src="{{ $.Site.BaseURL }}/img/findreels-device-frame.png" class="img-responsive">
             </div>
             <!--/.First Column-->
@@ -31,7 +32,7 @@
                 <!--Heading-->
                 <h4>{{ $strings.contentinfo.tagline | safeHTML }}</h4>
                 <!--Description-->
-                <p>{{ $strings.about.description | safeHTML }}</p>
+                <p id>{{ $strings.about.description | safeHTML }}</p>
                 <p>Addhen was started by <a href="https://www.linkedin.com/in/henryaddo" target="_blank">Henry Addo</a>. A former software engineer at Ushahidi. You can read more about him on his personal <a href="https://www.addhen.org/" target="_blank">website</a>.<p>
                 <!--Call to action button-->
                 <p>Feel free to engage us.</p>
@@ -41,7 +42,7 @@
         </div>
         <!--/.First Row-->
         <!-- What we do Section -->
-        {{ $whatwedo := index $menus 0 }}
+        {{ $whatwedo := index $menus 1 }}
         <section id="{{ $whatwedo.Identifier }}">
             <div class="divider-new wow bounceIn">{{ $whatwedo.Name }}</div>
             <div class="row wrap-content">
@@ -51,7 +52,7 @@
         </section>
 
         <!--Section: Portfolio-->
-        {{ $portfolio := index $menus 1 }}
+        {{ $portfolio := index $menus 2 }}
         <section id="{{ $portfolio.Identifier }}">
             <div class="divider-new">{{$portfolio.Name}}</div>
             <div class="row">
@@ -168,7 +169,7 @@
 </main>
 
 <!-- Contact Section -->
-{{ $contact := index $menus 2 }}
+{{ $contact := index $menus 3 }}
 <section id="{{ $contact.Identifier }}">
     <div class="container">
         <div class="divider-new">{{$contact.Name}}</div>

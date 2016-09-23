@@ -41,20 +41,24 @@ Params:
 
 Menu:
     Main:
-        - Name: "What We Do"
+        - Name: "Home"
           Weight: 0
+          Identifier: "home"
+          URL: "/"
+        - Name: "What We Do"
+          Weight: 1
           Identifier: "what-we-do"
           URL: "#what-we-do"
         - Name: "Portfolio"
-          Weight: 1
+          Weight: 2
           Identifier: "portfolio"
           URL: "#portfolio"
         - Name: "Contact Us"
-          Weight: 2
+          Weight: 3
           Identifier: "contact"
           URL: "#contact"
         - Name: "Blog"
-          Weight: 3
+          Weight: 4
           Identifier: "blog"
           URL: "/blog/"  
     External:
