@@ -3,33 +3,28 @@
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <section>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-        {{ range .Data.Pages }}
-            <div class="wrap-content">
-            <h5><a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"> {{ .Title }}</a></h5>
-            <ul class="list-inline">
-                <li>
-                   <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
-                </li>
-                {{ if isset .Params "author" }}<li><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
-            </ul>
-            <div>
-                {{ .Summary }}
+    <div class="container">
+        <div class="col-md-12">
+            {{ range .Data.Pages }}
+            <div class="row wrap-content">
+                <h5><a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"> {{ .Title }}</a></h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                       <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
+                    </li>
+                    {{ if isset .Params "author" }}
+                    <li class="list-inline-item"><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
+                </ul>
+                <p>{{ .Summary }}</p>
                 {{ if .Truncated }}
                 <p class="read-more-link pull-right">
-                    <a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"><nobr>Read more →</nobr></a>
+                    <a class="btn btn-danger" href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"><nobr>Read more →</nobr></a>
                 </p>
                 {{ end }}
             </div>
-            </div>
-        {{ end }}
+            {{ end }}
         </div>
-        <div class="wrap-content col-md-4">
-            {{ partial "widgets/widgets.html"}}
-        </div>
+        <!-- Include right side bar -->
     </div>
-</div>
 </section>
 {{ partial "footer.html" . }}

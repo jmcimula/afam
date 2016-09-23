@@ -3,30 +3,32 @@
     <footer class="page-footer rgba-black-lighter center-on-small-only">
         <div class="container">
             <div class="row">
-                <div class="footer-col col-md-4 wow">
+                <div class="col-md-4 wow">
                     <address>
-                        <h5 class="white-text fadeInDown">Accra, Ghana</h5>
+                        <h4 class="white-text fadeInDown">Accra, Ghana</h4>
                         <p class="white-text">PO Box CT 8610, <br />Cantonments, Accra, Ghana,<br /> West Africa.</p>
                     </address>
                 </div>
-                <div class="footer-col col-md-4 text-center footer-social-media">
+                <div class="col-md-4 text-xs-center footer-social-media">
                     <ul class="list-inline">
                         {{ range $.Site.Menus.External }}
-                        <li>
-                            <a href="{{ .URL }}" class="btn-floating {{ .Identifier}}-bg waves-effect waves-light"><i class="fa fa-fw fa-{{ .Identifier}}"></i></a>
+                        <li class="list-inline-item">
+                            <a href="{{ .URL }}" class="btn {{ .Identifier}}-bg waves-effect waves-light"><i class="fa fa-fw fa-{{ .Identifier}} fa-lg"></i></a>
                         </li>
                         {{ end }}
                     </ul>
                 </div>
-                <div class="footer-col col-md-2 col-md-offset-2  wow">
-                    <address>
-                        <h5 class="white-text fadeInDown">Sendai, Japan</h5>
-                        <p class="white-text">Izumi Chuo, Sendai<br />Miyagi, Japan</p>
-                    </address>
+                <div class="col-md-4 wow">
+                    <div class="pull-lg-right">
+                        <address>
+                            <h4 class="white-text fadeInDown">Sendai, Japan</h4>
+                            <p class="white-text">Izumi Chuo, Sendai<br />Miyagi, Japan</p>
+                        </address>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright text-center rgba-black-lighter">
+        <div class="footer-copyright text-xs-center rgba-black-lighter">
             <div class="container">
                 &copy; {{ .Now.Format "2006" }} &middot; {{ $.Site.Copyright }} <span class="powered-by"> &middot; {{ $strings.contentinfo.generator | safeHTML }}
             </div>

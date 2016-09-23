@@ -87,14 +87,26 @@ p {
 
 .github-bg {
     background-color: #333333;
+    &:hover,
+    &:focus {
+        background-color: lighten(#333333, 5%);
+    }
 }
 
 .bitbucket-bg {
     background-color: #205081;
+    &:hover,
+    &:focus {
+        background-color: lighten(#205081, 5%);
+    }
 }
 
 .google-plus-bg {
     background-color: #DD4B39;
+    &:hover,
+    &:focus {
+        background-color: lighten(#DD4B39, 5%);
+    }
 }
 
 footer.page-footer a {
