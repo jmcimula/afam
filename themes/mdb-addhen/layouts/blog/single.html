@@ -1,13 +1,5 @@
 {{ partial "head.html" . }}
 <title>{{ .Title }} &mdash; {{ $.Site.Title }}</title>
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ substr .Summary 0 250 }} ...">
-<meta name="description" content="{{ substr .Summary 0 250 }} ...">
-<!-- Twitter cards -->
-<meta name="twitter:card" content="{{ substr .Summary 0 250 }} ..." />
-<meta name="twitter:description" content="{{ .Site.Params.description}}" />
-<meta name="twitter:creator" content="@{{ .Params.twitter }}" />
-<meta name="twitter:site" content="@{{ $.Site.Twitter }}" />
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <div class="container">
@@ -17,10 +9,11 @@
             <h3>{{ .Title }}</h3>
             <hr />
             <ul class="list-inline">
-                <li>
+                <li class="list-inline-item">
                    <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
                 </li>
-                {{ if isset .Params "author" }}<li><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
+                {{ if isset .Params "author" }}
+                <li class="list-inline-item"><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
             </ul>
         </div>
     </div>

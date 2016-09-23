@@ -1,0 +1,13 @@
+{{ if .Site.Params.Widgets.Tags }}
+{{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
+{{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+<div class="widget-wrap">
+    <h3 class="widget-title"> {{ $strings.widgets.tags.title }}</h3>
+    <div class="widget tagcloud">
+        {{ range $name, $items := .Site.Taxonomies.tags }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower  }}" style="font-size: 12px;">{{ $name }}</a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}

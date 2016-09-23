@@ -1,0 +1,18 @@
+{{ if .Site.Params.Widgets.RecentArticles }}
+<div class="widget-wrap">
+    <div class="widget">
+        <ul id="recent-post">
+            <li id="first-recent">
+                <a href="sitemap.xml" id="firstmove" class="move">
+                    <h3 class="widget-title">Latest News</h3>
+                </a>
+            </li>
+            {{ range .Data.Pages }}
+            <li>
+                <a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"> {{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}

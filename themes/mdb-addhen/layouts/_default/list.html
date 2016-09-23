@@ -1,42 +1,30 @@
 {{ partial "head.html" . }}
-<meta property="og:title" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
-<meta property="og:description" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
-<meta name="description" content="{{ $.Site.Title }} &mdash; {{ .Title }}">
-<meta name="author" content="{{ $.Site.Params.Publisher.Name }}">
-<!-- Twitter card support -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ $.Site.Title }} &mdash; {{ .Title }}" />
-<meta name="twitter:description" content="{{ $.Site.Title }} &mdash; {{ .Title }}" />
-<meta name="twitter:site" content="{{ $.Site.Params.Publisher.TwitterUserName }}" />
 <title>{{ $.Site.Title }} &mdash; {{ .Title }}</title>
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
 <section>
-<div class="container">
-    {{ range .Data.Pages }} 
-    <div class="row">
-        <div class="wrap-content col-sm-12"> 
-            <h3>{{ .Title }}</h3>
-            <hr />
-            <ul class="list-inline">
-                <li>
-                   <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
-                </li>
-                {{ if isset .Params "author" }}<li><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            {{ .Summary }}
-            {{ if .Truncated }}
-            <div class="read-more-link">
-                <a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"><nobr><span class="text-info">Read more →</span></nobr></a>
+    <div class="container">
+        <div class="col-md-12">
+            {{ range .Data.Pages }}
+            <div class="row wrap-content">
+                <h5><a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"> {{ .Title }}</a></h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                       <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
+                    </li>
+                    {{ if isset .Params "author" }}
+                    <li class="list-inline-item"><span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</li></span>{{ end }}
+                </ul>
+                <p>{{ .Summary }}</p>
+                {{ if .Truncated }}
+                <p class="read-more-link pull-right">
+                    <a class="btn btn-danger" href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"><nobr>Read more →</nobr></a>
+                </p>
+                {{ end }}
             </div>
             {{ end }}
         </div>
+        <!-- Include right side bar -->
     </div>
-    {{ end }}
-</div>
-{{ partial "footer.html" . }}
 </section>
+{{ partial "footer.html" . }}

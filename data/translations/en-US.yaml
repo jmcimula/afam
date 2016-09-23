@@ -55,4 +55,10 @@ portfolio:
 
 # Content
 content:
-    readmore_link: "Read more"    
+    readmore_link: "Read more"
+
+widgets:
+    tags:
+        title: "Tags"
+    recent_articles:
+        title: "Recent Articles"    

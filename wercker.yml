@@ -13,9 +13,9 @@ build:
           apt-get install build-essential ruby rubygems ruby-dev -y -f
 
     - script:
-        name: Install bootstrap sass
+        name: Install sass
         code: |
-          gem install sass bootstrap-sass
+          gem install sass
 
     - eyedol/compass-compile:
         config-file: $WERCKER_ROOT/themes/mdb-addhen/static/config.rb
