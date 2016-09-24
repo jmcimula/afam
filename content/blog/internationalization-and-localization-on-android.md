@@ -4,6 +4,8 @@ date: 2016-06-01T11:08:17+09:00
 draft: true
 title: Best Practices For Supporting Internationalization and Localization On Android
 twitter: "eyedol"
+googlenewskeywords: ["localization", "translation", "android", "locale", "accessibility"]
+Tags: ["Localization", "Translation", "Accessibility"]
 ---
 
 At addhen, localization is something we take very seriously when developing an Android application. Though most of our apps aren't translated into most languages, we make sure we build apps that are localizable. That way in the future when we're ready to open the app to more regions and languages, we already have a strong foundation. I'm going to share some of our best practices for localization support.  If you're not familiar with what *internationalization* and *localization* are, I'll go ahead to define them.

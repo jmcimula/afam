@@ -27,9 +27,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #CC0000;
+    color: #1F7CC3;
+    &:link {
+        text-decoration: none;
+    }
     &:hover {
-        color: #202020;
+        text-decoration: underline;
     }
 }
 

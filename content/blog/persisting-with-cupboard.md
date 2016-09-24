@@ -4,7 +4,7 @@ date: 2016-06-27T09:50:18+09:00
 draft: true
 title: Persisting Data Objects With Cupboard
 twitter: "eyedol"
-newsKeywords: ["cupboard", "json", "objects", "android", "design", "gson"]
+googlenewskeywords: ["cupboard", "json", "objects", "android", "design", "gson"]
 Tags: ["Storing", "Database"]
 ---
 

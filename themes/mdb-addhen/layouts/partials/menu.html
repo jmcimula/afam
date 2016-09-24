@@ -16,7 +16,13 @@
             {{ if .IsHome }}
                 {{ range $.Site.Menus.Main }}
                     {{ if eq .Identifier "blog" }}
-                        <li class="nav-item"><a class="nav-link" href="{{ .Identifier }}">{{ .Name }}</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ .Identifier }}">{{ .Name }}</a>
+                        </li>
+                    {{ else if eq .Identifier "home" }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ $.Site.BaseURL }}">{{ .Name }}</a>
+                        </li>
                     {{ else }}
                         <li class="nav-item page-scroll"><a class="nav-link" href="#{{ .Identifier }}">{{ .Name }}</a></li>
                     {{ end }}
@@ -24,9 +30,17 @@
             {{ else }}
                 {{ range $.Site.Menus.Main }}
                     {{ if eq .Identifier "blog" }}
-                        <li class="nav-item active page-scroll"><a class="nav-link" href="{{ $.Site.BaseURL }}{{ .Identifier }}">{{ .Name }}</a></li>
+                        <li class="nav-item active page-scroll">
+                            <a class="nav-link" href="{{ $.Site.BaseURL }}{{ .Identifier }}">{{ .Name }}</a>
+                        </li>
+                    {{ else if eq .Identifier "home" }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ $.Site.BaseURL }}">{{ .Name }}</a>
+                        </li>
                     {{ else }}
-                        <li class="nav-item page-scroll"><a class="nav-link" href="{{ $.Site.BaseURL }}#{{ .Identifier }}">{{ .Name }}</a></li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="{{ $.Site.BaseURL }}#{{ .Identifier }}">{{ .Name }}</a>
+                        </li>
                     {{ end }}
                 {{ end }}
             {{ end }}
