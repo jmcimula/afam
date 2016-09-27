@@ -36,5 +36,5 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-<!--Animations initialization-->
+// Animations initialization
 new WOW().init();
