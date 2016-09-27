@@ -23,12 +23,12 @@
         <div class="row intro-row">
             {{ $home := index $menus 0 }}
             <!--First Column-->
-            <div id="{{ $home.Identifier }}" class="col-md-6">
-                <img src="{{ $.Site.BaseURL }}/img/findreels-device-frame.png" class="img-responsive">
+            <div id="{{ $home.Identifier }}" class="col-md-6 col-xs-12">
+                <img src="{{ $.Site.BaseURL }}/img/findreels-device-frame.png" class="img-responsive" alt="Screen shot of one of our apps">
             </div>
             <!--/.First Column-->
             <!--Second Column-->
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-12">
                 <!--Heading-->
                 <h2>{{ $strings.contentinfo.tagline | safeHTML }}</h2>
                 <!--Description-->
