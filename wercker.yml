@@ -26,7 +26,8 @@ build:
           npm install --global gulp-cli
           npm install --save-dev gulp
           gulp config-prod
-          gulp build  
+          gulp build
+          cat rev-manifest.json  
 
 # A step that deploys hugo build
 deploy:
