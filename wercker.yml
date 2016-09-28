@@ -14,6 +14,9 @@ build:
     
     - npm-install
 
+    - arjen/hugo-build:
+        version: 0.17
+
     - script:
         name: Build website with gulp
         code: |
@@ -23,11 +26,6 @@ build:
           npm install
           gulp config-prod
           gulp build  
-
-    - arjen/hugo-build:
-        version: 0.16
-        config: ./config.yaml
-        flags: --buildDrafts=true
 
 # A step that deploys hugo build
 deploy:
