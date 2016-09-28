@@ -1,20 +1,19 @@
 www.addhen.com website
 
-### TO build SCSS
+### Install dependencies. Uses gulp for builds
+```
+npm install --global gulp-cli
+npm install --save-dev gulp
+npm install
+gulp config-prod
+gulp build
+```
 
-In the root folder issue
+### To serve
+`gulp serve`
 
-`compass watch --config themes/mdb-addhen/static/config.rb --output-style compressed`
-
-*Note* Make sure you've compass installed.
-
-`gem install compass`
-
-### Run website locally
-
-**English**
-`hugo server --buildDrafts --watch --config=config.yaml`
-
+### To build for distribution
+`gulp build`
 
 ### Write a new blog post
 `hugo new blog/<blog-post-title>.md`
