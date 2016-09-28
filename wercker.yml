@@ -1,5 +1,5 @@
 ---
-box: debian
+box: node
 # Build definition
 build:
   # The steps that will be executed on build
@@ -10,21 +10,23 @@ build:
         name: Update and Install Packages
         code: |
           apt-get update && apt-get upgrade -y
-          apt-get install build-essential ruby rubygems ruby-dev -y -f
+          apt-get install build-essential wget -y -f
+    
+    - npm-install
 
     - script:
-        name: Install sass
+        name: Install hugo
         code: |
-          gem install sass
+          wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16-1_amd64.deb
+          dpkg -i hugo_0.16-1_amd64.deb
 
-    - eyedol/compass-compile:
-        config-file: $WERCKER_ROOT/themes/mdb-addhen/static/config.rb
-        flags: --output-style compressed
-
-    - arjen/hugo-build:
-        version: 0.15
-        config: ./config.yaml
-        flags: --buildDrafts=true
+    - script:
+        name: Build website with gulp
+        code: |
+          npm install --global gulp-cli
+          npm install --save-dev gulp
+          gulp config-prod
+          gulp build  
 
 # A step that deploys hugo build
 deploy:

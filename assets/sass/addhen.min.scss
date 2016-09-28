@@ -1,9 +1,26 @@
 // MDB 
+* {
+    box-sizing: border-box;
+}
+ 
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #202020;
     margin-top: 7rem;
     background-color: #EEEEEE;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
 }
 
 span.powered-by {
@@ -298,3 +315,4 @@ a.recap-heading-links {
         text-decoration: underline;
     }
 }
+

@@ -16,7 +16,7 @@ Debugging **memory leaks** in an android app can be a bit tricky. Recently we ha
 
 Finding out all these information just by reading the codebase can be difficult and time consuming. Luckily there are monitoring tools out there that helps in reporting and investigating **memory leaks**. Android Studio comes with a [Memory Monitor][1] that essentially monitors memory activities by your app. You can then dump the Java Heap and analyize it for optimizations and possible memory leaks. There is also [LeakCanary][2] by the folks at Square. It allows you to integrate memory monitoring directly into your app so it reports any memory leaks in the app.
 
-I'm going to share with you the strategy we used in detecting memory leaks in our, the problematic code and the refactoring we did to eliminate the issue.
+I'm going to share with you the strategy we used in detecting the memory leak in our app, the problematic code and the refactoring we did to eliminate the issue.
 
 #### 1. Used LeakCanary To Detect Memory Leaks In the App 
 In our app's `devel flavor`, we have LeakCanary enabled. This is a practice we do with all of our apps as it makes it easier to detect and fix memory leaks as we develop. With our devel build variant launched in an emulator, we used it like a regular user will use the app. We fetched the needed content, scrolled through them and nothing really happened. The issue showed up just when we rotated the emulator to change screen orientation, after few seconds, LeakCanary reported a memory leak, followed by a dump of our app's heap. LeakCanary displays the heap in an optimized way so it's easier to find which dominant object is still referencing an object that needs to be GC'd. 
@@ -31,11 +31,9 @@ After we have run the profiler for a while, we took a heap dump of it. Using the
 
 This leaks an Activity.
 
-{{< syntax-highlight java >}}
-public class Launcher {
-	
-	 // This will be strongly held by the instance of the Launcher class.
-   	 private Activity mActivity;
+{{< syntax-highlight java >}}public class Launcher {
+    // This will be strongly held by the instance of the Launcher class.
+    private Activity mActivity;
 
     @Inject
     public Launcher(Activity activity) {
@@ -45,7 +43,8 @@ public class Launcher {
     public void launchReviewList(Context context, Long movieId) {
         context.startActivity(ListReviewsActivity.getIntent(context, movieId));
     }
-	// This is bad code
+    
+    // This is bad code
     public void launchMovieDetails(FragmentActivity activity, Long movieId, View view) {
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 // The context of the activity
@@ -64,7 +63,7 @@ public class Launcher {
 
 {{< /syntax-highlight >}}
 
-The dominant object, `mLauncher` holding on to the instance of the activity class.
+The dominant object, `mLauncher` was holding on to the instance of the activity class.
 
 {{< syntax-highlight java>}}
 public class ListMovieFragment extends BaseRecyclerViewFragment<MovieModel, MovieAdapter> implements
@@ -94,7 +93,7 @@ public class ListMovieFragment extends BaseRecyclerViewFragment<MovieModel, Movi
 }
 {{</syntax-highlight>}}
 
-An instance of `Launcher` class, `mLauncher` is declared in the `ListMovieFragment` class. This fragment class still exist after the main activity hosting it is destroyed. It's referencing an instance of the MainActivity which is declared in the `Launcher` class as `mActivity`
+An instance of `Launcher` class, `mLauncher` is declared in the `ListMovieFragment` class and it's referencing an instance of the `MainActivity` which is declared in the `Launcher` class as `mActivity`. Because the fragment class still exist after the main activity hosting it is destroyed.
 
 
 #### 5. Refactored Defected Code To Eliminate The Issue
@@ -128,7 +127,7 @@ public class Launcher {
 
 {{</syntax-highlight>}}
 
-We removed the global instance of Activity, `mActivity` and instead passed it as a parameter to the method that needs it. This way it can be `GC'd` easily as there is no strong hold of it anymore.
+We removed the global instance of Activity, `mActivity` and instead passed it as a parameter to the method that needed it. This way it can be `GC'd` easily as there is no strong hold of it anymore.
 
 ### Conclusion
 If you're curious about memory leaks in general and ways to avoid them, you can read these great articles belows.
