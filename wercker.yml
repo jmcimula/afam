@@ -11,20 +11,17 @@ build:
         code: |
           apt-get update && apt-get upgrade -y
           apt-get install build-essential nodejs npm -y -f
-
+    
+    - inz/npm-install:
+    
     - script:
         name: Build website with gulp
         code: |
-          npm install
           gulp config-prod
-          gulp build
-
-    - eyedol/compass-compile:
-        config-file: $WERCKER_ROOT/themes/mdb-addhen/static/config.rb
-        flags: --output-style compressed
+          gulp build  
 
     - arjen/hugo-build:
-        version: 0.15
+        version: 0.16
         config: ./config.yaml
         flags: --buildDrafts=true
 
