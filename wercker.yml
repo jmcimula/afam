@@ -1,5 +1,5 @@
 ---
-box: nodesource/trusty
+box: node
 # Build definition
 build:
   # The steps that will be executed on build
@@ -12,7 +12,7 @@ build:
           apt-get update && apt-get upgrade -y
           apt-get install build-essential -y -f
     
-    - inz/npm-install@1.1.5
+    - npm-install
 
     - script:
         name: Build website with gulp
