@@ -23,15 +23,7 @@ var hugoTheme = 'mdb-addhen';
 var sassInput = './assets/sass/**/*.scss';
 var sassOutput = './public/css/';
 
-var jsInput = [
-  './themes/'+hugoTheme+'/static/js/jquery-2.2.3.js',
-  './themes/'+hugoTheme+'/static/js/tether.js',
-  './themes/'+hugoTheme+'/static/js/bootstrap.js',
-  './themes/'+hugoTheme+'/static/js/mdb.js',
-  './themes/'+hugoTheme+'/static/js/addhen.js',
-  './themes/'+hugoTheme+'/static/js/jqBootstrapValidation-1.3.7.js',
-  './themes/'+hugoTheme+'/static/js/contact.js'
-];
+var jsInput = './assets/js/**/*.js';
 
 var htmlInput = [
   './rev-manifest.json',
@@ -63,7 +55,9 @@ var configProdFile = './config-prod.yaml';
 
 gulp.task('default', ['serve']);
 
-gulp.task('build', ['hugo', 'sass', 'js', 'img', 'html']);
+gulp.task('build', function() {
+  runSequence('hugo', 'sass', 'js', 'img', 'html');
+});
 
 gulp.task('hugo', function() {
   return buildHugo();
@@ -93,13 +87,12 @@ gulp.task('config-prod', function() {
   return changeConfigFile(configProdFile);
 });
 
-gulp.task('watch', function() {
-  changeConfigFile(configDevFile);
-  buildHugo();
-  buildJs();
-  buildSass();
-  buildHtml();
+gulp.task('rev-assets', function() {
+  return revAssets();
+});
 
+gulp.task('watch', function() {
+  runSequence(['config-dev','hugo'],'js','sass','html');
   watch(sassInput, function (vinyl) {
     gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
     return buildSass().pipe(connect.reload());
@@ -142,7 +135,6 @@ function buildHugo() {
 }
 
 function buildSass() {
-  gutil.log(gutil.colors.red('building sass...'));
   return gulp
     .src(sassInput)
     .pipe(plumber({
@@ -158,13 +150,12 @@ function buildSass() {
     .pipe(gulp.dest(sassOutput))
     .pipe(rev.manifest({
       base:  sassOutput,
-      merge: true
+      merge: './rev-manifest.json'
     }))
     .pipe(gulp.dest(sassOutput));
 }
 
 function buildJs() {
-  gutil.log(gutil.colors.red('building js...'));
   return gulp.src(jsInput)
     .pipe(plumber({
       errorHandler: handleError
@@ -176,13 +167,12 @@ function buildJs() {
     .pipe(gulp.dest(jsOutput))
     .pipe(rev.manifest({
       base: jsOutput,
-      merge: true
+      merge: './rev-manifest.json'
     }))
     .pipe(gulp.dest(jsOutput));
 }
 
 function buildImages() {
-  gutil.log(gutil.colors.red('building images...'));
   return gulp.src(imageInput)
     .pipe(imagemin({
       progressive: true,
@@ -195,7 +185,6 @@ function buildImages() {
 }
 
 function buildHtml() {
-  gutil.log(gutil.colors.red('building html...'));
   return gulp
     .src(htmlInput)
     .pipe(revCollector({
