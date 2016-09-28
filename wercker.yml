@@ -10,10 +10,10 @@ build:
         name: Update and Install Packages
         code: |
           apt-get update && apt-get upgrade -y
-          apt-get install build-essential nodejs npm -y -f
+          apt-get install build-essential -y -f
     
     - inz/npm-install@1.1.5
-    
+
     - script:
         name: Build website with gulp
         code: |
