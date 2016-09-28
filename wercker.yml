@@ -17,6 +17,7 @@ build:
     - script:
         name: Build website with gulp
         code: |
+          npm install --global gulp-cli
           npm install
           gulp config-prod
           gulp build  
