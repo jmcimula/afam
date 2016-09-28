@@ -23,7 +23,8 @@ build:
     - script:
         name: Build website with gulp
         code: |
-          hugo version
+          npm install --global gulp-cli
+          npm install --save-dev gulp
           gulp config-prod
           gulp build  
 
