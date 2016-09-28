@@ -14,8 +14,11 @@ build:
     
     - npm-install
 
-    - arjen/hugo-build:
-        version: 0.16
+    - script:
+        name: Install hugo
+        code: |
+          wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16-1_amd64.deb
+          dpkg -i hugo_0.16-1_amd64.deb
 
     - script:
         name: Build website with gulp
