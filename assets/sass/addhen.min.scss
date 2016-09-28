@@ -17,6 +17,12 @@ body {
     background-color: #EEEEEE;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
 span.powered-by {
     a {
         color: #CC0000;

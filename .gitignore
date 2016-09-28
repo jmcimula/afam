@@ -6,3 +6,13 @@ gen
 Gemfile.lock
 addhen.min.css
 public
+node_modules
+
+# NPM
+node_modules
+
+#grunt-rev
+rev-manifest.json
+
+#Configuration
+config.yaml

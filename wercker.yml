@@ -10,12 +10,14 @@ build:
         name: Update and Install Packages
         code: |
           apt-get update && apt-get upgrade -y
-          apt-get install build-essential ruby rubygems ruby-dev -y -f
+          apt-get install build-essential nodejs npm -y -f
 
     - script:
-        name: Install sass
+        name: Build website with gulp
         code: |
-          gem install sass
+          npm install
+          gulp config-prod
+          gulp build
 
     - eyedol/compass-compile:
         config-file: $WERCKER_ROOT/themes/mdb-addhen/static/config.rb

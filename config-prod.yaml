@@ -1,10 +1,11 @@
 MetaDataFormat: "yaml"
 
 LanguageCode: "en-US"
-BaseURL: "http://0.0.0.0:6789/"
+BaseURL: "http://www.addhen.com/"
 Theme: "mdb-addhen"
 Title: "Android Apps Development Company"
 Copyright: "addhen limited"
+
 
 Params:
     Domain: "addhen.com"
@@ -12,7 +13,7 @@ Params:
         Name: "Addhen Limited"
         GoogleUserName: "addhen"
         TwitterUserName: "addhenltd"
-    GoogleAnalyticsID: "dummy"
+    GoogleAnalyticsID: "UA-76734972-1"
     DisqusShortname: "addhen"
     Locales:
          - Code: "en-US"
