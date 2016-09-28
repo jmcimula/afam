@@ -20,10 +20,10 @@ build:
     - script:
         name: Build website with gulp
         code: |
-          ls
+          whereis hugo
+          which hugo
           npm install --global gulp-cli
           npm install --save-dev gulp
-          npm install
           gulp config-prod
           gulp build  
 
