@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>https://addhen.github.io/afam</id>
+  <updated>2016-09-27T11:34:07&#43;09:00</updated>
+  <link href="https://addhen.github.io/afam/tags/debugging/index.xml" rel="self" />
+  <category term="" />
+  <icon>https://addhen.github.io/afamimages/template/favicon.png</icon>
+  <logo>https://addhen.github.io/afamimages/template/logo-512.png</logo>
+  <rights>Copyright &#169; AFAM</rights>  
+  <title>AFAM</title>
+  <subtitle>Website for Addhen Limited. Highlighting its portfolio and service offerings.</subtitle>
+
+  <entry>
+    <id>https://addhen.github.io/afam/news/debugging-memory-leaks-in-an-android-app/</id>
+    <title>Debugging Memory Leaks In An Android App</title>
+    <updated>2016-09-27T11:34:07&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      
+
+<p>Debugging <strong>memory leaks</strong> in an android app can be a bit tricky. Recently we had to deal with this issue in one of our apps. This was caused due to a recent refactoring we did in our code base. We were holding on to an activity instance that needed to be Garbage Collected<strong>(GC&rsquo;d)</strong> after the activity was destroyed. Yes, you would think the Android Runtime<strong>(ART)</strong> will GC this instance but no. There was another living object in the application that was still holding on to the activity instance so it couldn&rsquo;t be GC&rsquo;d.</p>
+
+<h3 id="investigating-memory-leaks">Investigating Memory Leaks</h3>
+
+<p>Finding out all these information just by reading the codebase can be difficult and time consuming. Luckily there are monitoring tools out there that helps in reporting and investigating <strong>memory leaks</strong>. Android Studio comes with a <a href="https://developer.android.com/studio/profile/am-memory.html">Memory Monitor</a> that essentially monitors memory activities by your app. You can then dump the Java Heap and analyize it for optimizations and possible memory leaks. There is also <a href="https://github.com/square/leakcanary">LeakCanary</a> by the folks at Square. It allows you to integrate memory monitoring directly into your app so it reports any memory leaks in the app.</p>
+
+<p>I&rsquo;m going to share with you the strategy we used in detecting the memory leak in our app, the problematic code and the refactoring we did to eliminate the issue.</p>
+
+<h4 id="1-used-leakcanary-to-detect-memory-leaks-in-the-app">1. Used LeakCanary To Detect Memory Leaks In the App</h4>
+
+<p>In our app&rsquo;s <code>devel flavor</code>, we have LeakCanary enabled. This is a practice we do with all of our apps as it makes it easier to detect and fix memory leaks as we develop. With our devel build variant launched in an emulator, we used it like a regular user will use the app. We fetched the needed content, scrolled through them and nothing really happened. The issue showed up just when we rotated the emulator to change screen orientation, after few seconds, LeakCanary reported a memory leak, followed by a dump of our app&rsquo;s heap. LeakCanary displays the heap in an optimized way so it&rsquo;s easier to find which dominant object is still referencing an object that needs to be GC&rsquo;d.</p>
+
+<h4 id="2-enabled-profiling-to-monitor-memory-activities">2. Enabled Profiling To Monitor Memory Activities</h4>
+
+<p>Once we have detected a memory leak in our app, we enabled Memory Monitor to see the allocation and deallocations of memories in our apps. Also we forced excessive GC to see which objects are GC&rsquo;d or not.</p>
+
+<h4 id="3-dumped-java-heap-and-analyzed-the-trace">3. Dumped Java Heap And Analyzed The Trace.</h4>
+
+<p>After we have run the profiler for a while, we took a heap dump of it. Using the inbuilt <a href="https://developer.android.com/studio/profile/investigate-ram.html">HPROF Viewer</a> in Android studio, we&rsquo;ere able to analyze the trace for all possible memory leaks in the app. Indeed after analyzing it, we had one issue of memory leak. We were able to jump into the source code to see which code is causing the issue.</p>
+
+<h4 id="4-located-defected-code">4. Located Defected Code</h4>
+
+<p>This leaks an Activity.</p>
+
+
+<pre class="prettyprint linenums"><code class="language-java">public class Launcher {
+    // This will be strongly held by the instance of the Launcher class.
+    private Activity mActivity;
+
+    @Inject
+    public Launcher(Activity activity) {
+        mActivity = activity;
+    }
+
+    public void launchReviewList(Context context, Long movieId) {
+        context.startActivity(ListReviewsActivity.getIntent(context, movieId));
+    }
+    
+    // This is bad code
+    public void launchMovieDetails(FragmentActivity activity, Long movieId, View view) {
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                // The context of the activity
+                activity,
+                Pair.create(view, activity.getString(R.string.transition_movie_details)),
+                Pair.create(view, activity.getString(R.string.transition_movie_details_background))
+        );
+        ActivityCompat.startActivity(activity, DetailMovieActivity.getIntent(mActivity, movieId),
+                options.toBundle());
+    }
+
+    public void launchReminders(Context context) {
+        context.startActivity(ListRemindersActivity.getIntent(context));
+    }
+}
+
+</code></pre>
+
+
+
+<p>The dominant object, <code>mLauncher</code> was holding on to the instance of the activity class.</p>
+
+
+<pre class="prettyprint linenums"><code class="language-java">
+public class ListMovieFragment extends BaseRecyclerViewFragment&lt;MovieModel, MovieAdapter&gt; implements
+        MovieListView, RecyclerViewItemTouchListenerAdapter.RecyclerViewOnItemClickListener,
+        OnLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
+
+    @BindView(R.id.loading_list)
+    ProgressBar mProgressBar;
+
+    @BindView(android.R.id.empty)
+    View mEmptyView;
+
+    @Inject
+    ListMoviePresenter mListMoviePresenter;
+
+    @Inject
+    Launcher mLauncher;
+
+    private boolean mIsPaginating;
+
+    private boolean isFromInternet;
+
+    public ListMovieFragment() {
+        super(MovieAdapter.class, R.layout.fragment_movie_list, 0);
+    }
+    ...
+}
+</code></pre>
+
+
+
+<p>An instance of <code>Launcher</code> class, <code>mLauncher</code> is declared in the <code>ListMovieFragment</code> class and it&rsquo;s referencing an instance of the <code>MainActivity</code> which is declared in the <code>Launcher</code> class as <code>mActivity</code>. Because the fragment class still exist after the main activity hosting it is destroyed.</p>
+
+<h4 id="5-refactored-defected-code-to-eliminate-the-issue">5. Refactored Defected Code To Eliminate The Issue</h4>
+
+
+<pre class="prettyprint linenums"><code class="language-java">
+public class Launcher {
+
+    @Inject
+    public Launcher() {
+    }
+
+    public void launchReviewList(Context context, Long movieId) {
+        context.startActivity(ListReviewsActivity.getIntent(context, movieId));
+    }
+
+    public void launchMovieDetails(Activity activity, Long movieId, View view) {
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                // The context of the activity
+                activity,
+                Pair.create(view, activity.getString(R.string.transition_movie_details)),
+                Pair.create(view, activity.getString(R.string.transition_movie_details_background))
+        );
+        ActivityCompat.startActivity(activity, DetailMovieActivity.getIntent(activity, movieId),
+                options.toBundle());
+    }
+
+    public void launchReminders(Context context) {
+        context.startActivity(ListRemindersActivity.getIntent(context));
+    }
+}
+
+</code></pre>
+
+
+
+<p>We removed the global instance of Activity, <code>mActivity</code> and instead passed it as a parameter to the method that needed it. This way it can be <code>GC'd</code> easily as there is no strong hold of it anymore.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>If you&rsquo;re curious about memory leaks in general and ways to avoid them, you can read these great articles belows.</p>
+
+<ol>
+<li><a href="http://blog.nimbledroid.com/2016/09/06/stop-memory-leaks.html">Eight Ways Your Android App Can STOP Leaking memory</a></li>
+<li><a href="https://developer.android.com/studio/profile/am-memory.html">Memory Monitor</a></li>
+<li><a href="https://developer.android.com/studio/profile/am-hprof.html#hprof-diving">HPROF Viewer and Analyzer</a></li>
+<li><a href="https://developer.android.com/studio/profile/investigate-ram.html">Investigating Your RAM Usage</a></li>
+<li><a href="https://www.youtube.com/watch?v=mU1VcKx8Wzw">Detect all memory leaks with LeakCanary! - Youtube Link</a></li>
+</ol>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/news/debugging-memory-leaks-in-an-android-app/" />
+  </entry>
+</feed>

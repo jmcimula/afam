@@ -1,0 +1,150 @@
+<!doctype html><!--[if lt IE 7]> <html class="ie6" lang="ja" prefix="og: http://ogp.me/ns#"> <![endif]--><!--[if IE 7]> <html class="i7" lang="ja" prefix="og: http://ogp.me/ns#"> <![endif]--><!--[if IE 8]> <html class="ie" lang="ja" prefix="og: http://ogp.me/ns#"> <![endif]--> <!--[if gt IE 8]><!--><!--<![endif]--><html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="Storing Objects With Shared Preferences"><meta property="og:description" content="As you know SharedPreferences allows you to store key-value pairs of primitive data types in an XML and provides you with a decent API for storing/retrieving their values. It&rsquo;s mostly used to persist values from Preferences/Settings screens. In a recent project, we wanted to make use of the Shared Preferences framework to store an object&rsquo;s properties more so for convenience. Usually we&rsquo;ll store these in an SQLite database but with this use case we thought it was an overkill to do that."><meta property="og:type" content="website"><meta property="og:url" content="http://0.0.0.0:6789/news/storing-objects-with-shared-preferences/"><meta property="og:updated_time" content="2016-05-16 14:02:21 &#43;0900 JST"><meta itemprop="name" content="Storing Objects With Shared Preferences"><meta itemprop="description" content="As you know SharedPreferences allows you to store key-value pairs of primitive data types in an XML and provides you with a decent API for storing/retrieving their values. It&rsquo;s mostly used to persist values from Preferences/Settings screens. In a recent project, we wanted to make use of the Shared Preferences framework to store an object&rsquo;s properties more so for convenience. Usually we&rsquo;ll store these in an SQLite database but with this use case we thought it was an overkill to do that."><meta itemprop="keywords" content="accessibility,database,debugging,leakcanary,localization,memory-leaks,profiling,sharing,storing,translation,"><meta itemprop="wordCount" content="684"><meta name="news_keywords" content="sharedPreferences,storing,objects,android,design,gson"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Storing Objects With Shared Preferences"><meta name="twitter:description" content="As you know SharedPreferences allows you to store key-value pairs of primitive data types in an XML and provides you with a decent API for storing/retrieving their values. It&rsquo;s mostly used to persist values from Preferences/Settings screens. In a recent project, we wanted to make use of the Shared Preferences framework to store an object&rsquo;s properties more so for convenience. Usually we&rsquo;ll store these in an SQLite database but with this use case we thought it was an overkill to do that."><meta name="twitter:site" content="@afam"><meta name="twitter:domain" content="www.afam.com"><title>AFAM &mdash; Storing Objects With Shared Preferences</title><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"><link rel="stylesheet" href="http://0.0.0.0:6789/css/bootstrap.min.css" media="screen"><link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Orbitron:400,500,700,900" rel="stylesheet"><link href="http://0.0.0.0:6789/css/mdb.min.css" rel="stylesheet" media="all" type="text/css"><link href="http://0.0.0.0:6789/css/styles-8609750943.min.css" rel="stylesheet" media="all" type="text/css"><link href="" rel="alternate" type="application/rss+xml" title="AFAM"></head><body><header><nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar danger-color-dark"><button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx"><i class="fa fa-bars"></i></button><div class="container"><div class="collapse navbar-toggleable-xs" id="collapseEx"><div id="logo"><a class="waves-effect waves-light navbar-brand" href="http://0.0.0.0:6789/">AFAM</a></div><ul class="nav navbar-nav smooth-scroll"><li class="nav-item"><a class="nav-link" href="http://0.0.0.0:6789/">Home</a></li><li class="nav-item"><a class="nav-link" href="http://0.0.0.0:6789/calendar">Calendar</a></li><li class="nav-item"><a class="nav-link" href="http://0.0.0.0:6789/join/">Join</a></li><li class="nav-item page-scroll"><a class="nav-link page-scroll" href="http://0.0.0.0:6789/#contact">Contact Us</a></li></ul><ul class="nav navbar-nav nav-flex-icons"><li class="nav-item"><a class="nav-link"><i class="fa fa-facebook"></i></a></li><li class="nav-item"><a class="nav-link"><i class="fa fa-twitter"></i></a></li><li class="nav-item"><a class="nav-link"><i class="fa fa-instagram"></i></a></li></ul></div></div></nav></header><div class="container"><div class="row"><div class="wrap-content col-md-10 offset-md-1"><h2>Storing Objects With Shared Preferences</h2><ul class="list-inline"><li class="list-inline-item"><span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="2016-05-16T14:02:21&#43;09:00" itemprop="datePublished">May 16, 2016</time></span></li><li class="list-inline-item"><span class="post-meta"><i class="fa fa-user"></i> Henry Addo</span></li></ul><div class="row"><div class="p-l-1"><p>As you know <a href="http://developer.android.com/reference/android/content/SharedPreferences.html">SharedPreferences</a> allows you to store key-value pairs of primitive data types in an XML and provides you with a decent API for storing/retrieving their values. It&rsquo;s mostly used to persist values from Preferences/Settings screens.</p><p>In a recent project, we wanted to make use of the <strong>Shared Preferences</strong> framework to store an object&rsquo;s properties more so for convenience. Usually we&rsquo;ll store these in an SQLite database but with this use case we thought it was an overkill to do that. Instead, we leveraged on <strong>JSON</strong> and the <a href="http://developer.android.com/reference/android/content/SharedPreferences.html">SharedPreferences</a> class.</p><p>The design in it basic form: We serialize the object into a JSON string upon storing it and then store the regular string. Upon retrieving it, we deserialize the JSON string back into the object. Mind you this operation can be costly when the object being operated on has huge properties. So if you&rsquo;re planning on using this technique for large objects, it would be better to make use of the other storage options provided by the Android framework.</p><p>The design in it detailed form: We designed a simpile persistent storage with <a href="https://github.com/google/gson">GSON</a>, the underlining serialization mechanisim and <a href="http://developer.android.com/guide/topics/data/data-storage.html#pref">Shared Preferences</a>, the storage engine. We made it in such a way that you can use which ever storage or serialization engine you prefer.</p><p>We provided two interfaces, one for the Serialization mechanism and another for the Storage engine. To share some code, here is the interface for implementing the serialization mechanism.</p><pre class="prettyprint linenums"><code class="language-java">public interface SerializationMechanism&lt;T&gt; {
+
+    /**
+     * Serializes a T to a JSON string
+     *
+     * @param entity The type entity to be serialized
+     * @return String The serialized object into a JSON string
+     */
+    String serialize(T entity);
+
+    /**
+     * Deserializes a JSON string to it&#39;s typed entity
+     *
+     * @param serializedEntity The serialized object in a JSON format
+     * @return A type entity
+     */
+    T deserialize(String serializedEntity);
+}
+</code></pre><p>And the interface for the storage engine.</p><pre class="prettyprint linenums"><code class="language-java">
+public interface StorageMechanism&lt;T&gt; {
+
+    /**
+     * Gets an {@link rx.Observable} which will emit a list of {@link EntityType}.
+     */
+    Observable&lt;List&lt;EntityType&gt;&gt; get();
+
+    /**
+     * Gets an {@link rx.Observable} which will emit a {@link EntityType}.
+     */
+    Observable&lt;EntityType&gt; get(String key);
+
+    /**
+     * Puts an element into storage
+     *
+     * @param The unique key to identify this entity type
+     * @param entityType Element to insert into storage.
+     *
+     * @return  The stored entity type
+     */
+    Observable&lt;EntityType&gt; put(String key, EntityType entityType);
+
+    /**
+     * Deletes a particular entity type
+     */
+    Observable&lt;Boolean&gt; delete(String key);
+
+    /**
+     * Delete all persisted elements
+     */
+    Observable&lt;Boolean&gt; deleteAll();
+}
+</code></pre><p>Now let&rsquo;s look at their respective implementations.</p><p>The serialization mechanism:</p><pre class="prettyprint linenums"><code class="language-java">public class GsonSerializationMechanism implements SerializationMechanism&lt;EntityType&gt; {
+
+    private final Gson mGson = new Gson();
+
+    private final Type mTypeToken = new TypeToken&lt;List&lt;EntityType&gt;&gt;() {}.getType();
+
+    public String serialize(EntityType entityType) {
+        return mGson.toJson(entityType, mTypeToken);
+    }
+    
+    public EntityType deserialize(String jsonString) {
+        return mGson.fromJson(jsonString, mTypeToken);
+    }
+}
+</code></pre><p>The storage mechanism implementation: This is a <a href="https://github.com/ReactiveX/RxJava">RxJava</a> based implementation. You will noticed most of the functions are returning an Observable. You can do away with the RxJava implementation if you don&rsquo;t find that useful for your use case.</p><pre class="prettyprint linenums"><code class="language-java">public class SharedPreferenceStorageMechanism implements StorageMechanism&lt;EntityType&gt; {
+
+    private final SharedPreferences mSharedPreferences;
+
+    private final SerializationMechanism mSerializationMechanism;
+
+    public SharedPreferenceStorageMechanism(SharedPreferences sharedPreferences, 
+        StorageMechanism serializationMechanism) {
+        mSharedPreferences = sharedPreferences;
+        mSerializationMechanism = serializationMechanism;
+    }
+
+    @Override
+    public Observable&lt;EntityType&gt; put(@NonNull String key, @NonNull EntityType entityType) {
+        return Observable.create(subscriber -&gt; {
+            mSharedPreferences.edit().putString(key,mSerializationStrategy.serialize(entityType)).apply();
+            subscriber.onNext(entityType);
+            subscriber.onCompleted();
+        });
+    }
+
+    @Override
+    public Observable&lt;Boolean&gt; delete(@NonNull String key) {
+        return Observable.defer(() -&gt; {
+        if (TextUtils.isEmpty(key)) {
+            return Observable.just(Boolean.FALSE);
+        }
+        mSharedPreferences.edit().remove(key).apply();
+            return Observable.just(Boolean.TRUE);
+       });
+    }
+
+    @Override
+    public Observable&lt;Boolean&gt; deleteAll() {
+        return Observable.defer(() -&gt; {
+            mSharedPreferences.edit().clear().apply();
+            return Observable.just(Boolean.TRUE);
+        });
+    }
+
+    @Override
+    public Observable&lt;List&lt;EntityType&gt;&gt; get() {
+        return Observable.create(subscriber -&gt; {
+            Map&lt;String, String&gt; savedTypes = (Map&lt;String, String&gt;) mSharedPreferences
+                    .getAll();
+            List&lt;EntityType&gt; entitiesTypes = new ArrayList&lt;EntityType&gt;();
+            for (Map.Entry entry : savedTypes.entrySet()) {
+                entitiesTypes.add(mSerializationStrategy.deserialize((String) entry.getValue()));
+            }
+            subscriber.onNext(entitiesTypes);
+            subscriber.onCompleted();
+        });
+    }
+
+    @Override
+    public Observable&lt;EntityType&gt; get(String key) {
+        return Observable.create(subscriber -&gt; {
+            EntityType entityType = getStored(key);
+            if (entityType != null) {
+                subscriber.onNext(entityType);
+                subscriber.onCompleted();
+            } else {
+                subscriber.onError(new NotFoundException());
+            }
+        });
+    }
+
+    private EntityType getStored(String key) {
+        final String jsonString = mSharedPreferences.getString(key, null);
+        return mSerializationStrategy.deserialize(jsonString);
+    }
+}
+</code></pre><p>This so far has been working greatly in our current use case. Hope you will find this useful in your projects.</p></div></div><div class="row"><div class="p-l-1"><ul class="list-inline"><li class="list-inline-item"><span class="pink-text"><i class="fa fa-clock-o"></i> <time datetime="2016-05-16T14:02:21&#43;09:00" itemprop="datePublished">May 16, 2016</time></span></li><li class="list-inline-item"><a class="btn btn-primary tweet-this" href="https://twitter.com/share" title="Tweet this"><i class="fa fa-twitter"></i> Tweet</a></li></ul></div></div><div class="row"><div class="col-sm-2"><a class="btn btn-danger waves-effect waves-light" href="http://0.0.0.0:6789/news/internationalization-and-localization-on-android/"><i class="fa fa-fw fa-long-arrow-left"></i></a></div><div class="col-sm-2 offset-md-8"><a class="btn btn-danger waves-effect waves-light pull-right" href="http://0.0.0.0:6789/news/welcome/"><i class="fa fa-fw fa-long-arrow-right"></i></a></div></div><div class="row"><div class="p-l-1"><div id="disqus_thread"></div><script async type="text/javascript">var disqus_shortname = 'afam';
+    
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript></div></div></div></div></div><footer class="page-footer rgba-black-lighter center-on-small-only"><div class="footer-copyright text-xs-center rgba-black-lighter"><div class="container"><ul class="list-inline"><li class="list-inline-item">&copy; 2016 &middot; AFAM <span class="powered-by">&middot; developed by <a href="http://www.addhen.com" rel="nofollow">addhen</a></span></li></ul></div></div></footer><script type="text/javascript" src="http://0.0.0.0:6789/js/jquery-2.2.3.min.js" defer="defer"></script><script type="text/javascript" src="http://0.0.0.0:6789/js/tether.min.js" defer="defer"></script><script type="text/javascript" src="http://0.0.0.0:6789/js/bootstrap.min.js" defer="defer"></script><script type="text/javascript" src="http://0.0.0.0:6789/js/jquery.easing-1.3.min.js" defer="defer"></script><script type="text/javascript" src="http://0.0.0.0:6789/js/mdb.min.js" defer="defer"></script><script type="text/javascript" src="http://0.0.0.0:6789/js/jqBootstrapValidation-1.3.7.min.js" defer="defer"></script><script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer="defer"></script><script type="text/javascript" src="http://0.0.0.0:6789/js/site-8b7d768f98.min.js" defer="defer"></script><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=sons-of-obsidian" defer="defer"></script><script async>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXXXXX-X', 'auto');
+  ga('send', 'pageview');</script></body></html>
