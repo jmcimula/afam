@@ -18,7 +18,7 @@ var htmlmin = require('gulp-htmlmin');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 
-var hugoTheme = 'mdb-addhen';
+var hugoTheme = null;
 
 var sassInput = './assets/sass/**/*.scss';
 var sassOutput = './public/css/';
@@ -160,7 +160,7 @@ function buildJs() {
     .pipe(plumber({
       errorHandler: handleError
     }))
-    .pipe(concat('addhen.min.js'))
+    .pipe(concat('site.min.js'))
     .pipe(uglify())
     .pipe(buffer())
     .pipe(rev())

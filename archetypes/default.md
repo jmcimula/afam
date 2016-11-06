@@ -1,12 +1,8 @@
 ---
 author: ""
-
-draft: true
-
-twitter: ""
-
 title: ""
-
+description: ""
+draft: true
 # An array of urls to any images referenced in the post. The first image in the array will be the default shareable image.
 images: []
 
@@ -15,6 +11,4 @@ vidoes: []
 
 # The first 10 will be inserted into the Google "news_keyword" meta tag
 googlenewskeywords: []
-
-tags: []
 ---

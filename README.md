@@ -1,4 +1,4 @@
-www.addhen.com website
+www.afam.com website
 
 ### Install dependencies. Uses gulp for builds
 ```
@@ -21,5 +21,5 @@ gulp build
 ### TODO
 Fix issue with when `gulp serve` is running and there's a change in 
 the source, it loses css and js files being loaded. This is because 
-the html files are recreated by hugo and causes it lose the asset fingerprints 
+the html files are recreated by hugo and causes it to lose the asset fingerprints 
 changes in the html files. Workaround is to issue `gulp serve`

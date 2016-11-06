@@ -4,7 +4,7 @@ gen
 *.DS_Store
 .sass-cache
 Gemfile.lock
-addhen.min.css
+styles.min.css
 public
 node_modules
 

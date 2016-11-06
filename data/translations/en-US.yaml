@@ -1,17 +1,16 @@
 # Sections
 sections:
     home: Home
-    blog: Blog
-    contact: Contact Us
-    categories: Categories
-    versions: Versions
     about: About
+    calendar: Calendar
+    news: News
+    join: Join
 
 # Meta
 contentinfo:
     tagline: "You dream it. We deliver it."
     description: "Website for Addhen Limited. Highlighting its portfolio and service offerings."
-    generator: 'powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a>'
+    generator: 'developed by <a href="http://www.addhen.com" rel="nofollow">addhen</a>'
 
 # Contact form
 contactform:
@@ -23,12 +22,10 @@ contactform:
     validateemail: "Please enter your email address."
     validatemessage: "Please enter a message."
 
-# What we do sections
-whatwedo:
-    column_one: "Addhen specializes in developing apps for the Android platform: for phones, tablets and wearables. We are able to turn your static mockups into functional apps.
-We can <strong>create</strong> your app from the ground up, <strong>port</strong> it from a different platform or help <strong>maintain</strong> and <strong>improve</strong> existing Android apps."
-    column_two: 'We value direct communication, a pragmatic approach to problem solving and providing a quality consulting service.
-    <p>Interested to know more about what we can do for you or your business? Reach out to us at <a href="mailto:support@addhen.com">support [at] addhen.com</a></p>'
+# Who we're
+who_we_are:
+    title: "Who We Are"
+    description: "Lorem ipsum dolor sit amet, usu an case fabulas. Ne mel minim soleat, voluptaria intellegebat pro ne. Sea congue dignissim pertinacia an. Ei laudem menandri mnesarchum eos, mea ut dicat civibus evertitur, habeo rebum hendrerit vix ex. Usu solet saepe civibus in. An prompta feugait placerat vel, purto antiopam splendide in duo, ei illud mediocritatem est.<p>His accumsan salutandi consetetur in. Et error commune inimicus nec, soleat definiebas vim et, cu omnis sanctus epicuri eos. Minim verear ei ius, in per adipisci volutpat liberavisse. Et mel singulis definitiones. Epicuri consulatu cum ex, ipsum utinam vocibus ne mel. Indoctum suavitate prodesset ius cu.</p>"
 
 # About
 about:
@@ -40,7 +37,7 @@ recent_blog_posts: "Recent"
 # 404 page
 not_found_page:
     title: "Page Not Found"
-    description: "The page you are looking for could not be found. If you believe this is an error, please reach us at support@addhen.com."
+    description: "The page you are looking for could not be found. If you believe this is an error, please reach us at support@afam.com."
 
 # Feed
 feed:
