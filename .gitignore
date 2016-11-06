@@ -5,7 +5,6 @@ gen
 .sass-cache
 Gemfile.lock
 styles.min.css
-public
 node_modules
 
 # NPM

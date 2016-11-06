@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://addhen.github.io/afam/</loc>
+    <lastmod>2016-10-06T23:44:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/about/</loc>
+    <lastmod>2016-10-06T23:44:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/join/</loc>
+    <lastmod>2016-10-06T23:44:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/calendar/</loc>
+    <lastmod>2016-10-06T23:44:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/news/debugging-memory-leaks-in-an-android-app/</loc>
+    <lastmod>2016-09-27T11:34:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/news/persisting-with-cupboard/</loc>
+    <lastmod>2016-06-27T09:50:18+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/news/internationalization-and-localization-on-android/</loc>
+    <lastmod>2016-06-01T11:08:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/news/storing-objects-with-shared-preferences/</loc>
+    <lastmod>2016-05-16T14:02:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://addhen.github.io/afam/news/welcome/</loc>
+    <lastmod>2016-02-19T20:35:29+00:00</lastmod>
+  </url>
+  
+</urlset>
