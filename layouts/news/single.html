@@ -1,0 +1,52 @@
+{{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
+{{ partial "head.html" . }}
+<title>{{ $.Site.Title }} &mdash; {{ .Title}}</title>
+{{ partial "header-media-links.html" . }}
+{{ partial "menu.html" . }}
+<div class="container">
+    <!-- body starts -->
+    <div class="row">
+        <div class="wrap-content col-md-10 offset-md-1">
+            <h2>{{ .Title }}</h2>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                   <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
+                </li>
+                {{ if isset .Params "author" }}
+                <li class="list-inline-item">
+                    <span class="post-meta"><i class="fa fa-user"></i> {{ .Params.author }}</span>
+                </li>
+                {{ end }}
+            </ul>
+            <div class="row">
+                <div class="p-l-1">
+                    {{ .Content  }}
+                </div>
+            </div>
+            <div class="row">
+                 <div class="p-l-1">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <span class="pink-text"><i class="fa fa-clock-o"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></li>
+                            </span>
+                        <li class="list-inline-item">
+                            <a class="btn btn-primary tweet-this" href="https://twitter.com/share" title="Tweet this"><i class="fa fa-twitter"></i> Tweet</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- pagination -->
+            {{ partial "pagination.html" . }}
+
+            <!-- comment section -->
+            {{ with $.Site.Params.DisqusShortname }}
+            <div class="row">
+                <div class="p-l-1">
+                    {{ partial "disqus.html" . }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

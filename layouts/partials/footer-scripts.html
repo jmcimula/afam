@@ -1,0 +1,40 @@
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/jquery-2.2.3.min.js" defer></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/tether.min.js" defer></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/bootstrap.min.js" defer></script>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/jquery.easing-1.3.min.js" defer></script>
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/mdb.min.js" defer></script>
+    
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/jqBootstrapValidation-1.3.7.min.js" defer></script>
+    <script type="text/javascript" src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script type="text/javascript" src="{{ $.Site.BaseURL }}js/site.min.js" defer></script>
+    {{ if not .IsHome }} <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=sons-of-obsidian" defer></script> {{ end }}
+    <!--Google Maps-->
+    {{ if .IsHome }}
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script>
+        function init_map() {
+            var var_location = new google.maps.LatLng(38.3233632,140.878611);
+            var var_mapoptions = {
+                center: var_location,
+                zoom: 14
+            };
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: {{ $.Site.Params.Location.Address}}
+            });
+            var var_map = new google.maps.Map(document.getElementById("map-container"),
+                var_mapoptions);
+            var_marker.setMap(var_map);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+    {{ end }}
+    <!-- /Google Maps -->
+    <!-- Google analytics -->
+    {{ partial "google_analytics.html" . }}
+</body>

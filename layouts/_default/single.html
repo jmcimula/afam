@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+{{ partial "header-media-links.html" . }}
+{{ partial "menu.html" . }}
+<div class="container" style="margin-top: 6rem;">
+    <main role="main">
+        <header>
+            <h1 itemprop="name">{{ .Title }}</h1>
+            <p itemprop="description">{{ .Description }}</p>
+        </header>
+        <div class="container">
+            {{ .Content }}
+        </div>
+    </main>
+</div>
+{{ partial "footer.html" . }}

@@ -1,0 +1,29 @@
+{{ if .Site.Params.Widgets.RecentArticles }}
+<section id="{{ lower .Title | urlize }}" class="section news-section">
+    <h1 class="section-heading section-title wow bounceIn">Recent News</h1>
+    <div class="row text-xs-left">
+        <div class="col-md-12">
+            {{ range first 3 (where .Data.Pages "Section" "news") }}
+             <div class="single-news">
+                <div class="row">
+                    <h4>
+                        <a href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"> {{ .Title }}</a>
+                    </h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                           <span class="post-meta"><i class="fa fa-calendar"></i> <time datetime="{{ .Date.Format $.Site.Params.DateFormat.ISO8601 }}" itemprop="datePublished">{{ .Date.Format $.Site.Params.DateFormat.Localized }}</time></span>
+                        </li>
+                    </ul>
+                    <p>{{ .Summary }}</p>
+                    {{ if .Truncated }}
+                    <p class="read-more-link">
+                        <a class="btn btn-danger" href="{{ replace .RelPermalink (printf "%s" $.Site.BaseURL) $.Site.Params.BaseDir }}"><nobr>Read more →</nobr></a>
+                    </p>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
