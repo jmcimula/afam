@@ -1,10 +1,9 @@
 MetaDataFormat: "yaml"
 
 LanguageCode: "en-US"
-BaseURL: "http://0.0.0.0:6789/"
+BaseURL: "https://addhen.github.io/afam"
 Title: "AFAM"
 Copyright: "AFAM"
-
 
 Params:
     Domain: "afam.com"
