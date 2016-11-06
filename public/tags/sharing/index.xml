@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>https://addhen.github.io/afam</id>
+  <updated>2016-05-16T14:02:21&#43;09:00</updated>
+  <link href="https://addhen.github.io/afam/tags/sharing/index.xml" rel="self" />
+  <category term="" />
+  <icon>https://addhen.github.io/afamimages/template/favicon.png</icon>
+  <logo>https://addhen.github.io/afamimages/template/logo-512.png</logo>
+  <rights>Copyright &#169; AFAM</rights>  
+  <title>AFAM</title>
+  <subtitle>Website for Addhen Limited. Highlighting its portfolio and service offerings.</subtitle>
+
+  <entry>
+    <id>https://addhen.github.io/afam/news/storing-objects-with-shared-preferences/</id>
+    <title>Storing Objects With Shared Preferences</title>
+    <updated>2016-05-16T14:02:21&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p>As you know <a href="http://developer.android.com/reference/android/content/SharedPreferences.html">SharedPreferences</a> allows you to store key-value pairs of primitive data types in an XML and provides you with a decent API for storing/retrieving their values. It&rsquo;s mostly used to persist values from Preferences/Settings screens.</p>
+
+<p>In a recent project, we wanted to make use of the <strong>Shared Preferences</strong> framework to store an object&rsquo;s properties more so for convenience. Usually we&rsquo;ll store these in an SQLite database but with this use case we thought it was an overkill to do that. Instead, we leveraged on <strong>JSON</strong> and the <a href="http://developer.android.com/reference/android/content/SharedPreferences.html">SharedPreferences</a> class.</p>
+
+<p>The design in it basic form: We serialize the object into a JSON string upon storing it and then store the regular string. Upon retrieving it, we deserialize the JSON string back into the object. Mind you this operation can be costly when the object being operated on has huge properties. So if you&rsquo;re planning on using this technique for large objects, it would be better to make use of the other storage options provided by the Android framework.</p>
+
+<p>The design in it detailed form: We designed a simpile persistent storage with <a href="https://github.com/google/gson">GSON</a>, the underlining serialization mechanisim and <a href="http://developer.android.com/guide/topics/data/data-storage.html#pref">Shared Preferences</a>, the storage engine. We made it in such a way that you can use which ever storage or serialization engine you prefer.</p>
+
+<p>We provided two interfaces, one for the Serialization mechanism and another for the Storage engine. To share some code, here is the interface for implementing the serialization mechanism.</p>
+
+
+<pre class="prettyprint linenums"><code class="language-java">public interface SerializationMechanism&lt;T&gt; {
+
+    /**
+     * Serializes a T to a JSON string
+     *
+     * @param entity The type entity to be serialized
+     * @return String The serialized object into a JSON string
+     */
+    String serialize(T entity);
+
+    /**
+     * Deserializes a JSON string to it&#39;s typed entity
+     *
+     * @param serializedEntity The serialized object in a JSON format
+     * @return A type entity
+     */
+    T deserialize(String serializedEntity);
+}
+</code></pre>
+
+
+
+<p>And the interface for the storage engine.</p>
+
+
+<pre class="prettyprint linenums"><code class="language-java">
+public interface StorageMechanism&lt;T&gt; {
+
+    /**
+     * Gets an {@link rx.Observable} which will emit a list of {@link EntityType}.
+     */
+    Observable&lt;List&lt;EntityType&gt;&gt; get();
+
+    /**
+     * Gets an {@link rx.Observable} which will emit a {@link EntityType}.
+     */
+    Observable&lt;EntityType&gt; get(String key);
+
+    /**
+     * Puts an element into storage
+     *
+     * @param The unique key to identify this entity type
+     * @param entityType Element to insert into storage.
+     *
+     * @return  The stored entity type
+     */
+    Observable&lt;EntityType&gt; put(String key, EntityType entityType);
+
+    /**
+     * Deletes a particular entity type
+     */
+    Observable&lt;Boolean&gt; delete(String key);
+
+    /**
+     * Delete all persisted elements
+     */
+    Observable&lt;Boolean&gt; deleteAll();
+}
+</code></pre>
+
+
+
+<p>Now let&rsquo;s look at their respective implementations.</p>
+
+<p>The serialization mechanism:</p>
+
+
+<pre class="prettyprint linenums"><code class="language-java">public class GsonSerializationMechanism implements SerializationMechanism&lt;EntityType&gt; {
+
+    private final Gson mGson = new Gson();
+
+    private final Type mTypeToken = new TypeToken&lt;List&lt;EntityType&gt;&gt;() {}.getType();
+
+    public String serialize(EntityType entityType) {
+        return mGson.toJson(entityType, mTypeToken);
+    }
+    
+    public EntityType deserialize(String jsonString) {
+        return mGson.fromJson(jsonString, mTypeToken);
+    }
+}
+</code></pre>
+
+
+
+<p>The storage mechanism implementation: This is a <a href="https://github.com/ReactiveX/RxJava">RxJava</a> based implementation. You will noticed most of the functions are returning an Observable. You can do away with the RxJava implementation if you don&rsquo;t
+find that useful for your use case.</p>
+
+
+<pre class="prettyprint linenums"><code class="language-java">public class SharedPreferenceStorageMechanism implements StorageMechanism&lt;EntityType&gt; {
+
+    private final SharedPreferences mSharedPreferences;
+
+    private final SerializationMechanism mSerializationMechanism;
+
+    public SharedPreferenceStorageMechanism(SharedPreferences sharedPreferences, 
+        StorageMechanism serializationMechanism) {
+        mSharedPreferences = sharedPreferences;
+        mSerializationMechanism = serializationMechanism;
+    }
+
+    @Override
+    public Observable&lt;EntityType&gt; put(@NonNull String key, @NonNull EntityType entityType) {
+        return Observable.create(subscriber -&gt; {
+            mSharedPreferences.edit().putString(key,mSerializationStrategy.serialize(entityType)).apply();
+            subscriber.onNext(entityType);
+            subscriber.onCompleted();
+        });
+    }
+
+    @Override
+    public Observable&lt;Boolean&gt; delete(@NonNull String key) {
+        return Observable.defer(() -&gt; {
+        if (TextUtils.isEmpty(key)) {
+            return Observable.just(Boolean.FALSE);
+        }
+        mSharedPreferences.edit().remove(key).apply();
+            return Observable.just(Boolean.TRUE);
+       });
+    }
+
+    @Override
+    public Observable&lt;Boolean&gt; deleteAll() {
+        return Observable.defer(() -&gt; {
+            mSharedPreferences.edit().clear().apply();
+            return Observable.just(Boolean.TRUE);
+        });
+    }
+
+    @Override
+    public Observable&lt;List&lt;EntityType&gt;&gt; get() {
+        return Observable.create(subscriber -&gt; {
+            Map&lt;String, String&gt; savedTypes = (Map&lt;String, String&gt;) mSharedPreferences
+                    .getAll();
+            List&lt;EntityType&gt; entitiesTypes = new ArrayList&lt;EntityType&gt;();
+            for (Map.Entry entry : savedTypes.entrySet()) {
+                entitiesTypes.add(mSerializationStrategy.deserialize((String) entry.getValue()));
+            }
+            subscriber.onNext(entitiesTypes);
+            subscriber.onCompleted();
+        });
+    }
+
+    @Override
+    public Observable&lt;EntityType&gt; get(String key) {
+        return Observable.create(subscriber -&gt; {
+            EntityType entityType = getStored(key);
+            if (entityType != null) {
+                subscriber.onNext(entityType);
+                subscriber.onCompleted();
+            } else {
+                subscriber.onError(new NotFoundException());
+            }
+        });
+    }
+
+    private EntityType getStored(String key) {
+        final String jsonString = mSharedPreferences.getString(key, null);
+        return mSerializationStrategy.deserialize(jsonString);
+    }
+}
+</code></pre>
+
+
+
+<p>This so far has been working greatly in our current use case. Hope you will find this useful in your projects.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/news/storing-objects-with-shared-preferences/" />
+  </entry>
+</feed>
