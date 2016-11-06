@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>https://addhen.github.io/afam/</id>
+  <updated>2016-10-06T23:44:45&#43;09:00</updated>
+  <link href="https://addhen.github.io/afam/about/index.xml" rel="self" />
+  <category term="" />
+  <icon>https://addhen.github.io/afam/images/template/favicon.png</icon>
+  <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
+  <rights>Copyright &#169; AFAM</rights>  
+  <title>AFAM</title>
+  <subtitle>Website for Addhen Limited. Highlighting its portfolio and service offerings.</subtitle>
+
+  <entry>
+    <id>https://addhen.github.io/afam/about/</id>
+    <title>About AFAM</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      
+
+<h2 id="what-we-do">What we do</h2>
+
+<p>AFAM is a nonprofit community of africans in Miyagi&hellip;</p>
+
+<h2 id="how-to-get-invovled">How to get invovled</h2>
+
+<p>What we do at AFAM&hellip;</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/about/" />
+  </entry>
+</feed>
