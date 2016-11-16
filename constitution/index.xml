@@ -10,20 +10,392 @@
   <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
-  <subtitle>Website for Addhen Limited. Highlighting its portfolio and service offerings.</subtitle>
+  <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>https://addhen.github.io/afam/constitution/</id>
-    <title>Our Constitution</title>
+    <id>https://addhen.github.io/afam/constitution/article-one/</id>
+    <title>Article I - NAME</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p>The full name of the Association is African Association of Miyagi hereinafter refers to as AFAM.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-one/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-two/</id>
+    <title>Article II - MEMBERSHIP</title>
+    <updated>2016-10-06T23:45:47&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<p>Membership shall be open to all Africans who:</p>
+
+<ol>
+<li><p>Subscribe to the objects of the organization.</p></li>
+
+<li><p>Is willing to make sacrifice for the attainment of the said objectives.</p></li>
+
+<li><p>Is willing to commit him/herself to tapping the potentials within him/her to their fullest.</p></li>
+
+<li><p>Membership shall be purely voluntary.</p></li>
+</ol>
+
+<p><strong>Section 2</strong></p>
+
+<p>Associate membership shall be open to any non-African who has interest in Africa values.</p>
+
+<p><strong>Section 3</strong></p>
+
+<p>Honorary membership shall be granted by the AFAM Executive Committee to people who have shown distinction, commitment, and an interest in the promotion of AFAM’s objectives as stated below.</p>
+
+<p><strong>Section 4</strong></p>
+
+<p>All members above the age of 18, shall pay an annual membership fee of 2000 (Two Thousand Yen).</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-two/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-three/</id>
+    <title>Article III - AIMS AND OBJECTIVES</title>
+    <updated>2016-10-06T23:46:47&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<p>AFAM has adopted the following as its aims and objectives:</p>
+
+<ol>
+<li><p>To foster unity and friendship among members.</p></li>
+
+<li><p>To provide a forum for the discussion of issues pertaining to Africa.</p></li>
+
+<li><p>To offer community services workshops to portray African values.</p></li>
+
+<li><p>To promote cooperation with other organizations in Miyagi such as TUFSA,
+Latin- America etc in the areas such as inter-association sports, cultural exchanges and fun fairs.</p></li>
+
+<li><p>To promote social interaction between the members and within the Japanese community.</p></li>
+
+<li><p>To co-ordinate with each other and offer assistance in emergency situations.</p></li>
+
+<li><p>To help incoming African residence settle in the Miyagi Prefecture.</p></li>
+
+<li><p>To act on other matters related to the aims and objectives as stated above.</p></li>
+</ol>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-three/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-four/</id>
+    <title>Article IV - THE EXECUTIVE BODY</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1.</strong></p>
+
+<p>The EXECUTIVE BODY is the main decision making body of AFAM and shall consist of the</p>
+
+<p>following officers:</p>
+
+<ol>
+<li><p>President</p></li>
+
+<li><p>Vice-Presidents : 1st &amp; 2nd</p></li>
+
+<li><p>General Secretary</p></li>
+
+<li><p>Deputy General Secretary</p></li>
+
+<li><p>Financial Secretary</p></li>
+
+<li><p>Organizing Secretaries : 1st &amp; 2nd</p></li>
+
+<li><p>Information Officer</p></li>
+</ol>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-four/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-five/</id>
+    <title>Article V - DUTIES OF THE EXECUTIVE BODY</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p>The duties of the executive officers shall be as defined below.</p>
+
+<p><strong>President:</strong></p>
+
+<ol>
+<li><p>Shall preside over both the general and the executive body meetings</p></li>
+
+<li><p>Shall be the overall spokesperson for AFAM in consultation with the executive body.</p></li>
+</ol>
+
+<p><strong>1st Vice-President:</strong></p>
+
+<ol>
+<li><p>Shall assist the president in all official deliberations;</p></li>
+
+<li><p>Shall assume the duties of the presidency in the absence of the president;</p></li>
+
+<li><p>Shall in liasion with the General secretary appoint and/or oversee general elections.</p></li>
+</ol>
+
+<p><strong>2nd Vice-President:</strong></p>
+
+<ol>
+<li><p>Shall assist the president in all official deliberations</p></li>
+
+<li><p>Shall be assigned special duties by the executive body.</p></li>
+</ol>
+
+<p><strong>General Secretary:</strong></p>
+
+<ol>
+<li><p>Shall, in consultation with the executive body, prepare agenda for all general and
+executive body meetings; shall take minutes at both general and executive body meetings.</p></li>
+
+<li><p>Shall be responsible for the general correspondence of AFAM.</p></li>
+
+<li><p>Shall in liason with the 1 st Vice President, cordinate elections and appoint a returning officer.</p></li>
+</ol>
+
+<p><strong>Deputy General Secretary:</strong></p>
+
+<ol>
+<li><p>Shall assist the general secretary in above duties.</p></li>
+
+<li><p>Responsible to secretary and shall assume the office the general secretary in his/her absence.</p></li>
+
+<li><p>Shall be responsible for all sub-committee secretariat cordination.</p></li>
+</ol>
+
+<p><strong>Financial Secretary:</strong></p>
+
+<ol>
+<li><p>Shall be responsible for collecting all dues.</p></li>
+
+<li><p>Shall be responsible for all financial correspondence.</p></li>
+
+<li><p>Shall be responsible for fund-raising collections.</p></li>
+
+<li><p>Shall present quarterly financial statements to the general body.</p></li>
+</ol>
+
+<p><strong>1st Organizing Secretary:</strong></p>
+
+<ol>
+<li><p>Shall be responsible for social and cultural functions.</p></li>
+
+<li><p>Shall prepare activity mini budgets for presentation to the executive body.</p></li>
+
+<li><p>Shall preside over fundraising functions.</p></li>
+</ol>
+
+<p><strong>2nd Organizing Secretary:</strong></p>
+
+<ol>
+<li><p>Shall draw quarterly plans, in liasion with the 1 st Organizing Secretary, for the social and cultural functions.</p></li>
+
+<li><p>Shall be in-charge of internal marketing (lobbying) of the AFAM to the Japanese community.</p></li>
+</ol>
+
+<p><strong>Information Officer:</strong></p>
+
+<ol>
+<li><p>Shall be in charge of public relations.</p></li>
+
+<li><p>Shall recruit new members.</p></li>
+
+<li><p>Shall be responsible for maintaining a database of all members.</p></li>
+
+<li><p>Shall be responsible for the association&rsquo;s publication(s).</p></li>
+
+<li><p>Shall be responsible for the maintenance and regular updating of the association’s webpage.</p></li>
+</ol>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-five/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-six/</id>
+    <title>Article VI - ELIGIBILITY FOR HOLDING OFFICE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       
 
-<h2 id="constitution-details">Constitution details</h2>
+<h4 id="section-1">Section 1.</h4>
 
-<p>Constitution details here</p>
+<p>All members of African Association of Miyagi of mature age (18 years and above), as defined by
+Article II, may vie for any one of the offices of the Executive.</p>
+
+<h4 id="section-2">Section 2.</h4>
+
+<p>Candidates should have been paid-up members as in section Article II Section 4.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/" />
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-six/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-seven/</id>
+    <title>Article VII - ELECTIONS</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<ol>
+<li><p>The general elections shall be done through secret balloting at an Annual general
+membership meeting every spring quarter.</p></li>
+
+<li><p>The Outgoing 1 st Vice President and General secretary shall appoint a returning officer on the election date to conduct the elections. In the absence, of a returning officer, the two will
+oversee the elections.</p></li>
+</ol>
+
+<p><strong>Section 2</strong></p>
+
+<ol>
+<li><p>Candidates to the executive positions shall present their names to the outgoing General Secretary in preparation of election documentation one week prior to the elections.</p></li>
+
+<li><p>All nominees for office should be present at time of election but, with prior arrangement, may be elected proxy.</p></li>
+</ol>
+
+<p><strong>Section 3</strong></p>
+
+<p>Voting rights shall not be of less than 16 years of age.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-seven/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-eight/</id>
+    <title>Article VIII - TENURE</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<ol>
+<li><p>Executive officers shall not hold the same office for 2 (two)cosecutive terms.</p></li>
+
+<li><p>A term shall constitute of one year.</p></li>
+</ol>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-eight/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-nine/</id>
+    <title>Article IX - REMOVAL OF OFFICERS</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p>Two-thirds of the membership meeting may remove an officer on the petition of any member.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-nine/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-ten/</id>
+    <title>Article X - FILLING OF THE VACANCY OF AN OFFICE</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<p>Elections must be held within thirty-one (31) days after the vacancy occurs.</p>
+
+<p><strong>Section 2</strong></p>
+
+<p>In the event that an election cannot be held within the required thirty-one (31) days, the Executive.</p>
+
+<p>Body shall appoint someone to the vacant office until the next general elections.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-ten/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-eleven/</id>
+    <title>Article XI - FINANCE</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong>
+Membership dues.</p>
+
+<p>Each member above 18 years of age shall pay to AFAM a minimum amount of \2,000 annually as dues; payable by the end of May.</p>
+
+<p><strong>Section 2</strong></p>
+
+<p>Additional funds to be obtained through fund-raising activities.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-eleven/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-twelve/</id>
+    <title>Article XII - FINANCIAL TRANSACTIONS</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<p>All financial transactions shall be signed by one of the three (3) Executive Committee members
+whose signatories to AFAM. In the event a cheque is written to one of the three signatories, then
+one of the two remaining must sign.</p>
+
+<p><strong>Section 2</strong></p>
+
+<p>The Executive Body of AFAM must have an annual audit and the Financial Secretary shall report
+to the general members.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-twelve/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-thirteen/</id>
+    <title>Article XIII - MEETINGS</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<p>A membership meeting shall be held at least once every quarter.</p>
+
+<p><strong>Section 2</strong></p>
+
+<p>Emergency meetings shall be called by at least two of the Executive Body members upon request</p>
+
+<p>of any member of the Executive Body or of the membership.</p>
+
+<p><strong>Section 3</strong></p>
+
+<p>Executive Body meetings shall be called by the President or, in his absence, by the Vice-President</p>
+
+<p>or General Secretary.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-thirteen/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-fourteen/</id>
+    <title>Article XIV - QUORUMS</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p><strong>Section 1</strong></p>
+
+<p>Two-thirds of the members of the membership shall constitute a quorum of any membership meeting.</p>
+
+<p><strong>Section 2</strong></p>
+
+<p>Five officers of the Executive Body shall constitute a quorum at any Executive meeting.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-fourteen/" />
+  </entry>
+  <entry>
+    <id>https://addhen.github.io/afam/constitution/article-fifteen/</id>
+    <title>Article XV - CONSTITUTIONAL AMENDMENT</title>
+    <updated>2016-10-06T23:44:45&#43;09:00</updated>
+    <content type="html"><![CDATA[
+      <p>The constitution of the association may be amended upon petition by a member and on approval by
+a two-thirds majority vote of the membership.</p>
+
+    ]]></content>
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-fifteen/" />
   </entry>
 </feed>
