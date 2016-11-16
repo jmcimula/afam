@@ -37,7 +37,7 @@ recent_blog_posts: "Recent"
 # 404 page
 not_found_page:
     title: "Page Not Found"
-    description: "The page you are looking for could not be found. If you believe this is an error, please reach us at support@afam.com."
+    description: "The page you are looking for could not be found. If you believe this is an error, please reach us at hello.afam@gmail.com."
 
 # Feed
 feed:
