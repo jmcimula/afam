@@ -1,5 +1,0 @@
-{{ if .Get 0 }}
-<pre class="prettyprint linenums"><code class="language-{{ .Get 0 }}">{{ printf "%s" .Inner }}</code></pre>
-{{ else }}
-<pre class="prettyprint linenums"><code class="language-html">{{ printf "%s" .Inner }}</code></pre>
-{{ end }}
