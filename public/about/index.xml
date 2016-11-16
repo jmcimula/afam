@@ -2,18 +2,18 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>https://addhen.github.io/afam/</id>
+  <id>http://0.0.0.0:6789/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
-  <link href="https://addhen.github.io/afam/about/index.xml" rel="self" />
+  <link href="http://0.0.0.0:6789/about/index.xml" rel="self" />
   <category term="" />
-  <icon>https://addhen.github.io/afam/images/template/favicon.png</icon>
-  <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
+  <icon>http://0.0.0.0:6789/images/template/favicon.png</icon>
+  <logo>http://0.0.0.0:6789/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for Addhen Limited. Highlighting its portfolio and service offerings.</subtitle>
 
   <entry>
-    <id>https://addhen.github.io/afam/about/</id>
+    <id>http://0.0.0.0:6789/about/</id>
     <title>About AFAM</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -41,6 +41,6 @@
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/about/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/about/" />
   </entry>
 </feed>
