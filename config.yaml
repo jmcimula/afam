@@ -1,10 +1,9 @@
 MetaDataFormat: "yaml"
 
 LanguageCode: "en-US"
-BaseURL: "http://0.0.0.0:6789/"
+BaseURL: "https://addhen.github.io/afam/"
 Title: "AFAM"
 Copyright: "AFAM"
-
 
 Params:
     Domain: "afam.com"
@@ -40,7 +39,7 @@ Params:
     Location:
       Address: "Sumiyoshidai Higashi 4-13-12, Izumi-ku, Sendia, Miyagi, Japan"
       Telephone: "+81 22-376-4092"
-      EmailAddress: "hello.afam@gmail.com"
+      EmailAddress: "hello.afam at gmail.com"
 
 Menu:
     Main:
