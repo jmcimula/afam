@@ -4,7 +4,7 @@
 
   <id>https://addhen.github.io/afam/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
-  <link href="https://addhen.github.io/afam/join/index.xml" rel="self" />
+  <link href="https://addhen.github.io/afam/constitution/index.xml" rel="self" />
   <category term="" />
   <icon>https://addhen.github.io/afam/images/template/favicon.png</icon>
   <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
@@ -13,13 +13,17 @@
   <subtitle>Website for Addhen Limited. Highlighting its portfolio and service offerings.</subtitle>
 
   <entry>
-    <id>https://addhen.github.io/afam/join/</id>
-    <title>Join Us</title>
+    <id>https://addhen.github.io/afam/constitution/</id>
+    <title>Our Constitution</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
-      <p>You are welcome to join us on our mailing list. This is where we engage with our members over email. You can join us by going to our <a href="https://groups.google.com/forum/#!forum/emailafam">Google group&rsquo;s</a> page to apply for membership.</p>
+      
+
+<h2 id="constitution-details">Constitution details</h2>
+
+<p>Constitution details here</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/join/" />
+    <link rel="alternate" href="https://addhen.github.io/afam/constitution/" />
   </entry>
 </feed>

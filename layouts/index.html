@@ -16,7 +16,7 @@
 {{ partial "menu.html" . }}
 {{ $strings := index $.Site.Data.translations $.Site.LanguageCode }}
 {{ $menus := $.Site.Menus.Main }}
-{{ $contact := index $menus 3 }}
+{{ $contact := index $menus 5 }}
 {{ partial "carousel.html" . }}
 <main>
     <div class="container">
@@ -30,6 +30,87 @@
     </div>
 </main>
 
+<!--Section: Team v.1-->
+<div class="container">
+    <!--Section: Team v.1-->
+    <section class="section team-section">
+        <!--Section heading-->
+        <h1 class="section-title wow bounceIn">Executive members</h1>
+        <!--First row-->
+        <div class="row text-xs-center">
+            <!--First column-->
+            <div class="col-lg-3 col-md-6 mb-r">
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/lego/2.jpg" class="rounded-circle">
+                </div>
+                <h4>Dr. Isaac Yaw Asiedu</h4>
+                <h5>Co-Founder</h5>
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Twitter-->
+                <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+            </div>
+            <!--/First column-->
+
+            <!--Second column-->
+            <div class="col-lg-3 col-md-6 mb-r">
+
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/lego/6.jpg" class="rounded-circle">
+                </div>
+                <h4>Dr. Ismail Issah</h4>
+                <h5>Co-Founder</h5>
+                <!--Linkedin-->
+                <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+            </div>
+            <!--/Second column-->
+
+            <!--Third column-->
+            <div class="col-lg-3 col-md-6 mb-r">
+
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/lego/3.jpg" class="rounded-circle">
+                </div>
+
+                <h4>Bobby</h4>
+                <h5>Secretary</h5>
+                <!--Linkedin-->
+                <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Pinterest-->
+                <a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a>
+                <!--Instagram-->
+                <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
+
+            </div>
+            <!--/Third column-->
+
+            <!--Fourth column-->
+            <div class="col-lg-3 col-md-6 mb-r">
+
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/lego/4.jpg" class="rounded-circle">
+                </div>
+                <h4>Henry Addo</h4>
+                <h5>Webmaster</h5>
+                <!--Linkedin-->
+                <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                <!--GitHub-->
+                <a class="icons-sm git-ic"><i class="fa fa-github"> </i></a>
+
+            </div>
+            <!--/Fourth column-->
+
+        </div>
+        <!--/First row-->
+
+    </section>
+    <!--/Section: Team v.1-->
+
+</div>
 <!-- Contact Section -->
 <section id="{{ $contact.Identifier }}">
     <div class="container">

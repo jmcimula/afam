@@ -1,14 +1,23 @@
 {{ partial "head.html" . }}
 {{ partial "header-media-links.html" . }}
 {{ partial "menu.html" . }}
-<div class="container" style="margin-top: 6rem;">
+<!--Mask-->
+<div class="view">
+    <div class="full-bg-img flex-center">
+        <ul>
+            <li>
+                <h1 class="h1-responsive wow fadeInDown text-white" data-wow-delay="0.2s">{{ .Title }}</h1><hr/></li>
+            <li>
+                <p class="wow fadeInDown text-white">{{ .Description }}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--/.Mask-->
+<div class="container" style="margin-top: 4rem; margin-bottom: 2rem;">
     <main role="main">
-        <header>
-            <h1 itemprop="name">{{ .Title }}</h1>
-            <p itemprop="description">{{ .Description }}</p>
-        </header>
         <div class="container">
-            {{ .Content }}
+            {{ .Content | safeHTML }}
         </div>
     </main>
 </div>

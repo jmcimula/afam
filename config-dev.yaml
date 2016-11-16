@@ -38,8 +38,8 @@ Params:
       Tags: true
 
     Location:
-      Address: "Izumi, Sendia, Miyagi, Japan"
-      Telephone: "+81 70794320829"
+      Address: "Sumiyoshidia Higashi 4-13-12, Izumi-ku, Sendia, Miyagi, Japan"
+      Telephone: "+81 22-376-4092"
       EmailAddress: "contact@afam.com"
 
 Menu:
@@ -47,16 +47,24 @@ Menu:
         - Name: "Home"
           Weight: 0
           Identifier: "home"
-        - Name: "Calendar"
+        - Name: "About Us"
           Weight: 1
+          Identifier: "about"
+          URL: "about"
+        - Name: "Constitution"
+          Weight: 2
+          Identifier: "constitution"
+          URL: "constitution"
+        - Name: "Calendar"
+          Weight: 3
           Identifier: "calendar"
           URL: "calendar"
         - Name: "Join"
-          Weight: 2
+          Weight: 4
           Identifier: "join"
-          URL: "join/"
+          URL: "join"
         - Name: "Contact Us"
-          Weight: 3
+          Weight: 5
           Identifier: "contact"
           URL: "#contact"
     External:

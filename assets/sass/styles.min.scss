@@ -14,7 +14,6 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     height: 100%;
-    margin-top: 3rem;
     color:#000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;;
@@ -226,10 +225,6 @@ textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly=re
     border-bottom:1px dotted rgba(0,0,0,.26)
 }
 
-.nav-background-light {
-    background-color: #E0E0E0!important;
-}
-
 .rgba-black-strong {
     background-color: #000!important;
 }
@@ -242,59 +237,6 @@ textarea.materialize-textarea:disabled,textarea.materialize-textarea[readonly=re
     margin-top: 25px;
 }
 
-/*.navbar.navbar-light {
-    background: #E0E0E0;
-    .nav-item a {
-        color: #000;
-        &:hover {
-            background-color: transparent;
-        }
-        &.open {
-            color: #CC0000;
-            &:focus, &:hover {
-                color: #CC0000;
-                background-color: transparent;
-            }
-        }
-    }
-
-    .nav-link {
-        &.active {
-            &,
-            &:focus, 
-            &:hover {
-                color: #FFF;
-                background-color: #CC0000;
-            }
-        }
-        &.open {
-            color: #CC0000;
-            &:focus, &:hover {
-                color: #CC0000;
-                background-color: transparent;
-            }
-        }
-    }
-}*/
-
-/** Style blog menu item active state. For some reason I have to do this */
-/*.navbar-light .navbar-nav {
-    .active > .nav-link {
-        &,
-        &:focus, 
-        &:hover {
-            color: #FFF;
-            background-color: #CC0000;
-        }
-    }
-    &.open {
-        color: #CC0000;
-        &:focus, &:hover {
-            color: #CC0000;
-            background-color: transparent;
-        }
-    }
-}*/
 
 .send-btn-margin {
     margin-left: 40px;
@@ -341,16 +283,22 @@ a.recap-heading-links {
 }
 
 .top-nav-collapse {
-    background-color: #0d47a1;
+    background-color: #CC0000;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
 }
 
 footer.page-footer {
-    background-color: #0d47a1;
+    background-color: #CC0000;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #0d47a1;
+        background-color: #CC0000;
     }
 }
 
@@ -387,20 +335,17 @@ footer.page-footer {
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url("../img/down-town.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carousel-item:nth-child(4) {
     background-image: url("../img/tokyo-photo.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*.carousel-item:nth-child(4) {
+    background-image: url("../img/tokyo-photo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 /*Caption*/
-.flex-center {
-    color: #fff;
-}
 
 // News components  
 .news-section {
@@ -459,6 +404,100 @@ footer.page-footer {
             strong {
                 font-size: 1.2rem;
             }
+        }
+    }
+}
+
+.view {
+    background: url("../img/globe.jpg") no-repeat center center fixed;
+    height: 62%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// Social btns colors
+// 
+
+$fb-color: #3B5998;
+$tw-color: #55ACEE;
+$gplus-color: #DD4B39;
+$yt-color: #CD201F;
+$li-color: #0082CA;
+$pin-color: #C61118;
+$ins-color: #3F729B;
+$git-color: #4183C4;
+$comm-color: #30CFC0;
+$vk-color: #4C75A3;
+$drib-color: #C32361;
+$so-color: #f69c55;
+
+.icons-sm {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.fb-ic {
+    color: $fb-color!important;
+    &:hover,
+    &:focus {
+        color: $fb-color;
+    }
+}
+
+.gplus-ic {
+    color: $gplus-color!important;
+    &:hover,
+    &:focus {
+        color: $gplus-color;
+    }
+}
+
+.tw-ic {
+    color: $tw-color!important;
+    &:hover,
+    &:focus {
+        color: $tw-color;
+    }
+}
+
+.li-ic {
+    color: $li-color!important;
+    &:hover,
+    &:focus {
+        color: $li-color;
+    }
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    p {
+        margin: 0;
+    }
+    ul {
+        text-align: center;
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.section {
+    &.team-section {
+        .avatar {
+            margin-bottom: 2rem;
+            @extend .flex-center;
+            .rounded-circle {
+                max-width: 200px;
+            }
+        }
+        h4,h5 {
+            margin-bottom: 1rem;
         }
     }
 }
