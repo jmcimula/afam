@@ -4,7 +4,7 @@
 
   <id>https://addhen.github.io/afam/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
-  <link href="https://addhen.github.io/afam/index.xml" rel="self" />
+  <link href="/index.xml" rel="self" />
   <category term="" />
   <icon>https://addhen.github.io/afam/images/template/favicon.png</icon>
   <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
