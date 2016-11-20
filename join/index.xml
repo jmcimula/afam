@@ -2,12 +2,12 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>http://www.afam-org.com</id>
+  <id>http://www.afam-org.com/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
   <link href="/join/index.xml" rel="self" />
   <category term="" />
-  <icon>http://www.afam-org.comimages/template/favicon.png</icon>
-  <logo>http://www.afam-org.comimages/template/logo-512.png</logo>
+  <icon>http://www.afam-org.com/images/template/favicon.png</icon>
+  <logo>http://www.afam-org.com/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
