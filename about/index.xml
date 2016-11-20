@@ -2,18 +2,18 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>https://addhen.github.io/afam/</id>
+  <id>http://www.afam-org.com</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
   <link href="/about/index.xml" rel="self" />
   <category term="" />
-  <icon>https://addhen.github.io/afam/images/template/favicon.png</icon>
-  <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
+  <icon>http://www.afam-org.comimages/template/favicon.png</icon>
+  <logo>http://www.afam-org.comimages/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>https://addhen.github.io/afam/about/</id>
+    <id>http://www.afam-org.com/about/</id>
     <title>About AFAM</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -21,15 +21,15 @@
 
 <h2 id="our-aim">Our aim</h2>
 
-<p>AFAM association was stablished in 2002 with the aim of the following:</p>
+<p>AFAM association was established in 2002 with the aim of the following:</p>
 
 <ol>
 <li>To foster unity among the African residents in Miyagi Prefecture by maintaining closer contact among ourselves and to help one another as a body where needed.</li>
-<li>To acquaint ourselves with the problems of the African continent and with out individaul problems and to understake collective measures to where necessary.</li>
-<li>To engage in social and cultural interchange amoung us and the Japanese community.</li>
+<li>To acquaint ourselves with the problems of the African continent and with our individual problems and to understake collective measures where necessary.</li>
+<li>To engage in social and cultural interchange among us and the Japanese community.</li>
 <li>To protect and perpetuate the African cultural heritage through planned AFAM activities.</li>
 <li>To encourage and support memembers in issues of personal growth and innovations deemed beneficial to the general goals of the Association.</li>
-<li>To establish friendly relations and cooperation with the Universities in the region and other student organizations.</li>
+<li>To establish friendly relations and cooperation with the universities in the region and other student organizations.</li>
 </ol>
 
 <h2 id="how-to-get-involved">How to get involved</h2>
@@ -41,6 +41,6 @@
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/about/" />
+    <link rel="alternate" href="http://www.afam-org.com/about/" />
   </entry>
 </feed>

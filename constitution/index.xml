@@ -2,28 +2,28 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>https://addhen.github.io/afam/</id>
+  <id>http://www.afam-org.com</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
   <link href="/constitution/index.xml" rel="self" />
   <category term="" />
-  <icon>https://addhen.github.io/afam/images/template/favicon.png</icon>
-  <logo>https://addhen.github.io/afam/images/template/logo-512.png</logo>
+  <icon>http://www.afam-org.comimages/template/favicon.png</icon>
+  <logo>http://www.afam-org.comimages/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-one/</id>
+    <id>http://www.afam-org.com/constitution/article-one/</id>
     <title>Article I - NAME</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       <p>The full name of the Association is African Association of Miyagi hereinafter refers to as AFAM.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-one/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-one/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-two/</id>
+    <id>http://www.afam-org.com/constitution/article-two/</id>
     <title>Article II - MEMBERSHIP</title>
     <updated>2016-10-06T23:45:47&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -32,7 +32,7 @@
 <p>Membership shall be open to all Africans who:</p>
 
 <ol>
-<li><p>Subscribe to the objects of the organization.</p></li>
+<li><p>Subscribe to the objectives of the organization.</p></li>
 
 <li><p>Is willing to make sacrifice for the attainment of the said objectives.</p></li>
 
@@ -51,13 +51,14 @@
 
 <p><strong>Section 4:</strong></p>
 
-<p>All members above the age of 18, shall pay an annual membership fee of 2000 (Two Thousand Yen).</p>
+<p>All members above the age of 18, shall pay an annual membership fee of <i class="fa fa-jpy" aria-hidden="true"></i>
+2,000 (Two Thousand Yen).</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-two/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-two/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-three/</id>
+    <id>http://www.afam-org.com/constitution/article-three/</id>
     <title>Article III - AIMS AND OBJECTIVES</title>
     <updated>2016-10-06T23:46:47&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -79,16 +80,16 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 
 <li><p>To co-ordinate with each other and offer assistance in emergency situations.</p></li>
 
-<li><p>To help incoming African residence settle in the Miyagi Prefecture.</p></li>
+<li><p>To help incoming African residents settle in the Miyagi Prefecture.</p></li>
 
 <li><p>To act on other matters related to the aims and objectives as stated above.</p></li>
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-three/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-three/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-four/</id>
+    <id>http://www.afam-org.com/constitution/article-four/</id>
     <title>Article IV - THE EXECUTIVE BODY</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -113,10 +114,10 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-four/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-four/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-five/</id>
+    <id>http://www.afam-org.com/constitution/article-five/</id>
     <title>Article V - DUTIES OF THE EXECUTIVE BODY</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -125,7 +126,7 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 <p><strong>President:</strong></p>
 
 <ol>
-<li><p>Shall preside over both the general and the executive body meetings</p></li>
+<li><p>Shall preside over both the general and the executive body meetings.</p></li>
 
 <li><p>Shall be the overall spokesperson for AFAM in consultation with the executive body.</p></li>
 </ol>
@@ -133,9 +134,9 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 <p><strong>1st Vice-President:</strong></p>
 
 <ol>
-<li><p>Shall assist the president in all official deliberations;</p></li>
+<li><p>Shall assist the president in all official deliberations.</p></li>
 
-<li><p>Shall assume the duties of the presidency in the absence of the president;</p></li>
+<li><p>Shall assume the duties of the presidency in the absence of the president.</p></li>
 
 <li><p>Shall in liasion with the General secretary appoint and/or oversee general elections.</p></li>
 </ol>
@@ -143,7 +144,7 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 <p><strong>2nd Vice-President:</strong></p>
 
 <ol>
-<li><p>Shall assist the president in all official deliberations</p></li>
+<li><p>Shall assist the president in all official deliberations.</p></li>
 
 <li><p>Shall be assigned special duties by the executive body.</p></li>
 </ol>
@@ -156,7 +157,7 @@ executive body meetings; shall take minutes at both general and executive body m
 
 <li><p>Shall be responsible for the general correspondence of AFAM.</p></li>
 
-<li><p>Shall in liason with the 1 st Vice President, cordinate elections and appoint a returning officer.</p></li>
+<li><p>Shall in liason with the 1 st Vice President, coordinate elections and appoint a returning officer.</p></li>
 </ol>
 
 <p><strong>Deputy General Secretary:</strong></p>
@@ -164,9 +165,9 @@ executive body meetings; shall take minutes at both general and executive body m
 <ol>
 <li><p>Shall assist the general secretary in above duties.</p></li>
 
-<li><p>Responsible to secretary and shall assume the office the general secretary in his/her absence.</p></li>
+<li><p>Responsible to secretary and shall assume the office of the general secretary in his/her absence.</p></li>
 
-<li><p>Shall be responsible for all sub-committee secretariat cordination.</p></li>
+<li><p>Shall be responsible for all sub-committee secretariat coordination.</p></li>
 </ol>
 
 <p><strong>Financial Secretary:</strong></p>
@@ -214,10 +215,10 @@ executive body meetings; shall take minutes at both general and executive body m
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-five/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-five/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-six/</id>
+    <id>http://www.afam-org.com/constitution/article-six/</id>
     <title>Article VI - ELIGIBILITY FOR HOLDING OFFICE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -231,10 +232,10 @@ Article II, may vie for any one of the offices of the Executive.</p>
 <p>Candidates should have been paid-up members as in section Article II Section 4.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-six/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-six/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-seven/</id>
+    <id>http://www.afam-org.com/constitution/article-seven/</id>
     <title>Article VII - ELECTIONS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -261,10 +262,10 @@ oversee the elections.</p></li>
 <p>Voting rights shall not be of less than 16 years of age.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-seven/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-seven/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-eight/</id>
+    <id>http://www.afam-org.com/constitution/article-eight/</id>
     <title>Article VIII - TENURE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -277,20 +278,20 @@ oversee the elections.</p></li>
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-eight/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-eight/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-nine/</id>
+    <id>http://www.afam-org.com/constitution/article-nine/</id>
     <title>Article IX - REMOVAL OF OFFICERS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       <p>Two-thirds of the membership meeting may remove an officer on the petition of any member.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-nine/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-nine/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-ten/</id>
+    <id>http://www.afam-org.com/constitution/article-ten/</id>
     <title>Article X - FILLING OF THE VACANCY OF AN OFFICE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -305,26 +306,26 @@ oversee the elections.</p></li>
 <p>Body shall appoint someone to the vacant office until the next general elections.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-ten/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-ten/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-eleven/</id>
+    <id>http://www.afam-org.com/constitution/article-eleven/</id>
     <title>Article XI - FINANCE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       <p><strong>Section 1. Membership dues:</strong></p>
 
-<p>Each member above 18 years of age shall pay to AFAM a minimum amount of 2,000 YEN annually as dues; payable by the end of May.</p>
+<p>Each member above 18 years of age shall pay to AFAM a minimum amount of <i class="fa fa-jpy" aria-hidden="true"></i> 2,000 annually as dues; payable by the end of May.</p>
 
 <p><strong>Section 2</strong></p>
 
 <p>Additional funds to be obtained through fund-raising activities.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-eleven/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-eleven/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-twelve/</id>
+    <id>http://www.afam-org.com/constitution/article-twelve/</id>
     <title>Article XII - FINANCIAL TRANSACTIONS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -340,10 +341,10 @@ one of the two remaining must sign.</p>
 to the general members.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-twelve/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-twelve/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-thirteen/</id>
+    <id>http://www.afam-org.com/constitution/article-thirteen/</id>
     <title>Article XIII - MEETINGS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -360,10 +361,10 @@ to the general members.</p>
 <p>Executive Body meetings shall be called by the President or, in his absence, by the Vice-President or General Secretary.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-thirteen/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-thirteen/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-fourteen/</id>
+    <id>http://www.afam-org.com/constitution/article-fourteen/</id>
     <title>Article XIV - QUORUMS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -376,10 +377,10 @@ to the general members.</p>
 <p>Five officers of the Executive Body shall constitute a quorum at any Executive meeting.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-fourteen/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-fourteen/" />
   </entry>
   <entry>
-    <id>https://addhen.github.io/afam/constitution/article-fifteen/</id>
+    <id>http://www.afam-org.com/constitution/article-fifteen/</id>
     <title>Article XV - CONSTITUTIONAL AMENDMENT</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -387,6 +388,6 @@ to the general members.</p>
 a two-thirds majority vote of the membership.</p>
 
     ]]></content>
-    <link rel="alternate" href="https://addhen.github.io/afam/constitution/article-fifteen/" />
+    <link rel="alternate" href="http://www.afam-org.com/constitution/article-fifteen/" />
   </entry>
 </feed>
