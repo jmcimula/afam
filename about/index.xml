@@ -2,18 +2,18 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>http://0.0.0.0:6789/</id>
+  <id>http://www.afam-org.com/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
   <link href="/about/index.xml" rel="self" />
   <category term="" />
-  <icon>http://0.0.0.0:6789/images/template/favicon.png</icon>
-  <logo>http://0.0.0.0:6789/images/template/logo-512.png</logo>
+  <icon>http://www.afam-org.com/images/template/favicon.png</icon>
+  <logo>http://www.afam-org.com/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>http://0.0.0.0:6789/about/</id>
+    <id>http://www.afam-org.com/about/</id>
     <title>About AFAM</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -41,6 +41,6 @@
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="http://0.0.0.0:6789/about/" />
+    <link rel="alternate" href="http://www.afam-org.com/about/" />
   </entry>
 </feed>
