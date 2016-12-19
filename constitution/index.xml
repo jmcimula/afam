@@ -2,28 +2,28 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>http://www.afam-org.com/</id>
+  <id>http://0.0.0.0:6789/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
   <link href="/constitution/index.xml" rel="self" />
   <category term="" />
-  <icon>http://www.afam-org.com/images/template/favicon.png</icon>
-  <logo>http://www.afam-org.com/images/template/logo-512.png</logo>
+  <icon>http://0.0.0.0:6789/images/template/favicon.png</icon>
+  <logo>http://0.0.0.0:6789/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>http://www.afam-org.com/constitution/article-one/</id>
+    <id>http://0.0.0.0:6789/constitution/article-one/</id>
     <title>Article I - NAME</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       <p>The full name of the Association is African Association of Miyagi hereinafter refers to as AFAM.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-one/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-one/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-two/</id>
+    <id>http://0.0.0.0:6789/constitution/article-two/</id>
     <title>Article II - MEMBERSHIP</title>
     <updated>2016-10-06T23:45:47&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -55,10 +55,10 @@
 2,000 (Two Thousand Yen).</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-two/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-two/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-three/</id>
+    <id>http://0.0.0.0:6789/constitution/article-three/</id>
     <title>Article III - AIMS AND OBJECTIVES</title>
     <updated>2016-10-06T23:46:47&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -86,10 +86,10 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-three/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-three/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-four/</id>
+    <id>http://0.0.0.0:6789/constitution/article-four/</id>
     <title>Article IV - THE EXECUTIVE BODY</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -114,10 +114,10 @@ Latin- America etc in the areas such as inter-association sports, cultural excha
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-four/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-four/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-five/</id>
+    <id>http://0.0.0.0:6789/constitution/article-five/</id>
     <title>Article V - DUTIES OF THE EXECUTIVE BODY</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -215,10 +215,10 @@ executive body meetings; shall take minutes at both general and executive body m
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-five/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-five/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-six/</id>
+    <id>http://0.0.0.0:6789/constitution/article-six/</id>
     <title>Article VI - ELIGIBILITY FOR HOLDING OFFICE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -235,10 +235,10 @@ Anybody who holds an Executive Position in any other African Association in Miya
 <p>Candidates should have been paid-up members as in section Article II Section 4.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-six/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-six/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-seven/</id>
+    <id>http://0.0.0.0:6789/constitution/article-seven/</id>
     <title>Article VII - ELECTIONS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -265,10 +265,10 @@ oversee the elections.</p></li>
 <p>Voting rights shall not be of less than 16 years of age.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-seven/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-seven/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-eight/</id>
+    <id>http://0.0.0.0:6789/constitution/article-eight/</id>
     <title>Article VIII - TENURE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -281,20 +281,20 @@ oversee the elections.</p></li>
 </ol>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-eight/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-eight/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-nine/</id>
+    <id>http://0.0.0.0:6789/constitution/article-nine/</id>
     <title>Article IX - REMOVAL OF OFFICERS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       <p>Two-thirds of the membership meeting may remove an officer on the petition of any member.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-nine/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-nine/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-ten/</id>
+    <id>http://0.0.0.0:6789/constitution/article-ten/</id>
     <title>Article X - FILLING OF THE VACANCY OF AN OFFICE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -309,10 +309,10 @@ oversee the elections.</p></li>
 <p>Body shall appoint someone to the vacant office until the next general elections.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-ten/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-ten/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-eleven/</id>
+    <id>http://0.0.0.0:6789/constitution/article-eleven/</id>
     <title>Article XI - FINANCE</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -325,10 +325,10 @@ oversee the elections.</p></li>
 <p>Additional funds to be obtained through fund-raising activities.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-eleven/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-eleven/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-twelve/</id>
+    <id>http://0.0.0.0:6789/constitution/article-twelve/</id>
     <title>Article XII - FINANCIAL TRANSACTIONS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -344,10 +344,10 @@ one of the two remaining must sign.</p>
 to the general members.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-twelve/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-twelve/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-thirteen/</id>
+    <id>http://0.0.0.0:6789/constitution/article-thirteen/</id>
     <title>Article XIII - MEETINGS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -364,10 +364,10 @@ to the general members.</p>
 <p>Executive Body meetings shall be called by the President or, in his absence, by the Vice-President or General Secretary.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-thirteen/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-thirteen/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-fourteen/</id>
+    <id>http://0.0.0.0:6789/constitution/article-fourteen/</id>
     <title>Article XIV - QUORUMS</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -380,10 +380,10 @@ to the general members.</p>
 <p>Five officers of the Executive Body shall constitute a quorum at any Executive meeting.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-fourteen/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-fourteen/" />
   </entry>
   <entry>
-    <id>http://www.afam-org.com/constitution/article-fifteen/</id>
+    <id>http://0.0.0.0:6789/constitution/article-fifteen/</id>
     <title>Article XV - CONSTITUTIONAL AMENDMENT</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -391,6 +391,6 @@ to the general members.</p>
 a two-thirds majority vote of the membership.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/constitution/article-fifteen/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/constitution/article-fifteen/" />
   </entry>
 </feed>
