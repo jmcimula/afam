@@ -2,24 +2,24 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>http://www.afam-org.com/</id>
+  <id>http://0.0.0.0:6789/</id>
   <updated>2016-10-06T23:44:45&#43;09:00</updated>
   <link href="/join/index.xml" rel="self" />
   <category term="" />
-  <icon>http://www.afam-org.com/images/template/favicon.png</icon>
-  <logo>http://www.afam-org.com/images/template/logo-512.png</logo>
+  <icon>http://0.0.0.0:6789/images/template/favicon.png</icon>
+  <logo>http://0.0.0.0:6789/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>http://www.afam-org.com/join/</id>
+    <id>http://0.0.0.0:6789/join/</id>
     <title>Join Us</title>
     <updated>2016-10-06T23:44:45&#43;09:00</updated>
     <content type="html"><![CDATA[
       <p>We welcome you to join our mailing list for announcements and upcoming event information. You can join us by going to our <a href="https://groups.google.com/forum/#!forum/afam-forum">Google group&rsquo;s</a> page to apply for membership.</p>
 
     ]]></content>
-    <link rel="alternate" href="http://www.afam-org.com/join/" />
+    <link rel="alternate" href="http://0.0.0.0:6789/join/" />
   </entry>
 </feed>
