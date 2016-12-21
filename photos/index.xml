@@ -2,18 +2,18 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <id>http://0.0.0.0:6789/</id>
+  <id>http://www.afam-org.com/</id>
   <updated>2016-12-19T20:12:26&#43;09:00</updated>
   <link href="/photos/index.xml" rel="self" />
   <category term="" />
-  <icon>http://0.0.0.0:6789/images/template/favicon.png</icon>
-  <logo>http://0.0.0.0:6789/images/template/logo-512.png</logo>
+  <icon>http://www.afam-org.com/images/template/favicon.png</icon>
+  <logo>http://www.afam-org.com/images/template/logo-512.png</logo>
   <rights>Copyright &#169; AFAM</rights>  
   <title>AFAM</title>
   <subtitle>Website for AFAM.</subtitle>
 
   <entry>
-    <id>http://0.0.0.0:6789/photos/general-meeting-19-dec-16/</id>
+    <id>http://www.afam-org.com/photos/general-meeting-19-dec-16/</id>
     <title>General Meeting, 18, Dec, 2016</title>
     <updated>2016-12-19T20:12:26&#43;09:00</updated>
     <content type="html"><![CDATA[
@@ -90,10 +90,10 @@
 </figure></p>
 
     ]]></content>
-    <link rel="alternate" href="http://0.0.0.0:6789/photos/general-meeting-19-dec-16/" />
+    <link rel="alternate" href="http://www.afam-org.com/photos/general-meeting-19-dec-16/" />
   </entry>
   <entry>
-    <id>http://0.0.0.0:6789/photos/visit-to-pension-home/</id>
+    <id>http://www.afam-org.com/photos/visit-to-pension-home/</id>
     <title>Visit To The Pension Homes</title>
     <updated>2016-10-21T19:07:17&#43;03:00</updated>
     <content type="html"><![CDATA[
@@ -170,6 +170,6 @@
 </figure>
 
     ]]></content>
-    <link rel="alternate" href="http://0.0.0.0:6789/photos/visit-to-pension-home/" />
+    <link rel="alternate" href="http://www.afam-org.com/photos/visit-to-pension-home/" />
   </entry>
 </feed>
